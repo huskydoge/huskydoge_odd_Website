@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><lastBuildDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Git</title>
+    <link>http://example.org/posts/git/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/git/</guid>
+    <description><![CDATA[git init: 在当前目录下生成一个 git 仓库 git init dir_name: 使用指定目录作为Git仓库 设置提交代码时的用户信息： $ git config --global user.name &#34;runoob&#34; $ git config --global user.email test@runoob.com 基本操作 git add 添加文件到暂存区]]></description>
+</item>
+<item>
     <title>Hello</title>
     <link>http://example.org/posts/hello/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
