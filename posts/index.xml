@@ -4,7 +4,7 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Git</title>
     <link>http://example.org/posts/git/</link>
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
@@ -13,12 +13,20 @@
     <description><![CDATA[git init: 在当前目录下生成一个 git 仓库 git init dir_name: 使用指定目录作为Git仓库 设置提交代码时的用户信息： $ git config --global user.name &#34;runoob&#34; $ git config --global user.email test@runoob.com 基本操作 git add 添加文件到暂存区]]></description>
 </item>
 <item>
+    <title>Shell</title>
+    <link>http://example.org/posts/shell/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/shell/</guid>
+    <description><![CDATA[echo + text pwd: 当前路径 cd .:当前目录 cd ..:上级目录 cd /：根目录 ls -l:显示文件的详细信息 rm -rf:用强制权限删除，避免烦人的提醒信息 mv: mv命令将]]></description>
+</item>
+<item>
     <title>Hello</title>
     <link>http://example.org/posts/hello/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/hello/</guid>
-    <description><![CDATA[我在配置hugo网站时遇到的种种问题 github提交问题 1. 更新被拒绝 具体信息：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为]]></description>
+    <description><![CDATA[<p><strong>&ldquo;My First Blog&rdquo;</strong></p>]]></description>
 </item>
 </channel>
 </rss>

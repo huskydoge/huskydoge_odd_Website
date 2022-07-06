@@ -4,5 +4,5 @@
         <link>http://example.org/categories/</link>
         <description>Categories - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>
