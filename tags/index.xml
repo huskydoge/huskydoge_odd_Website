@@ -4,5 +4,13 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>git</title>
+    <link>http://example.org/tags/git/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
