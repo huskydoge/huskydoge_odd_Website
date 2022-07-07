@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>C&#43;&#43; 字符研究 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="C&#43;&#43; 字符研究" />
+<meta property="og:description" content="c&#43;&#43;字符/字符串输入函数： ​ 注：程序运行后键盘输入会首先存储到输入缓冲区中，遇到结束符时终止输入（一般为回车）。 cin &gt;&gt; s cin从输入缓冲区中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-06T17:17:42+08:00" />
+<meta property="article:modified_time" content="2022-07-06T17:17:42+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43; 字符研究"/>
+<meta name="twitter:description" content="c&#43;&#43;字符/字符串输入函数： ​ 注：程序运行后键盘输入会首先存储到输入缓冲区中，遇到结束符时终止输入（一般为回车）。 cin &gt;&gt; s cin从输入缓冲区中"/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" /><link rel="prev" href="http://example.org/posts/git/" /><link rel="next" href="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "C++ 字符研究",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2\/"
+        },"genre": "posts","keywords": "C\u002b\u002b, Char","wordcount":  560 ,
+        "url": "http:\/\/example.org\/posts\/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2\/","datePublished": "2022-07-06T17:17:42+08:00","dateModified": "2022-07-06T17:17:42+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HuskyDoge"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="LazyDog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="LazyDog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">C&#43;&#43; 字符研究</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-06">2022-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;560 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#c字符字符串输入函数">c++字符/字符串输入函数：</a></li>
+    <li><a href="#c-cout字符指针会直接输出字符串重载">C++ cout字符指针会直接输出字符串(重载)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="c字符字符串输入函数">c++字符/字符串输入函数：</h2>
+<p>​        注：程序运行后键盘输入会首先存储到输入缓冲区中，遇到结束符时终止输入（一般为回车）。</p>
+<ol>
+<li>
+<p><code>cin &gt;&gt; s</code></p>
+<pre><code>cin从输入缓冲区中读入非空白字符到字符串s中（若第一个字符为空白字符，直至遇到第一个非空白字符开始读取），读取时遇到空白字符（空格符 space、制表符 tab、换行符 return等）结束读取。
+</code></pre>
+</li>
+<li>
+<p><code>ch = getchar()</code></p>
+<p>从缓冲区中读入任何一个字符（包括空格符 space、制表符 tab 与换行符 return）。
+in.get(s, 10, &lsquo;#&rsquo;); 从缓冲区中接收字符到字符串s中，遇到结束符&rsquo;#&rsquo;（默认为换行符）
+或9个字符后结束读取。</p>
+</li>
+<li>
+<p><code>cin.getline(s, 10, '#')</code></p>
+<pre><code>从缓冲区中接收字符到字符串s中，遇到结束符'#'（默认为换行符）
+</code></pre>
+<p>符后结束读取。</p>
+<blockquote>
+<p>注：cin、cin.get()在读取缓冲区时不会处理结束符，cin.getline()会从缓冲区中移除结束符，
+可以利用cin.ignore(1024, &lsquo;\n&rsquo;)函数来清除输入缓冲区中存留的换行符。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="c-cout字符指针会直接输出字符串重载">C++ cout字符指针会直接输出字符串(重载)</h2>
+<p>其他指针例如double*，float*，int*等，输出的是地址值.</p>
+<pre tabindex="0"><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+using namespace std;
+
+char *oddstr(char str[]);
+int main() {
+    char str[200];
+    cin &gt;&gt; str;
+    char *odd = oddstr(str);
+        cout &lt;&lt; odd &lt;&lt; endl;
+        delete []odd;
+        return 0;
+    }
+
+
+char *oddstr(char str[])
+    {
+        char *p = new char[200];
+        int j = 0;
+    for(int i = 0; str[i] != &#39;\0&#39;; i++)
+    // for(int i = 0; i &lt; strlen(str); i++)
+    {
+            if(i % 2)
+                p[j++] = str[i];
+    }
+
+    // char * 不会自动在末尾补0，需手动添加
+        p[j] = &#39;\0&#39;;
+        return p;
+}
+</code></pre></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-title="C&#43;&#43; 字符研究" data-hashtags="C&#43;&#43;,Char"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-hashtag="C&#43;&#43;"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-title="C&#43;&#43; 字符研究"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-title="C&#43;&#43; 字符研究"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-title="C&#43;&#43; 字符研究"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2fcpp%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%2f&amp;description=C%2b%2b%20%e5%ad%97%e7%ac%a6%e7%a0%94%e7%a9%b6" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/char/">Char</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/git/" class="prev" rel="prev" title="Git"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Git</a>
+            <a href="/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/" class="next" rel="next" title="C&#43;&#43; 字符指针">C&#43;&#43; 字符指针<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript><div id="commento" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.commento.io/js/commento.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":[""],"clientID":"","clientSecret":"","id":"2022-07-06T17:17:42+08:00","owner":"","repo":"","title":"C++ 字符研究"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

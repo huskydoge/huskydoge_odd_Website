@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pointer - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/pointer/</link>
+        <description>Pointer - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/pointer/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; 字符指针</title>
+    <link>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/</guid>
+    <description><![CDATA[#include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; // 写出两个函数的声明 char *&amp;funA(char **&amp;p); char *funB(char b[], char **p); int main() { char a[100], b[100]; for(int i = 0; i &lt; 3; ++i) { char **p; cin &gt;&gt; a; // 1. funA(p)作为左值，需要加引用&amp; //]]></description>
+</item>
+</channel>
+</rss>
