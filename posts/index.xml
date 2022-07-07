@@ -28,5 +28,13 @@
     <guid>http://example.org/posts/hello/</guid>
     <description><![CDATA[<p><strong>&ldquo;My First Blog&rdquo;</strong></p>]]></description>
 </item>
+<item>
+    <title>造字</title>
+    <link>http://example.org/posts/%E9%80%A0%E5%AD%97/</link>
+    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/%E9%80%A0%E5%AD%97/</guid>
+    <description><![CDATA[<p><strong>&ldquo;汉字文化&rdquo;</strong></p>]]></description>
+</item>
 </channel>
 </rss>
