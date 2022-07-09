@@ -13,12 +13,12 @@
     <description><![CDATA[git init: 在当前目录下生成一个 git 仓库 git init dir_name: 使用指定目录作为Git仓库 设置提交代码时的用户信息： $ git config --global user.name &#34;runoob&#34; $ git config --global user.email test@runoob.com 基本操作 git add 添加文件到暂存区]]></description>
 </item>
 <item>
-    <title>Git</title>
+    <title>Vscode快捷键</title>
     <link>http://example.org/posts/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-    <description><![CDATA[cmd + k + 0: 折叠所有函数]]></description>
+    <description><![CDATA[<p><strong>&ldquo;有用的快捷键&rdquo;</strong></p>]]></description>
 </item>
 </channel>
 </rss>
