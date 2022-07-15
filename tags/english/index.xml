@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>English - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/english/</link>
+        <description>English - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/english/" rel="self" type="application/rss+xml" /><item>
+    <title>英语词汇表达</title>
+    <link>http://example.org/posts/english/</link>
+    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/english/</guid>
+    <description><![CDATA[怎么翻译？ 潜在的恶果 insidious 潜在的，潜伏的但暗中为害的 the insidious effects of polluted water supplies 供水系统污染的潜在恶果 沉思 mull over 反复思考 I need some time to mull it over before making a decision.]]></description>
+</item>
+</channel>
+</rss>
