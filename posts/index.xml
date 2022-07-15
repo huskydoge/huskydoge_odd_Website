@@ -53,6 +53,14 @@
     <description><![CDATA[性能分析 Timing usr sys: 在cpu里跑的时间 wall-Clock：所有进程花费的时间， 包括用户输入 time 指令 + 文件地址 Memory htop Glances 网络参数 shell 中输入 ifconfig 比较命令行指令]]></description>
 </item>
 <item>
+    <title>English</title>
+    <link>http://example.org/posts/english/</link>
+    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/english/</guid>
+    <description><![CDATA[怎么翻译？ 潜在的恶果 insidious 潜在的，潜伏的但暗中为害的 the insidious effects of polluted water supplies 供水系统污染的潜在恶果 沉思 mull over 反复思考 I need some time to mull it over before making a decision.]]></description>
+</item>
+<item>
     <title>Hello</title>
     <link>http://example.org/posts/hello/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/ml_note1/</guid>
     <description><![CDATA[Main Challenges ]]></description>
-</item>
-<item>
-    <title>Vim</title>
-    <link>http://example.org/posts/vim/</link>
-    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/vim/</guid>
-    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

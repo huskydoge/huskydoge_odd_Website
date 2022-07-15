@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-06T15:55:33+08:00" />
-<meta property="article:modified_time" content="2022-07-15T22:07:56+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-15T22:34:35+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 1"/>
@@ -25,7 +25,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note\/"
         },"genre": "posts","keywords": "Machine Learning","wordcount":  964 ,
-        "url": "http:\/\/example.org\/posts\/ml_note\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-15T22:07:56+08:00","license": "All Mine","publisher": {
+        "url": "http:\/\/example.org\/posts\/ml_note\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-15T22:34:35+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -200,18 +200,18 @@
 <p>• Association rule learning
 — Apriori — Eclat</p>
 <h3 id="related-task-dimensionality-reduction"><strong>Related task: dimensionality reduction</strong></h3>
-<p>It is often a good idea to try to reduce the dimension of your training data using a dimensionality reduction algorithm before you feed it to another Machine Learning algorithm (such as a super‐ vised learning algorithm). ==It will run much faster, the data will take up less disk and memory space, and in some cases it may also per‐ form better.==</p>
+<p>It is often a good idea to try to reduce the dimension of your training data using a dimensionality reduction algorithm before you feed it to another Machine Learning algorithm (such as a super‐ vised learning algorithm). <strong>It will run much faster, the data will take up less disk and memory space, and in some cases it may also per‐ form better.</strong></p>
 <h2 id="semisupervised-learning">Semisupervised learning</h2>
 <p>​	Some algorithms can deal with partially labeled training data, usually a lot of unla‐ beled data and a little bit of labeled data. This is called semisupervised learning.
-​	Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). ==Now all the system needs is for you to tell it who these people are.== Just one label per person,4 and it is able to name everyone in every photo, which is useful for searching photos.</p>
+​	Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). <strong>Now all the system needs is for you to tell it who these people are.</strong> Just one label per person,4 and it is able to name everyone in every photo, which is useful for searching photos.</p>
 <p>​	自动找出不同图片中一样的人，但需要人为输入人的名字。</p>
 <h2 id="reinforcement-learning">Reinforcement Learning</h2>
 <p>​	Reinforcement Learning is a very different beast.</p>
-<p>​	The learning system, called an agent in this context, can observe the environment, select and perform actions, and get rewards in return or penalties in the form of negative rewards. ==It must then learn by itself what is the best strategy, called a policy==, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.</p>
+<p>​	The learning system, called an agent in this context, can observe the environment, select and perform actions, and get rewards in return or penalties in the form of negative rewards. <strong>It must then learn by itself what is the best strategy, called a policy</strong>, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.</p>
 <h1 id="batch-and-online-learning">Batch and Online Learning</h1>
 <h2 id="batch-learning">Batch learning</h2>
-<p>​	In batch learning, the system is ==incapable of learning incrementally==: it must be trained using all the available data. This will generally take a lot of time and computing resources, so it is typically done offline.</p>
-<p>​	First the system is trained, and ==then it is launched into production and runs without learning anymore; it just applies what it has learned. This is called offline learning.==
+<p>​	In batch learning, the system is <strong>incapable of learning incrementally</strong>: it must be trained using all the available data. This will generally take a lot of time and computing resources, so it is typically done offline.</p>
+<p>​	First the system is trained, and <strong>then it is launched into production and runs without learning anymore; it just applies what it has learned. This is called offline learning.</strong>
 ​	If you want a batch learning system to know about new data (such as a new type of spam), you need to train a new version of the system from scratch on the full dataset (not just the new data, but also the old data), then stop the old system and replace it with the new one.</p>
 <p>Deficiency:</p>
 <ul>
@@ -229,7 +229,7 @@
 <ul>
 <li>bad data will lead to bad performance, so monitor the performance is necessary.</li>
 </ul>
-<p>​	Online learning algorithms can also be used to train systems on huge datasets that cannot fit in one machine’s main memory ==(this is called out-of-core learning).== The algorithm loads part of the data, runs a training step on that data, and repeats the process until it has run on all of the data (see Figure 1-14).
+<p>​	Online learning algorithms can also be used to train systems on huge datasets that cannot fit in one machine’s main memory <strong>(this is called out-of-core learning).</strong> The algorithm loads part of the data, runs a training step on that data, and repeats the process until it has run on all of the data (see Figure 1-14).
 ​	Out-of-core learning is usually done offline (i.e., not on the live system), <!-- raw HTML omitted --><strong>so online learning can be a confusing name. Think of it as incremental learning.</strong><!-- raw HTML omitted --></p>
 <p>​	Learning rate:</p>
 <ul>
@@ -239,7 +239,7 @@
 <h1 id="instance-based-versus-model-based-learning">Instance-Based Versus Model-Based Learning</h1>
 <h2 id="instance-based-learning">Instance-Based learning</h2>
 <p>​	Instead of just flagging emails that are identical to known spam emails, your spam filter could be programmed to also flag emails that are very similar to known spam emails. This requires a measure of similarity between two emails. 			    	A (very basic) similarity measure between two emails could be to count the number of words they have in common. The system would flag an email as spam if it has many words in com‐ mon with a known spam email.
-​	This is called instance-based learning: the system learns the examples by heart, then ==generalizes to new cases by comparing them to the learned examples (or a subset of them),  using a <!-- raw HTML omitted -->similarity measure<!-- raw HTML omitted -->.==</p>
+​	This is called instance-based learning: the system learns the examples by heart, then <strong>generalizes to new cases by comparing them to the learned examples (or a subset of them),  using a <!-- raw HTML omitted -->similarity measure<!-- raw HTML omitted -->.</strong></p>
 <h2 id="model-based-learning">Model-based learning</h2>
 <p>​	Another way to generalize from a set of examples is to build a model of these exam‐ ples, then use that model to make predictions. This is called model-based learning.</p>
 <p>A simple linear model life_satisfaction = $\theta_{0} + \theta_{1}\times GDP _ per_capita$</p>
