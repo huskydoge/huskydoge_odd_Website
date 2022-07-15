@@ -63,6 +63,14 @@
     <description><![CDATA[<p><strong>&ldquo;My First Blog&rdquo;</strong></p>]]></description>
 </item>
 <item>
+    <title>ML Learning</title>
+    <link>http://example.org/posts/ml_note/</link>
+    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/ml_note/</guid>
+    <description><![CDATA[Types of Machine Learning Systems Whether or not they are trained with human supervision supervised unsupervised semisupervised （半监督） Reinforcement Learning Whether or not they can learn incrementally on the fly online learning batch learning Whether they work by simply comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do instance-based model-based]]></description>
+</item>
+<item>
     <title>造字</title>
     <link>http://example.org/posts/%E9%80%A0%E5%AD%97/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
