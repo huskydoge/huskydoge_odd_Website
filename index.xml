@@ -71,20 +71,20 @@
     <description><![CDATA[<p><strong>&ldquo;My First Blog&rdquo;</strong></p>]]></description>
 </item>
 <item>
-    <title>Vim</title>
-    <link>http://example.org/posts/vim/</link>
+    <title>ML Learning 1</title>
+    <link>http://example.org/posts/ml_note/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
     <author>HuskyDoge</author>
-    <guid>http://example.org/posts/vim/</guid>
-    <description><![CDATA[]]></description>
+    <guid>http://example.org/posts/ml_note/</guid>
+    <description><![CDATA[Types of Machine Learning Systems Whether or not they are trained with human supervision supervised unsupervised semisupervised （半监督） Reinforcement Learning Whether or not they can learn incrementally on the fly online learning batch learning Whether they work by simply comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do instance-based model-based]]></description>
 </item>
 <item>
-    <title>健身笔记</title>
-    <link>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</link>
+    <title>ML Learning 2</title>
+    <link>http://example.org/posts/ml_note1/</link>
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
     <author>HuskyDoge</author>
-    <guid>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[饮食 黄金时间： ​ 运动后30分钟内摄入蛋白质最佳 热身 静态拉伸 ​ 静态拉伸就是把自己的身体摆放到关节活动度极限位置附近，然后保持这个动作持续10-]]></description>
+    <guid>http://example.org/posts/ml_note1/</guid>
+    <description><![CDATA[Main Challenges This is a tip 一个 技巧 横幅]]></description>
 </item>
 </channel>
 </rss>
