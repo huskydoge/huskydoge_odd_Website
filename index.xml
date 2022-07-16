@@ -84,7 +84,7 @@
     <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/ml_note1/</guid>
-    <description><![CDATA[Main Challenges This is a tip 一个 技巧 横幅]]></description>
+    <description><![CDATA[Main Challenges Insufficient Quantity of Training Data ​ The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of Data” published in 2009.10 It should be noted, however, that small- and medium- sized datasets are still very common, and it is not always easy or cheap to]]></description>
 </item>
 </channel>
 </rss>

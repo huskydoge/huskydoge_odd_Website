@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>ML Learning 2 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="ML Learning 2" />
-<meta property="og:description" content="Main Challenges This is a tip 一个 技巧 横幅" />
+<meta property="og:description" content="Main Challenges Insufficient Quantity of Training Data ​ The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of Data” published in 2009.10 It should be noted, however, that small- and medium- sized datasets are still very common, and it is not always easy or cheap to" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-06T15:55:33+08:00" />
-<meta property="article:modified_time" content="2022-07-16T14:03:06+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-16T15:09:17+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 2"/>
-<meta name="twitter:description" content="Main Challenges This is a tip 一个 技巧 横幅"/>
+<meta name="twitter:description" content="Main Challenges Insufficient Quantity of Training Data ​ The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of Data” published in 2009.10 It should be noted, however, that small- and medium- sized datasets are still very common, and it is not always easy or cheap to"/>
 <meta name="application-name" content="Husky&#39;s World">
 <meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/ml_note1/" /><link rel="prev" href="http://example.org/posts/vim/" /><link rel="next" href="http://example.org/posts/ml_note/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note1\/"
-        },"genre": "posts","keywords": "Machine Learning","wordcount":  12 ,
-        "url": "http:\/\/example.org\/posts\/ml_note1\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-16T14:03:06+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "Machine Learning","wordcount":  1196 ,
+        "url": "http:\/\/example.org\/posts\/ml_note1\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-16T15:09:17+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,8 +114,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ML Learning 2</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-06">2022-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;12 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/ml_note1/" class="leancloud_visitors" data-flag-title="ML Learning 2">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-06">2022-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1196 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/ml_note1/" class="leancloud_visitors" data-flag-title="ML Learning 2">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -123,14 +123,76 @@
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#insufficient-quantity-of-training-data">Insufficient Quantity of Training Data</a></li>
+        <li><a href="#nonrepresentative-training-data">Nonrepresentative Training Data</a></li>
+        <li><a href="#poor-quality-data">Poor-Quality Data</a></li>
+        <li><a href="#irrelevant-features">Irrelevant Features</a></li>
+        <li><a href="#overfitting-the-training-data">Overfitting the Training Data</a></li>
+        <li><a href="#underfitting-the-training-data">Underfitting the Training Data</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hyperparameter-tuning-and-model-selection">Hyperparameter Tuning and Model Selection</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
             </div><div class="content" id="content"><h1 id="main-challenges">Main Challenges</h1>
-<div class="details admonition warning">
+<h3 id="insufficient-quantity-of-training-data">Insufficient Quantity of Training Data</h3>
+<p>​	The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of Data” published in 2009.10 It should be noted, however, that small- and medium- sized datasets are still very common, and it is not always easy or cheap to get extra training data, so don’t abandon algorithms just yet.</p>
+<h3 id="nonrepresentative-training-data">Nonrepresentative Training Data</h3>
+<p>​	In order to generalize well, it is crucial that your training data be representative of the new cases you want to generalize to. This is true whether you use instance-based learning or model-based learning.</p>
+<h3 id="poor-quality-data">Poor-Quality Data</h3>
+<p>​	Obviously, if your training data is full of errors, outliers, and noise (e.g., due to poor- quality measurements), it will make it harder for the system to detect the underlying patterns, so your system is less likely to perform well. It is often well worth the effort to spend time cleaning up your training data. The truth is, most data scientists spend a significant part of their time doing just that. For example:</p>
+<p>• If some instances are clearly outliers, it may help to simply discard them or try to fix the errors manually.
+• If some instances are missing a few features (e.g., 5% of your customers did not specify their age), you must decide</p>
+<p>whether you want to ignore this attribute alto‐ gether, ignore these instances, fill in the missing values (e.g., with the median age), or train one model with the feature and one model without it, and so on.</p>
+<h3 id="irrelevant-features">Irrelevant Features</h3>
+<p>​	As the saying goes: garbage in, garbage out. Your system will only be capable of learn‐ ing if the training data contains enough relevant features and not too many irrelevant ones. A critical part of the success of a <strong>Machine Learning project is coming up with a good set of features to train on. This process, called feature engineering,</strong> involves:</p>
+<p>• Feature selection: selecting the most useful features to train on among existing features.
+• Feature extraction: combining existing features to produce a more useful one (as we saw earlier, dimensionality reduction algorithms can help).
+• Creating new features by gathering new data.</p>
+<h3 id="overfitting-the-training-data">Overfitting the Training Data</h3>
+<p>​	Say you are visiting a foreign country and the taxi driver rips you off. You might be tempted to say that all taxi drivers in that country are thieves. Overgeneralizing is something that we humans do all too often, and unfortunately machines can fall into the same trap if we are not careful. In Machine Learning this is called overfitting: it means that the model performs well on the training data, but it does not generalize well.     过拟合</p>
+<p>​	<strong>Constraining a model to make it simpler and reduce the risk of overfitting is called regularization.</strong></p>
+<p>（减少模型的参数变量，减少过拟合的风险。</p>
+<p>​	<strong>The amount of regularization to apply during learning can be controlled by a hyperparameter.</strong> A hyperparameter is a parameter of a learning algorithm (not of the model). As such, it is not affected by the learning algorithm itself; it must be set prior to training and remains constant during training.</p>
+<p>​</p>
+<h3 id="underfitting-the-training-data">Underfitting the Training Data</h3>
+<p>The main options to fix this problem are:</p>
+<p>• Selecting a more powerful model, with more parameters
+• Feeding better features to the learning algorithm (feature engineering)
+• Reducing the constraints on the model (e.g., reducing the regularization hyper‐ parameter)</p>
+<h1 id="testing-and-validating">Testing and Validating</h1>
+<p>​	Split your data into two sets: the training set and the test set.</p>
+<p>​	As these names imply, you train your model using the training set, and you test it using the test set. The error rate on new cases is called the generalization error (or out-of- sample error), and by evaluating your model on the test set, you get an estimate of this error. This value tells you how well your model will perform on instances it has never seen before.
+​	<strong>If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is <!-- raw HTML omitted -->overfitting<!-- raw HTML omitted --> the train‐ ing data.</strong></p>
+<div class="details admonition tip open">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">一个 <strong>技巧</strong> 横幅</div>
+            <div class="admonition-content">​	It is common to use 80% of the data for training and hold out 20% for testing. <strong>However, this depends on the size of the dataset</strong>: if it contains 10 million instances, then holding out 1% means your test set will contain 100,000 instances: that’s probably more than enough to get a good estimate of the generalization error.</div>
+        </div>
+    </div>
+<h3 id="hyperparameter-tuning-and-model-selection">Hyperparameter Tuning and Model Selection</h3>
+<p>怎么选取 Hyperparameter regularization的值？</p>
+<p>​	A common solution to this problem is called <strong>holdout validation: you simply hold out part of the training set to evaluate several candidate models and select the best one.</strong> The new heldout set is called the validation set (or sometimes the development set, or dev set). More specifically, you train multiple models with various hyperparameters on the reduced training set (i.e., the full training set minus the validation set), and you select the model that performs best on the validation set. After this holdout vali‐ dation process, you train the best model on the full training set (including the valida‐ tion set), and this gives you the final model. Lastly, you evaluate this final model on the test set to get an estimate of the generalization error.</p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>No Free Lunch Theorem<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">​	A model is a simplified version of the observations. The simplifications are meant to discard the superfluous details that are unlikely to generalize to new instances. However, to decide what data to discard and what data to keep, you must make assumptions. For example, a linear model makes the assumption that the data is fundamentally linear and that the distance between the instances and the straight line is just noise, which can safely be ignored.
+​	In a famous 1996 paper,11 David Wolpert demonstrated that if you make absolutely no assumption about the data, then there is no reason to prefer one model over any other. <strong>This is called the No Free Lunch (NFL) theorem.</strong> For some datasets the best model is a linear model, while for other datasets it is a neural network. There is no model that is a priori guaranteed to work better (hence the name of the theorem). The only way to know for sure which model is best is to evaluate them all. Since this is not possible, in practice you make some reasonable assumptions about the data and you evaluate only a few reasonable models. For example, for simple tasks you may evaluate linear models with various levels of regularization, and for a complex problem you may evaluate various neural networks.</div>
         </div>
     </div>
 </div><div class="post-footer" id="post-footer">
