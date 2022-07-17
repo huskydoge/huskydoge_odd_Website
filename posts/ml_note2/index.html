@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-17T11:05:51+08:00" />
-<meta property="article:modified_time" content="2022-07-17T12:36:36+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-17T12:44:23+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 3"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note2\/"
-        },"genre": "posts","keywords": "Machine Learning","wordcount":  312 ,
-        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-17T12:36:36+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "Machine Learning","wordcount":  314 ,
+        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-17T12:44:23+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,7 +114,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ML Learning 3</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;312 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;314 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/ml_note2/" class="leancloud_visitors" data-flag-title="ML Learning 3">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -140,15 +140,17 @@
 \sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\bold x^{(i)} - y^{(i)})^2}
 $$</p>
 <p><code>m </code>: number of instances</p>
-<p>$x^{(i)}$: a vector of all the features, for example:</p>
-<p>​																					$\left(
-\begin{array}{l}
+<p>$x^{(i)}$: a vector of all the features, for example:
+$$
+\left(
+\begin{matrix}
 longitude = -118.29\degree \
 latitude  = 33.91 \degree\
 inhabitants = 1416 \
 median income = 38372 \
-\end{array}
-\right)$</p>
+\end{matrix}
+\right)
+$$</p>
 <p><code>h(x)</code>： h is your system’s prediction function, also called a hypothesis. When your system is given an instance’s feature vector x(i), it outputs a predicted value ŷ(i) = $h(x^{(i)})$ for that instance (ŷ is pronounced “y-hat”).</p>
 <h3 id="maemean-absolute-error--average-absolute-deviation">MAE(Mean Absolute Error / Average Absolute Deviation)</h3>
 <p>$$
@@ -156,8 +158,10 @@ median income = 38372 \
 $$</p>
 <p>​		Computing the root of a sum of squares (RMSE) corresponds to the Euclidean norm: it is the notion of distance you are familiar with. It is also called the $l_{2}$ norm, noted $∥ · ∥_{2}$ (or just $∥ · ∥$).</p>
 <p>​	Computing the sum of absolutes (MAE) corresponds to the $l_{1}$ norm, noted $∥ · ∥_{1}$. It is sometimes called the Manhattan norm because it measures the distance between two points in a city if you can only travel along orthogonal city blocks.</p>
-<p>​	More generally, the $l_{k}$ norm of a vector <strong>v</strong> containing <em>n</em> elements is defined as</p>
-<p>​																				$||\bold{v}||<em>{k}=(|v</em>{0}|^{k} + |v_{1}|^{k} + \cdots + |v_{n}|^{k})^{\frac{1}{k}}$</p>
+<p>​	More generally, the $l_{k}$ norm of a vector <strong>v</strong> containing <em>n</em> elements is defined as
+$$
+||{v}||<em>{k}=(|v</em>{0}|^{k} + |v_{1}|^{k} + \cdots + |v_{n}|^{k})^{\frac{1}{k}}
+$$</p>
 <p>​	$l_{0}$ = the number of elements in the vector</p>
 <p>​	$l_{\infty}$= the maximum absolute value in the vector.</p>
 <div class="details admonition Notice open">
