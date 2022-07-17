@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>ML Learning 3</title>
+    <link>http://example.org/posts/ml_note2/</link>
+    <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/ml_note2/</guid>
+    <description><![CDATA[<p>End to End project Start</p>]]></description>
+</item>
+<item>
     <title>C&#43;&#43; 字符指针</title>
     <link>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/</link>
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/ml_note/</guid>
     <description><![CDATA[Types of Machine Learning Systems Whether or not they are trained with human supervision supervised unsupervised semisupervised （半监督） Reinforcement Learning Whether or not they can learn incrementally on the fly online learning batch learning Whether they work by simply comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do instance-based model-based]]></description>
-</item>
-<item>
-    <title>ML Learning 2</title>
-    <link>http://example.org/posts/ml_note1/</link>
-    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/ml_note1/</guid>
-    <description><![CDATA[Main Challenges Insufficient Quantity of Training Data ​ The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of Data” published in 2009.10 It should be noted, however, that small- and medium- sized datasets are still very common, and it is not always easy or cheap to]]></description>
 </item>
 </channel>
 </rss>
