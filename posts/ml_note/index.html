@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-06T15:55:33+08:00" />
-<meta property="article:modified_time" content="2022-07-16T14:03:06+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-17T10:46:44+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 1"/>
@@ -25,7 +25,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note\/"
         },"genre": "posts","keywords": "Machine Learning","wordcount":  964 ,
-        "url": "http:\/\/example.org\/posts\/ml_note\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-16T14:03:06+08:00","license": "All Mine","publisher": {
+        "url": "http:\/\/example.org\/posts\/ml_note\/","datePublished": "2022-07-06T15:55:33+08:00","dateModified": "2022-07-17T10:46:44+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -125,28 +125,30 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#supervised-learning">Supervised Learning</a></li>
-    <li><a href="#unsupervised-learning">Unsupervised Learning</a>
+    <li><a href="#types-of-machine-learning-systems">Types of Machine Learning Systems</a></li>
+    <li><a href="#supervisedunsupervised-learning">Supervised/Unsupervised Learning</a>
       <ul>
-        <li><a href="#algorithms"><strong>Algorithms</strong></a></li>
-        <li><a href="#related-task-dimensionality-reduction"><strong>Related task: dimensionality reduction</strong></a></li>
+        <li><a href="#supervised-learning">Supervised Learning</a></li>
+        <li><a href="#unsupervised-learning">Unsupervised Learning</a></li>
+        <li><a href="#semisupervised-learning">Semisupervised learning</a></li>
+        <li><a href="#reinforcement-learning">Reinforcement Learning</a></li>
       </ul>
     </li>
-    <li><a href="#semisupervised-learning">Semisupervised learning</a></li>
-    <li><a href="#reinforcement-learning">Reinforcement Learning</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#batch-learning">Batch learning</a></li>
-    <li><a href="#online-learning">Online learning</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#instance-based-learning">Instance-Based learning</a></li>
-    <li><a href="#model-based-learning">Model-based learning</a></li>
+    <li><a href="#batch-and-online-learning">Batch and Online Learning</a>
+      <ul>
+        <li><a href="#batch-learning">Batch learning</a></li>
+        <li><a href="#online-learning">Online learning</a></li>
+      </ul>
+    </li>
+    <li><a href="#instance-based-versus-model-based-learning">Instance-Based Versus Model-Based Learning</a>
+      <ul>
+        <li><a href="#instance-based-learning">Instance-Based learning</a></li>
+        <li><a href="#model-based-learning">Model-based learning</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="types-of-machine-learning-systems">Types of Machine Learning Systems</h1>
+            </div><div class="content" id="content"><h2 id="types-of-machine-learning-systems">Types of Machine Learning Systems</h2>
 <ul>
 <li>
 <p>Whether or not they are trained with human supervision</p>
@@ -172,8 +174,8 @@
 </ul>
 </li>
 </ul>
-<h1 id="supervisedunsupervised-learning">Supervised/Unsupervised Learning</h1>
-<h2 id="supervised-learning">Supervised Learning</h2>
+<h2 id="supervisedunsupervised-learning">Supervised/Unsupervised Learning</h2>
+<h3 id="supervised-learning">Supervised Learning</h3>
 <p>​	<strong>data:</strong></p>
 <ul>
 <li>instance</li>
@@ -188,8 +190,8 @@
 <li>Decision Trees and Random Forests</li>
 <li>Neural networks</li>
 </ul>
-<h2 id="unsupervised-learning">Unsupervised Learning</h2>
-<h3 id="algorithms"><strong>Algorithms</strong></h3>
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+<h4 id="algorithms"><strong>Algorithms</strong></h4>
 <p>• Clustering
 — K-Means
 — DBSCAN
@@ -201,17 +203,17 @@
 — t-distributed Stochastic Neighbor Embedding (t-SNE)</p>
 <p>• Association rule learning
 — Apriori — Eclat</p>
-<h3 id="related-task-dimensionality-reduction"><strong>Related task: dimensionality reduction</strong></h3>
+<h4 id="related-task-dimensionality-reduction"><strong>Related task: dimensionality reduction</strong></h4>
 <p>It is often a good idea to try to reduce the dimension of your training data using a dimensionality reduction algorithm before you feed it to another Machine Learning algorithm (such as a super‐ vised learning algorithm). <strong>It will run much faster, the data will take up less disk and memory space, and in some cases it may also per‐ form better.</strong></p>
-<h2 id="semisupervised-learning">Semisupervised learning</h2>
+<h3 id="semisupervised-learning">Semisupervised learning</h3>
 <p>​	Some algorithms can deal with partially labeled training data, usually a lot of unla‐ beled data and a little bit of labeled data. This is called semisupervised learning.
 ​	Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). <strong>Now all the system needs is for you to tell it who these people are.</strong> Just one label per person,4 and it is able to name everyone in every photo, which is useful for searching photos.</p>
 <p>​	自动找出不同图片中一样的人，但需要人为输入人的名字。</p>
-<h2 id="reinforcement-learning">Reinforcement Learning</h2>
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
 <p>​	Reinforcement Learning is a very different beast.</p>
 <p>​	The learning system, called an agent in this context, can observe the environment, select and perform actions, and get rewards in return or penalties in the form of negative rewards. <strong>It must then learn by itself what is the best strategy, called a policy</strong>, to get the most reward over time. A policy defines what action the agent should choose when it is in a given situation.</p>
-<h1 id="batch-and-online-learning">Batch and Online Learning</h1>
-<h2 id="batch-learning">Batch learning</h2>
+<h2 id="batch-and-online-learning">Batch and Online Learning</h2>
+<h3 id="batch-learning">Batch learning</h3>
 <p>​	In batch learning, the system is <strong>incapable of learning incrementally</strong>: it must be trained using all the available data. This will generally take a lot of time and computing resources, so it is typically done offline.</p>
 <p>​	First the system is trained, and <strong>then it is launched into production and runs without learning anymore; it just applies what it has learned. This is called offline learning.</strong>
 ​	If you want a batch learning system to know about new data (such as a new type of spam), you need to train a new version of the system from scratch on the full dataset (not just the new data, but also the old data), then stop the old system and replace it with the new one.</p>
@@ -220,7 +222,7 @@
 <li>More time</li>
 <li>More compute resources</li>
 </ul>
-<h2 id="online-learning">Online learning</h2>
+<h3 id="online-learning">Online learning</h3>
 <p>​	In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or by small groups called mini-batches.</p>
 <p>Advantages:</p>
 <ul>
@@ -238,11 +240,11 @@
 <li>High rate: easy to forget old data, rapidly adapt to new data</li>
 <li>Low rate : learn slowly, less sensitive to noise in the new data o r to sequences of non representative data points(outliers)</li>
 </ul>
-<h1 id="instance-based-versus-model-based-learning">Instance-Based Versus Model-Based Learning</h1>
-<h2 id="instance-based-learning">Instance-Based learning</h2>
+<h2 id="instance-based-versus-model-based-learning">Instance-Based Versus Model-Based Learning</h2>
+<h3 id="instance-based-learning">Instance-Based learning</h3>
 <p>​	Instead of just flagging emails that are identical to known spam emails, your spam filter could be programmed to also flag emails that are very similar to known spam emails. This requires a measure of similarity between two emails. 			    	A (very basic) similarity measure between two emails could be to count the number of words they have in common. The system would flag an email as spam if it has many words in com‐ mon with a known spam email.
 ​	This is called instance-based learning: the system learns the examples by heart, then <strong>generalizes to new cases by comparing them to the learned examples (or a subset of them),  using a <!-- raw HTML omitted -->similarity measure<!-- raw HTML omitted -->.</strong></p>
-<h2 id="model-based-learning">Model-based learning</h2>
+<h3 id="model-based-learning">Model-based learning</h3>
 <p>​	Another way to generalize from a set of examples is to build a model of these exam‐ ples, then use that model to make predictions. This is called model-based learning.</p>
 <p>A simple linear model life_satisfaction = $\theta_{0} + \theta_{1}\times GDP _ per_capita$</p>
 <p>Two ways to measure performances:</p>
@@ -254,7 +256,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-07-16</span>
+                <span>Updated on 2022-07-17</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
