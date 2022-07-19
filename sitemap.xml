@@ -2,13 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/categories/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/machine-learning/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/ml_note2/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc><lastmod>2022-07-19T09:45:17&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/machine-learning/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/ml_note2/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc><lastmod>2022-07-19T13:51:33&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/c&#43;&#43;/</loc><lastmod>2022-07-06T17:17:42&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/</loc><lastmod>2022-07-06T17:17:42&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc><lastmod>2022-07-06T17:17:42&#43;08:00</lastmod></url><url>

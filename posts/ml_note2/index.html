@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-17T11:05:51+08:00" />
-<meta property="article:modified_time" content="2022-07-19T09:45:17+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-19T13:51:33+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 3"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note2\/"
-        },"genre": "posts","keywords": "Machine Learning","wordcount":  652 ,
-        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-19T09:45:17+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "Machine Learning","wordcount":  1702 ,
+        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-19T13:51:33+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,8 +114,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ML Learning 3</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;652 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/ml_note2/" class="leancloud_visitors" data-flag-title="ML Learning 3">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1702 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/ml_note2/" class="leancloud_visitors" data-flag-title="ML Learning 3">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -125,29 +125,21 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#performance-measure">Performance Measure</a>
+    <li>
       <ul>
-        <li><a href="#rsme-root-mean-square-error">RSME (Root Mean Square Error)</a></li>
-        <li><a href="#maemean-absolute-error--average-absolute-deviation">MAE(Mean Absolute Error / Average Absolute Deviation)</a></li>
+        <li><a href="#performance-measure">Performance Measure</a></li>
+        <li><a href="#create-test-set">Create Test Set</a></li>
+        <li><a href="#discover-and-visualize-the-data-to-gain-insights">Discover and Visualize the Data to Gain Insights</a></li>
+        <li><a href="#experimenting-with-attribute-combinations">Experimenting with Attribute Combinations</a></li>
+        <li><a href="#prepare-the-data-for-machine-learning-algorithms">Prepare the Data for Machine Learning Algorithms</a></li>
+        <li><a href="#handling-text-and-categorical-attributes">Handling Text and Categorical Attributes</a></li>
       </ul>
     </li>
-    <li><a href="#create-test-set">Create Test Set</a>
-      <ul>
-        <li><a href="#抽样">抽样</a></li>
-        <li><a href="#数据复原">数据复原</a></li>
-      </ul>
-    </li>
-    <li><a href="#discover-and-visualize-the-data-to-gain-insights">Discover and Visualize the Data to Gain Insights</a>
-      <ul>
-        <li><a href="#visualizing-geographical-data">Visualizing Geographical Data</a></li>
-      </ul>
-    </li>
-    <li><a href="#looking-for-correlations">Looking for Correlations</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>End to End project Start</p>
-<h2 id="performance-measure">Performance Measure</h2>
-<h3 id="rsme-root-mean-square-error">RSME (Root Mean Square Error)</h3>
+<h3 id="performance-measure">Performance Measure</h3>
+<h4 id="rsme-root-mean-square-error">RSME (Root Mean Square Error)</h4>
 <p>$$
 \sqrt{\frac{1}{m}\sum_{i=1}^{m}(h(\bold x^{(i)} - y^{(i)})^2}
 $$</p>
@@ -162,7 +154,7 @@ median income = 38372 \newline
 \end{pmatrix}
 $$</p>
 <p><code>h(x)</code>： h is your system’s prediction function, also called a hypothesis. When your system is given an instance’s feature vector x(i), it outputs a predicted value ŷ(i) = $h(x^{(i)})$ for that instance (ŷ is pronounced “y-hat”).</p>
-<h3 id="maemean-absolute-error--average-absolute-deviation">MAE(Mean Absolute Error / Average Absolute Deviation)</h3>
+<h4 id="maemean-absolute-error--average-absolute-deviation">MAE(Mean Absolute Error / Average Absolute Deviation)</h4>
 <p>$$
 \frac{1}{m}\sum_{i =1}^{m}|h(x^{(i)} - y^{(i)})|
 $$
@@ -182,15 +174,15 @@ $$</p>
             <div class="admonition-content">​	RMSE is more sensitive to outliers than the MAE. But when outliers are exponentially rare (like in a bell-shaped curve), the RMSE performs very well and is generally preferred.</div>
         </div>
     </div>
-<h2 id="create-test-set">Create Test Set</h2>
-<h3 id="抽样">抽样</h3>
-<h4 id="随机抽样">随机抽样</h4>
+<h3 id="create-test-set">Create Test Set</h3>
+<h4 id="抽样">抽样</h4>
+<h5 id="随机抽样">随机抽样</h5>
 <p>从数据集中选取随机20%作为测试集</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">train_set</span><span class="p">,</span> <span class="n">test_set</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </span></span></code></pre></div><p><code>random_state</code>的作用是设置随机数种子</p>
-<h4 id="分层抽样">分层抽样</h4>
+<h5 id="分层抽样">分层抽样</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedShuffleSplit</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## 分类</span>
 </span></span><span class="line"><span class="cl"><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;income_cat&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;median_income&#34;</span><span class="p">],</span>
@@ -201,7 +193,7 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">split</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">housing</span><span class="p">,</span> <span class="n">housing</span><span class="p">[</span><span class="s2">&#34;income_cat&#34;</span><span class="p">]):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">strat_train_set</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train_index</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">strat_test_set</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
-</span></span></code></pre></div><h3 id="数据复原">数据复原</h3>
+</span></span></code></pre></div><h4 id="数据复原">数据复原</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">set_</span> <span class="ow">in</span> <span class="p">(</span><span class="n">strat_train_set</span><span class="p">,</span> <span class="n">strat_test_set</span><span class="p">):</span> <span class="n">set_</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;income_cat&#34;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span></code></pre></div><p><code>pd.DataFrame.drop()</code>: 删除某一行或某一列</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
@@ -219,20 +211,99 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="o">--</span> <span class="n">level</span> <span class="n">针对多重索引</span> <span class="n">指定级别</span>
 </span></span><span class="line"><span class="cl"><span class="o">--</span> <span class="n">index</span> <span class="n">指定索引</span>
 </span></span><span class="line"><span class="cl"><span class="o">--</span> <span class="n">columns</span> <span class="n">指定列名</span>
-</span></span></code></pre></div><h2 id="discover-and-visualize-the-data-to-gain-insights">Discover and Visualize the Data to Gain Insights</h2>
-<h3 id="visualizing-geographical-data">Visualizing Geographical Data</h3>
+</span></span></code></pre></div><h3 id="discover-and-visualize-the-data-to-gain-insights">Discover and Visualize the Data to Gain Insights</h3>
+<h4 id="visualizing-geographical-data">Visualizing Geographical Data</h4>
 <p>小技巧：在使用散点图的时候，把alpha值设置为1可以更好地看出密集程度</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&#34;scatter&#34;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&#34;longitude&#34;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&#34;latitude&#34;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-</span></span></code></pre></div><p>用cmap结合颜色进一步美化</p>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>用cmap结合颜色进一步美化</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="n">housing</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&#34;scatter&#34;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&#34;longitude&#34;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&#34;latitude&#34;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="n">s</span><span class="o">=</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;population&#34;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&#34;population&#34;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">=</span><span class="s2">&#34;median_house_value&#34;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&#34;jet&#34;</span><span class="p">),</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </span></span></code></pre></div><p>​	The radius of each circle represents the district’s population <strong>(option s)</strong>, and the color represents the price <strong>(option c)</strong>. We will use a predefined color map <strong>(option cmap) called jet</strong>, which ranges from blue (low values) to red (high prices)</p>
-<h2 id="looking-for-correlations">Looking for Correlations</h2>
-<p>Standard correlation coefficient (Pearson&rsquo;s r, 皮尔逊相关系数)</p>
-<!-- raw HTML omitted --></div><div class="post-footer" id="post-footer">
+<h4 id="looking-for-correlations">Looking for Correlations</h4>
+<p><strong>1.Standard correlation coefficient (Pearson&rsquo;s r, 皮尔逊相关系数)</strong></p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>warning!<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>​	The correlation coefficient only measures linear correlations (“if x goes up, then y generally goes up/down”). It may completely miss out on nonlinear relationships (e.g., “if x is close to zero then y generally goes up”).</p>
+<p>​	Besides, the correlation coefficient has nothing to do with the slope. For example, your height in inches has a correla‐ tion coefficient of 1 with your height in feet or in nanometers.</p>
+</div>
+        </div>
+    </div>
+<p><strong>2.use Pandas’ <code>scatter_matrix function</code></strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">scatter_matrix</span>
+</span></span><span class="line"><span class="cl">    <span class="n">attributes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;median_house_value&#34;</span><span class="p">,</span> <span class="s2">&#34;median_income&#34;</span><span class="p">,</span> <span class="s2">&#34;total_rooms&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="s2">&#34;housing_median_age&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scatter_matrix</span><span class="p">(</span><span class="n">housing</span><span class="p">[</span><span class="n">attributes</span><span class="p">],</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</span></span></code></pre></div><p>This function plots every numerical attribute against every other numerical attribute.  If there are now 11 numerical attributes, you would get 112 = 121 plots.</p>
+<h3 id="experimenting-with-attribute-combinations">Experimenting with Attribute Combinations</h3>
+<p>​	Before feeding the data to a Machine Learning algorithm, and you found interesting correlations between attributes, in particular with the target attribute. You also noticed that some attributes have a tail-heavy distribution, so you may want to trans‐ form them (e.g., by computing their logarithm).</p>
+<p>​	For example, the total number of rooms in a district is not very useful if you don’t know how many households there are. What you really want is the number of rooms per household. Similarly, the total number of bedrooms by itself is not very useful: you probably want to compare it to the number of rooms. And the population per household also seems like an interesting attribute combination to look at. Let’s create these new attributes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;rooms_per_household&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[</span><span class="s2">&#34;total_rooms&#34;</span><span class="p">]</span><span class="o">/</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;households&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;bedrooms_per_room&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[</span><span class="s2">&#34;total_bedrooms&#34;</span><span class="p">]</span><span class="o">/</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;total_rooms&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;population_per_household&#34;</span><span class="p">]</span><span class="o">=</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;population&#34;</span><span class="p">]</span><span class="o">/</span><span class="n">housing</span><span class="p">[</span><span class="s2">&#34;households&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><h3 id="prepare-the-data-for-machine-learning-algorithms">Prepare the Data for Machine Learning Algorithms</h3>
+<p>​	First let’s revert to a clean training set (by copying strat_train_set once again), and let’s separate the predictors and the labels <strong>since we don’t necessarily want to apply the same transformations to the predictors and the target values</strong> (note that drop() creates a copy of the data and does not affect strat_train_set):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;median_house_value&#34;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">housing_labels</span> <span class="o">=</span> <span class="n">strat_train_set</span><span class="p">[</span><span class="s2">&#34;median_house_value&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span></code></pre></div><h4 id="data-cleaning">Data Cleaning</h4>
+<p>​	Most Machine Learning algorithms <strong>cannot work with missing features</strong>, so let’s create a few functions to take care of them. You noticed earlier that the total_bedrooms attribute has some missing values, so let’s fix this. You have three options:
+​	• Get rid of the corresponding districts.
+​	• Get rid of the whole attribute.
+​	• Set the values to some value (zero, the mean, the median, etc.).
+You can accomplish these easily using DataFrame’s <code>dropna()</code>, <code>drop()</code>, and <code>fillna()</code> methods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;total_bedrooms&#34;</span><span class="p">])</span> 	<span class="c1"># option 1 </span>
+</span></span><span class="line"><span class="cl"><span class="n">housing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;total_bedrooms&#34;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 			<span class="c1"># option 2 </span>
+</span></span><span class="line"><span class="cl"><span class="n">median</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[</span><span class="s2">&#34;total_bedrooms&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="c1"># option 3 housing[&#34;total_bedrooms&#34;].fillna(median, inplace=True)</span>
+</span></span></code></pre></div><p>Also, we could use Scikit-Learn. <code>SimpleImputer</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span> 
+</span></span><span class="line"><span class="cl"><span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&#34;median&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>​	Since the median can <strong>only be computed on numerical attributes</strong>, we need to create a copy of the data without the text attribute ocean_proximity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing_num</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;ocean_proximity&#34;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><p>​	Then use the <code>fit()</code> method:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</span></span></code></pre></div><p>​	The imputer has simply computed the median of each attribute and stored the result in its <code>statistics_</code> instance variable. Only the total_bedrooms attribute had missing values, but we cannot be sure that there won’t be any missing values in new data after the system goes live, <strong>so it is safer to apply the imputer to all the numerical attributes:</strong></p>
+<p>​	Now you can use this “trained” imputer to transform the training set by replacing missing values by the learned medians:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">X</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
+</span></span></code></pre></div><p>​	The result is a <strong>plain NumPy array</strong> containing the transformed features. If you want to put it back into a Pandas DataFrame, it’s simple:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing_tr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">housing_num</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="handling-text-and-categorical-attributes">Handling Text and Categorical Attributes</h3>
+<p>​	Earlier we left out the categorical attribute ocean_proximity because it is a text attribute so we cannot compute its median.</p>
+<p>​	Most Machine Learning algorithms prefer to work with numbers anyway, so let’s con‐ vert these categories from text to numbers. For this, we can use <strong>Scikit-Learn’s <code>OrdinalEncoder</code></strong> class:（数字化文字类别）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">housing_cat</span> <span class="o">=</span> <span class="n">housing</span><span class="p">[[</span><span class="s2">&#34;ocean_proximity&#34;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">housing_cat_encoded</span> <span class="o">=</span> <span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">housing_cat</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">housing_cat_encoded</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">0.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">4.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">1.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">0.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">1.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">0.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">1.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">0.</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="mf">0.</span><span class="p">]])</span>
+</span></span></code></pre></div><p>​	You can get the list of categories using the <code>categories_</code> instance variable. <strong>It is a list containing a 1D array of categories for each categorical attribute</strong> (in this case, a list containing a single array since there is just one categorical attribute):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">categories_</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;&lt;1H OCEAN&#39;</span><span class="p">,</span> <span class="s1">&#39;INLAND&#39;</span><span class="p">,</span> <span class="s1">&#39;ISLAND&#39;</span><span class="p">,</span> <span class="s1">&#39;NEAR BAY&#39;</span><span class="p">,</span> <span class="s1">&#39;NEAR OCEAN&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)]</span>
+</span></span></code></pre></div><p>​	一个要解决的问题也随之而来：ML algorithms will assume that two nearby values are more similar than two distant values. 解决办法：one-hot code 具体可参考这个，https://www.cnblogs.com/lianyingteng/p/7755545.html</p>
+<p>​	To fix this issue, a common solution is to create one binary attribute per category: one attribute equal to 1 when the category is “&lt;1H OCEAN” (and 0 otherwise), another attribute equal to 1 when the category is “INLAND” (and 0 otherwise), and so on.</p>
+<p>​	<strong>This is called one-hot encoding, because only one attribute will be equal to 1 (hot), while the others will be 0 (cold).</strong> The new attributes are sometimes called <em>dummy</em> attributes. Scikit-Learn provides a OneHotEn coder class to convert categorical values into one-hot vectors:</p>
+<p>​</p>
+<pre tabindex="0"><code></code></pre></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
