@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>ML Learning 4 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="ML Learning 4" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="模型选择与调整" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-17T11:05:51+08:00" />
-<meta property="article:modified_time" content="2022-07-19T17:14:00+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-19T19:21:23+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 4"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="模型选择与调整"/>
 <meta name="application-name" content="Husky&#39;s World">
 <meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/ml_note3/" /><link rel="prev" href="http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/" /><link rel="next" href="http://example.org/posts/ml_note2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note3\/"
-        },"genre": "posts","keywords": "Machine Learning","wordcount":  46 ,
-        "url": "http:\/\/example.org\/posts\/ml_note3\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-19T17:14:00+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "Machine Learning","wordcount":  962 ,
+        "url": "http:\/\/example.org\/posts\/ml_note3\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-19T19:21:23+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,8 +114,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ML Learning 4</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;46 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/ml_note3/" class="leancloud_visitors" data-flag-title="ML Learning 4">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;962 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/ml_note3/" class="leancloud_visitors" data-flag-title="ML Learning 4">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -128,11 +128,13 @@
     <li>
       <ul>
         <li><a href="#select-and-train-a-model">Select and Train a Model</a></li>
+        <li><a href="#fine-tune-your-model">Fine-Tune Your Model</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h3 id="select-and-train-a-model">Select and Train a Model</h3>
+            </div><div class="content" id="content"><p>模型选择与调整</p>
+<h3 id="select-and-train-a-model">Select and Train a Model</h3>
 <p>Already Done:</p>
 <ul>
 <li>framed the problem</li>
@@ -140,7 +142,109 @@
 <li>sampled a training set and a test set</li>
 <li>wrote transformation pipelines to clean up and prepare your data for Machine Learning algorithms automatically.</li>
 </ul>
-<h4 id="training-and-evaluating-on-the-training-set">Training and Evaluating on the Training Set</h4></div><div class="post-footer" id="post-footer">
+<h4 id="training-and-evaluating-on-the-training-set">Training and Evaluating on the Training Set</h4>
+<p>测试线性回归模型</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">lin_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">some_data</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">some_labels</span> <span class="o">=</span> <span class="n">housing_labels</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">some_data_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Predictions:&#34;</span><span class="p">,</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">some_data_prepared</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">Predictions</span><span class="p">:</span> <span class="p">[</span> <span class="mf">210644.6045</span> <span class="mf">317768.8069</span> <span class="mf">210956.4333</span> <span class="mf">59218.9888</span> <span class="mf">189747.5584</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Labels:&#34;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">some_labels</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">Labels</span><span class="p">:</span> <span class="p">[</span><span class="mf">286600.0</span><span class="p">,</span> <span class="mf">340600.0</span><span class="p">,</span> <span class="mf">196900.0</span><span class="p">,</span> <span class="mf">46300.0</span><span class="p">,</span> <span class="mf">254500.0</span><span class="p">]</span>
+</span></span></code></pre></div><p>Let’s measure this regression model’s RMSE on the whole train‐ ing set using Scikit-Learn’s mean_squared_error function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lin_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lin_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">lin_mse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lin_rmse</span>
+</span></span><span class="line"><span class="cl"><span class="mf">68628.19819848922</span>
+</span></span></code></pre></div><p>这个偏差显然太大，主要原因是underfitting。主要可以从下面三个角度优化：</p>
+<ul>
+<li>选择更强大的模型</li>
+<li>给予算法更多特征值</li>
+<li>减少加在模型上的束缚</li>
+</ul>
+<p>如果用<code>DecisionTreeRegressor</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span> <span class="n">tree_reg</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tree_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">housing_predictions</span> <span class="o">=</span> <span class="n">tree_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tree_mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">housing_labels</span><span class="p">,</span> <span class="n">housing_predictions</span><span class="p">)</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">tree_rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">tree_mse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tree_rmse</span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.0</span>
+</span></span></code></pre></div><p>偏差为0，但很显然有过拟合的嫌疑。As we saw earlier, <strong>you don’t want to touch the test set until you are ready to launch a model you are confident about</strong>, so you need to use part of the training set for training, and part for model validation.</p>
+<h4 id="better-evaluation-using-cross-validation">Better Evaluation Using Cross-Validation</h4>
+<p>use Scikit-Learn’s <code>K-fold cross-validation feature</code>. The following code randomly splits the training set into 10 distinct subsets called folds, then it trains and evaluates the Decision Tree model 10 times, picking a different fold for evaluation every time and training on the other 9 folds. <strong>The result is an array containing the 10 evaluation scores</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">tree_reg</span><span class="p">,</span> <span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                             <span class="n">scoring</span><span class="o">=</span><span class="s2">&#34;neg_mean_squared_error&#34;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tree_rmse_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">scores</span><span class="p">)</span>
+</span></span></code></pre></div><div class="details admonition Warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Warning<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Scikit-Learn’s <code>cross-validation</code> features expect a utility function <strong>(greater is better)</strong> rather than a cost function <strong>(lower is better)</strong>, so the scoring function is actually the opposite of the MSE <strong>(i.e., a neg‐ ative value)</strong>, which is why the preceding code computes -scores before calculating the square root.</div>
+        </div>
+    </div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">display_scores</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Scores:&#34;</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Mean:&#34;</span><span class="p">,</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Standard deviation:&#34;</span><span class="p">,</span> <span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">display_scores</span><span class="p">(</span><span class="n">tree_rmse_scores</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Scores</span><span class="p">:</span> <span class="p">[</span><span class="mf">70194.33680785</span> <span class="mf">66855.16363941</span> <span class="mf">72432.58244769</span> <span class="mf">70758.73896782</span>
+</span></span><span class="line"><span class="cl">     <span class="mf">71115.88230639</span> <span class="mf">75585.14172901</span> <span class="mf">70262.86139133</span> <span class="mf">70273.6325285</span>
+</span></span><span class="line"><span class="cl">     <span class="mf">75366.87952553</span> <span class="mf">71231.65726027</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Mean</span><span class="p">:</span> <span class="mf">71407.68766037929</span>
+</span></span><span class="line"><span class="cl"><span class="n">Standard</span> <span class="n">deviation</span><span class="p">:</span> <span class="mf">2439.4345041191004</span>
+</span></span></code></pre></div><p>Notice that cross-validation allows you to get not only an estimate of the performance of your model, <strong>but also a measure of how precise this estimate is</strong> (i.e., its standard deviation). The Decision Tree has a score of approximately 71,407, generally ±2,439. You would not have this information if you just used one validation set. <strong>But cross-validation comes at the cost of training the model several times, so it is not always possible.</strong></p>
+<p>最后一个测试模型：<code>RandomForestRegressor</code></p>
+<p>Random Forests work by training many Decision Trees on random subsets of the features, then averaging out their predictions. Building a model on top of many other models is called <code>Ensemble Learning</code>, and it is often a great way to push ML algo‐ rithms even further.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>You should save every model you experiment with, so you can come back easily to any model you want. Make sure you save both the hyperparameters and the trained parameters, as well as the cross-validation scores and perhaps the actual predictions as well. This will allow you to easily compare scores across model types, and compare the types of errors they make. You can easily save Scikit-Learn models by using Python’s <code>pickle</code> module, or using <code>sklearn.externals.joblib</code>, which is more efficient at <strong>serializing large NumPy arrays:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+</span></span><span class="line"><span class="cl"><span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_model</span><span class="p">,</span> <span class="s2">&#34;my_model.pkl&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#and later...</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_model_loaded</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&#34;my_model.pkl&#34;</span><span class="p">)</span>
+</span></span></code></pre></div></div>
+        </div>
+    </div>
+<h3 id="fine-tune-your-model">Fine-Tune Your Model</h3>
+<p>Let’s assume that you now have a shortlist of promising models. You now need to fine-tune them. Let’s look at a few ways you can do that.</p>
+<h4 id="grid-search">Grid Search</h4>
+<p>One way to do that would be to fiddle with the hyperparameters manually, until you find a great combination of hyperparameter values. 但这样很耗时间，而且枯燥。</p>
+<p>Instead you should get Scikit-Learn’s <code>GridSearchCV</code> to search for you. All you need to do is tell it which hyperparameters you want it to experiment with, and what values to try out, and it will evaluate all the possible combinations of hyperparameter values, using cross-validation.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+</span></span><span class="line"><span class="cl">    <span class="n">param_grid</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;bootstrap&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">],</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="n">forest_reg</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">forest_reg</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                               <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                               <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_prepared</span><span class="p">,</span> <span class="n">housing_labels</span><span class="p">)</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
