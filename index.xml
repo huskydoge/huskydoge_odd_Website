@@ -4,9 +4,25 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 18 Jul 2022 22:45:07 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Pandas</title>
+    <link>http://example.org/posts/pandas/</link>
+    <pubDate>Mon, 18 Jul 2022 22:45:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/pandas/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Scikit Learn</title>
+    <link>http://example.org/posts/scikit-learn/</link>
+    <pubDate>Mon, 18 Jul 2022 22:19:19 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/scikit-learn/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>ML Learning 3</title>
     <link>http://example.org/posts/ml_note2/</link>
     <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
@@ -69,22 +85,6 @@
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/english/</guid>
     <description><![CDATA[怎么翻译？ 潜在的恶果 insidious 潜在的，潜伏的但暗中为害的 the insidious effects of polluted water supplies 供水系统污染的潜在恶果 沉思 mull over 反复思考 I need some time to mull it over before making a decision.]]></description>
-</item>
-<item>
-    <title>Hello</title>
-    <link>http://example.org/posts/hello/</link>
-    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/hello/</guid>
-    <description><![CDATA[<p><strong>&ldquo;My First Blog&rdquo;</strong></p>]]></description>
-</item>
-<item>
-    <title>ML Learning 1</title>
-    <link>http://example.org/posts/ml_note/</link>
-    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/ml_note/</guid>
-    <description><![CDATA[Types of Machine Learning Systems Whether or not they are trained with human supervision supervised unsupervised semisupervised （半监督） Reinforcement Learning Whether or not they can learn incrementally on the fly online learning batch learning Whether they work by simply comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do instance-based model-based]]></description>
 </item>
 </channel>
 </rss>
