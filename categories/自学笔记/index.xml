@@ -26,7 +26,15 @@
     <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/ml_note2/</guid>
-    <description><![CDATA[<p>End to End project Start</p>]]></description>
+    <description><![CDATA[<p>End to End project Start&ndash; 数据处理部分</p>]]></description>
+</item>
+<item>
+    <title>ML Learning 4</title>
+    <link>http://example.org/posts/ml_note3/</link>
+    <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/ml_note3/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
     <title>ML Learning 1</title>
