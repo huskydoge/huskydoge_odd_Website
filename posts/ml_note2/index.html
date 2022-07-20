@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-17T11:05:51+08:00" />
-<meta property="article:modified_time" content="2022-07-19T17:14:00+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-20T20:31:23+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 3"/>
@@ -25,7 +25,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note2\/"
         },"genre": "posts","keywords": "Machine Learning","wordcount":  2881 ,
-        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-19T17:14:00+08:00","license": "All Mine","publisher": {
+        "url": "http:\/\/example.org\/posts\/ml_note2\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-20T20:31:23+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -271,7 +271,7 @@ $$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">housing_num</span> <span class="o">=</span> <span class="n">housing</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&#34;ocean_proximity&#34;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </span></span></code></pre></div><p>​		Then use the <code>fit()</code> method:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
-</span></span></code></pre></div><p>​		The imputer has simply computed the median of each attribute and stored the result in its <code>statistics_</code> instance variable. Only the total_bedrooms attribute had missing values, but we cannot be sure that there won’t be any missing values in new data after the system goes live, <strong>so it is safer to apply the imputer to all the numerical attributes:</strong></p>
+</span></span></code></pre></div><p>​		<strong>The imputer has simply computed the median of each attribute and stored the result in its <code>statistics_</code> instance variable.</strong> Only the total_bedrooms attribute had missing values, but we cannot be sure that there won’t be any missing values in new data after the system goes live, <strong>so it is safer to apply the imputer to all the numerical attributes:</strong></p>
 <p>​		Now you can use this “trained” imputer to transform the training set by replacing missing values by the learned medians:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">X</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">housing_num</span><span class="p">)</span>
 </span></span></code></pre></div><p>​		The result is a <strong>plain NumPy array</strong> containing the transformed features. If you want to put it back into a Pandas DataFrame, it’s simple:</p>
@@ -376,7 +376,7 @@ $$</p>
             <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Warning<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">​		As with all the transformations, it is important to fit the scalers to the training data only, not to the full dataset (including the test set). Only then can you use them to transform the training set and the test set (and new data).</div>
+            <div class="admonition-content">​		As with all the transformations, <strong>it is important to fit the scalers to the training data only</strong>, not to the full dataset (including the test set). Only then can you use them to transform the training set and the test set (and new data).</div>
         </div>
     </div>
 <h3 id="transformation-pipelines">Transformation Pipelines</h3>
@@ -415,7 +415,7 @@ $$</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-07-19</span>
+                <span>Updated on 2022-07-20</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
