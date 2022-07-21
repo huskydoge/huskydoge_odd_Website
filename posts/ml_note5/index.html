@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/ml_note5/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-17T11:05:51+08:00" />
-<meta property="article:modified_time" content="2022-07-21T14:29:25+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-07-21T14:57:06+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ML Learning 6"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ml_note5\/"
-        },"genre": "posts","keywords": "Machine Learning","wordcount":  440 ,
-        "url": "http:\/\/example.org\/posts\/ml_note5\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-21T14:29:25+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "Machine Learning","wordcount":  754 ,
+        "url": "http:\/\/example.org\/posts\/ml_note5\/","datePublished": "2022-07-17T11:05:51+08:00","dateModified": "2022-07-21T14:57:06+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,8 +114,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ML Learning 6</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;440 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/ml_note5/" class="leancloud_visitors" data-flag-title="ML Learning 6">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-17">2022-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;754 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/ml_note5/" class="leancloud_visitors" data-flag-title="ML Learning 6">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -135,7 +135,7 @@
 </nav></div>
             </div><div class="content" id="content"><p>处理 MINIST（手写数字图像） 数据集</p>
 <h3 id="training-a-binary-classifier">Training a Binary Classifier</h3>
-<p>A good place to start is with a <code>Stochastic Gradient Descent</code> (SGD) classifier, using Scikit-Learn’s <code>SGDClassifier</code> class. This classifier has the advantage of being capable of handling very large datasets efficiently. This is in part because SGD deals with training instances independently, one at a time (which also makes SGD well suited for online learning), as we will see later. Let’s create an SGDClassifier and train it on the whole training set:</p>
+<p>A good place to start is with a <code>Stochastic Gradient Descent</code> (SGD, 随机梯度下降) classifier, using Scikit-Learn’s <code>SGDClassifier</code> class. This classifier has the advantage of being capable of handling very large datasets efficiently. This is in part because SGD deals with training instances independently, one at a time (which also makes SGD well suited for online learning), as we will see later. Let’s create an SGDClassifier and train it on the whole training set:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDClassifier</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">sgd_clf</span> <span class="o">=</span> <span class="n">SGDClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span> <span class="c1"># 如果想要重复利用结果，随机状态不要忘了设置！</span>
@@ -162,12 +162,38 @@
 </span></span><span class="line"><span class="cl">       <span class="p">[</span> <span class="mi">1325</span><span class="p">,</span>  <span class="mi">4096</span><span class="p">]])</span>
 </span></span></code></pre></div><p>$$
 \begin{matrix}
-true_negative &amp; false_positive \
-false_negative&amp; true_positive \
+true-negative &amp; false-positive \\
+false-negative&amp; true-positive \\
 \end{matrix}
 $$</p>
 <p>true negative: 真阴</p>
-<p>true positive:  真阳</p></div><div class="post-footer" id="post-footer">
+<p>true positive:  真阳</p>
+<h4 id="precision-and-recall">Precision and Recall</h4>
+<p><code>Precision of the classifier</code>:
+$$
+precision=\frac{TP}{TP+FP}
+$$
+<code>recall(sensitivity, or true postitive rate TPR)</code>:
+$$
+recall = \frac{TP}{TP+FN}
+$$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_train_5</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span> <span class="c1"># == 4096 / (4096 + 1522) </span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.7290850836596654</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_train_5</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span> <span class="c1"># == 4096 / (4096 + 1325) </span>
+</span></span><span class="line"><span class="cl"><span class="mf">0.7555801512636044</span>
+</span></span></code></pre></div><p>It is often convenient to combine precision and recall into a single metric called the <code>F1 score</code>, in particular if you need a simple way to compare two classifiers.</p>
+<p><code>F1 score</code> is the harmonic mean of precision and recall:
+$$
+F_1=\frac{2}{\frac{1}{precision}+\frac{1}{recall}}
+$$
+To compute the F1 score, simply call the <code>f1_score()</code> function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_train_5</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span> <span class="mf">0.7420962043663375</span>
+</span></span></code></pre></div><p>The <code>F1 score</code> favors classifiers that have similar precision and recall. This is not always what you want: in some contexts you mostly care about precision, and in other contexts you really care about recall.</p>
+<p>For example, if you trained a classifier to detect videos that are safe for kids, you would probably prefer a classifier that rejects many good videos (low recall) but keeps only safe ones (high precision), rather than a classifier that has a much higher recall but lets a few really bad videos show up in your product (in such cases, you may even want to add a human pipeline to check the classifier’s video selection).</p>
+<p>On the other hand, suppose you train a classifier to detect shoplifters on surveillance images: it is probably fine if your classifier has only 30% precision as long as it has 99% recall (sure, the security guards will get a few false alerts, but almost all shoplifters will get caught).</p>
+<p>Unfortunately, you can’t have it both ways: increasing precision reduces recall, and vice versa. <strong>This is called the precision/recall tradeoff.</strong></p>
+<p>Precision/Recall Tradeoff</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
