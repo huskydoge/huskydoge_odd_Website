@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>library - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/library/</link>
+        <description>library - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/library/" rel="self" type="application/rss+xml" /><item>
+    <title>NumPy</title>
+    <link>http://example.org/posts/numpy/</link>
+    <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/numpy/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Pandas</title>
+    <link>http://example.org/posts/pandas/</link>
+    <pubDate>Mon, 18 Jul 2022 22:45:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/pandas/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Scikit Learn</title>
+    <link>http://example.org/posts/scikit-learn/</link>
+    <pubDate>Mon, 18 Jul 2022 22:19:19 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/scikit-learn/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

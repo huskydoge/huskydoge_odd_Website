@@ -4,10 +4,26 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 18 Jul 2022 22:45:07 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>library</title>
+    <link>http://example.org/tags/library/</link>
+    <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/library/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>python</title>
+    <link>http://example.org/tags/python/</link>
+    <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Machine Learning</title>
     <link>http://example.org/tags/machine-learning/</link>
-    <pubDate>Mon, 18 Jul 2022 22:45:07 &#43;0800</pubDate>
+    <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/machine-learning/</guid>
     <description><![CDATA[]]></description>
@@ -66,14 +82,6 @@
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/tools/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>English</title>
-    <link>http://example.org/tags/english/</link>
-    <pubDate>Wed, 06 Jul 2022 15:55:33 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/english/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
