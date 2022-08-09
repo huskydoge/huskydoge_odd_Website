@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>暑期生活</title>
+    <link>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</link>
+    <pubDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</guid>
+    <description><![CDATA[<p>大一下暑假</p>]]></description>
+</item>
+<item>
     <title>NumPy</title>
     <link>http://example.org/posts/numpy/</link>
     <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
     <description><![CDATA[c++字符/字符串输入函数： ​ 注：程序运行后键盘输入会首先存储到输入缓冲区中，遇到结束符时终止输入（一般为回车）。 cin &gt;&gt; s cin从输入缓冲区中]]></description>
-</item>
-<item>
-    <title>Git</title>
-    <link>http://example.org/posts/git/</link>
-    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/git/</guid>
-    <description><![CDATA[git init: 在当前目录下生成一个 git 仓库 git init dir_name: 使用指定目录作为Git仓库 设置提交代码时的用户信息： $ git config --global user.name &#34;runoob&#34; $ git config --global user.email test@runoob.com 基本操作 git add 添加文件到暂存区]]></description>
 </item>
 </channel>
 </rss>

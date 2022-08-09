@@ -2,11 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/categories/</loc><lastmod>2022-07-21T14:57:06&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2022-07-21T14:57:06&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/%E6%97%A5%E8%AE%B0/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/library/</loc><lastmod>2022-07-21T14:29:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/numpy/</loc><lastmod>2022-07-21T14:29:25&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2022-07-21T14:57:06&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/python/</loc><lastmod>2022-07-21T14:29:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/</loc><lastmod>2022-07-21T14:57:06&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc><lastmod>2022-07-21T14:57:06&#43;08:00</lastmod></url><url>
