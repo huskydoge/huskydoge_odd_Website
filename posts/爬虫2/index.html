@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>爬虫(二)HTTP库 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="爬虫(二)HTTP库" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E7%88%AC%E8%99%AB2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-22T13:24:57+08:00" />
+<meta property="article:modified_time" content="2022-08-22T13:24:57+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="爬虫(二)HTTP库"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E7%88%AC%E8%99%AB2/" /><link rel="prev" href="http://example.org/posts/%E7%88%AC%E8%99%AB1/" /><link rel="next" href="http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "爬虫(二)HTTP库",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB2\/"
+        },"genre": "posts","keywords": "爬虫, python","wordcount":  2078 ,
+        "url": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB2\/","datePublished": "2022-08-22T13:24:57+08:00","dateModified": "2022-08-22T13:24:57+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HuskyDoge"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="LazyDog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="LazyDog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">爬虫(二)HTTP库</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://foofish.net/http-requests.html" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-22">2022-08-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2078 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E7%88%AC%E8%99%AB2/" class="leancloud_visitors" data-flag-title="爬虫(二)HTTP库">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#发送请求">发送请求</a></li>
+        <li><a href="#相应内容">相应内容</a></li>
+        <li><a href="#查询参数">查询参数</a></li>
+        <li><a href="#请求首部">请求首部</a></li>
+        <li><a href="#请求体">请求体</a></li>
+        <li><a href="#响应内容">响应内容</a></li>
+        <li><a href="#代理设置">代理设置</a></li>
+        <li><a href="#超时设置">超时设置</a></li>
+        <li><a href="#session">Session</a></li>
+        <li><a href="#项目实战">项目实战</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>urllib、urllib2、urllib3、httplib、httplib2 都是和 HTTP 相关的 Python 模块，看名字就觉得很反人类，更糟糕的是这些模块在 Python2 与 Python3 中有很大的差异，如果业务代码要同时兼容 2 和 3，写起来会让人崩溃。</p>
+<p>好在，还有一个非常惊艳的 HTTP 库叫 <strong>requests</strong>，它是 GitHUb 关注数最多的 Python 项目之一，requests 的作者是 <em>Kenneth Reitz</em> 大神。</p>
+<p>requests 实现了 HTTP 协议中绝大部分功能，它提供的功能包括 Keep-Alive、连接池、Cookie持久化、内容自动解压、HTTP代理、SSL认证、连接超时、Session等很多特性，最重要的是它同时兼容 python2 和 python3。requests 的安装可以直接使用 pip 方法：pip install requests</p>
+<h3 id="发送请求">发送请求</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;https://foofish.net&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="相应内容">相应内容</h3>
+<p>请求返回的值是一个Response 对象，Response 对象是对 HTTP 协议中服务端返回给浏览器的响应数据的封装，响应的中的主要元素包括: <code>状态码</code>、<code>原因短语</code>、<code>响应首部</code>、<code>响应体</code>等等，这些属性都封装在Response 对象中。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 状态码</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+</span></span><span class="line"><span class="cl"><span class="mi">200</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 原因短语</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="o">.</span><span class="n">reason</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;OK&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 响应首部</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="n">gzip</span>
+</span></span><span class="line"><span class="cl"><span class="n">Server</span><span class="p">:</span><span class="n">nginx</span><span class="o">/</span><span class="mf">1.10.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span><span class="p">:</span><span class="n">Thu</span><span class="p">,</span> <span class="mi">06</span> <span class="n">Apr</span> <span class="mi">2017</span> <span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">01</span> <span class="n">GMT</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 响应内容</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;&lt;html&gt;&lt;body&gt;此处省略一万字...&lt;/body&gt;&lt;/html&gt;</span>
+</span></span></code></pre></div><p>requests 除了支持 GET 请求外，还支持 HTTP 规范中的其它所有方法，包括 POST、PUT、DELTET、HEADT、OPTIONS方法。</p>
+<h3 id="查询参数">查询参数</h3>
+<p>很多URL都带有很长一串参数，我们称这些参数为URL的查询参数，用&quot;?&ldquo;附加在URL链接后面，多个参数之间用&rdquo;&amp;&ldquo;隔开，比如：http://fav.foofish.net/?p=4&amp;s=20 ，现在你可以用字典来构建查询参数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;p&#34;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&#34;s&#34;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://fav.foofish.net&#34;</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;http://fav.foofish.net/?p=4&amp;s=2&#39;</span>
+</span></span></code></pre></div><h3 id="请求首部">请求首部</h3>
+<p>requests 可以很简单地指定请求首部字段 <code>Headers</code>，比如有时要指定 User-Agent 伪装成浏览器发送请求，以此来蒙骗服务器。直接传递一个字典对象给参数 headers 即可。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;user-agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">})</span>
+</span></span></code></pre></div><h3 id="请求体">请求体</h3>
+<p>requests 可以非常灵活地构建 POST 请求需要的数据，如果服务器要求发送的数据是表单数据，则可以指定关键字参数 data，如果要求传递 json 格式字符串参数，则可以使用json关键字参数，参数的值都可以字典的形式传过去。</p>
+<p>作为表单数据传输给服务器</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; payload = {&#39;key1&#39;: &#39;value1&#39;, &#39;key2&#39;: &#39;value2&#39;}
+&gt;&gt;&gt; r = requests.post(&#34;http://httpbin.org/post&#34;, data=payload)
+</code></pre><p>作为 json 格式的字符串格式传输给服务器</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; import json
+&gt;&gt;&gt; url = &#39;http://httpbin.org/post&#39;
+&gt;&gt;&gt; payload = {&#39;some&#39;: &#39;data&#39;}
+&gt;&gt;&gt; r = requests.post(url, json=payload)
+</code></pre><h3 id="响应内容">响应内容</h3>
+<p>HTTP返回的响应消息中很重要的一部分内容是响应体，响应体在 requests 中处理非常灵活，与响应体相关的属性有：content、text、json()。</p>
+<p>content 是 byte 类型，适合直接将内容保存到文件系统或者传输到网络中</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; r = requests.get(&#34;https://pic1.zhimg.com/v2-2e92ebadb4a967829dcd7d05908ccab0_b.jpg&#34;)
+&gt;&gt;&gt; type(r.content)
+&lt;class &#39;bytes&#39;&gt;
+# 另存为 test.jpg
+&gt;&gt;&gt; with open(&#34;test.jpg&#34;, &#34;wb&#34;) as f:
+...     f.write(r.content)
+</code></pre><p>text 是 str 类型，比如一个普通的 HTML 页面，需要对文本进一步分析时，使用 text。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; r = requests.get(&#34;https://foofish.net/understand-http.html&#34;)
+&gt;&gt;&gt; type(r.text)
+&lt;class &#39;str&#39;&gt;
+&gt;&gt;&gt; re.compile(&#39;xxx&#39;).findall(r.text)
+</code></pre><p>如果使用第三方开放平台或者API接口爬取数据时，返回的内容是json格式的数据时，那么可以直接使用json()方法返回一个经过json.loads()处理后的对象。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; r = requests.get(&#39;https://www.v2ex.com/api/topics/hot.json&#39;)
+&gt;&gt;&gt; r.json()
+[{&#39;id&#39;: 352833, &#39;title&#39;: &#39;在长沙，父母同住...
+</code></pre><h3 id="代理设置">代理设置</h3>
+<p>当爬虫频繁地对服务器进行抓取内容时，很容易被服务器屏蔽掉，因此要想继续顺利的进行爬取数据，使用代理是明智的选择。如果你想爬取墙外的数据，同样设置代理可以解决问题，requests 完美支持代理。这里我用的是本地 ShadowSocks 的代理，（socks协议的代理要这样安装 pip install requests[socks]）</p>
+<pre tabindex="0"><code>import requests
+
+proxies = {
+  &#39;http&#39;: &#39;socks5://127.0.0.1:1080&#39;,
+  &#39;https&#39;: &#39;socks5://127.0.0.1:1080&#39;,
+}
+
+requests.get(&#39;https://foofish.net&#39;, proxies=proxies, timeout=5)
+</code></pre><h3 id="超时设置">超时设置</h3>
+<p>requests 发送请求时，默认请求下线程一直阻塞，直到有响应返回才处理后面的逻辑。如果遇到服务器没有响应的情况时，问题就变得很严重了，它将导致整个应用程序一直处于阻塞状态而没法处理其他请求。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; import requests
+&gt;&gt;&gt; r = requests.get(&#34;http://www.google.coma&#34;)
+...一直阻塞中
+</code></pre><p><code>正确的方式的是给每个请求显示地指定一个超时时间。</code></p>
+<pre tabindex="0"><code>&gt;&gt;&gt; r = requests.get(&#34;http://www.google.coma&#34;, timeout=5)
+5秒后报错
+Traceback (most recent call last):
+socket.timeout: timed out
+</code></pre><h3 id="session">Session</h3>
+<p>HTTP协议是一中无状态的协议，为了维持客户端与服务器之间的通信状态，使用 Cookie 技术使之保持双方的通信状态。</p>
+<p><strong>有些网页是需要登录才能进行爬虫操作的，而登录的原理就是浏览器首次通过用户名密码登录之后，服务器给客户端发送一个随机的Cookie，下次浏览器请求其它页面时，就把刚才的 cookie 随着请求一起发送给服务器，这样服务器就知道该用户已经是登录用户。</strong></p>
+<pre tabindex="0"><code>import requests
+# 构建会话
+session  = requests.Session()
+#　登录url
+session.post(login_url, data={username, password})
+#　登录后才能访问的url
+r = session.get(home_url)
+session.close()
+</code></pre><p>构建一个session会话之后，客户端第一次发起请求登录账户，服务器自动把cookie信息保存在session对象中，发起第二次请求时requests 自动把session中的cookie信息发送给服务器，使之保持通信状态。</p>
+<h3 id="项目实战">项目实战</h3>
+<p>最后是一个实战项目，如何用 requests 实现知乎自动登录并给用户发私信，我会在下一篇文章中进行讲解，关注公众号 ‘Python之禅’。</p>
+<p>延伸阅读：</p>
+<ul>
+<li>Python实现知乎自动登录：https://foofish.net/python-auto-login-zhihu.html</li>
+<li>requests文档：http://docs.python-requests.org/en/master/</li>
+<li>如何阅读 requests 源码：<a href="https://www.slideshare.net/onceuponatimeforever/lets-read-code-pythonrequests-library?qid=9f3099df-4c9e-419a-ae62-b601f55b39f3&amp;v=&amp;b=&amp;from_search=3" target="_blank" rel="noopener noreffer"> https://www.slideshare.net/onceuponatimeforever/lets-read-code-pythonrequests-library?qid=9f3099df-4c9e-419a-ae62-b601f55b39f3&amp;v=&amp;b=&amp;from_search=3</a>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB2/" data-title="爬虫(二)HTTP库" data-hashtags="爬虫,python"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB2/" data-hashtag="爬虫"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB2/" data-title="爬虫(二)HTTP库"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB2/" data-title="爬虫(二)HTTP库"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB2/" data-title="爬虫(二)HTTP库"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E7%2588%25AC%25E8%2599%25AB2%2f&amp;description=%e7%88%ac%e8%99%ab%28%e4%ba%8c%29HTTP%e5%ba%93" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a>,&nbsp;<a href="/tags/python/">python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E7%88%AC%E8%99%AB1/" class="prev" rel="prev" title="爬虫(一)HTTP协议"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>爬虫(一)HTTP协议</a>
+            <a href="/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/" class="next" rel="next" title="登录与cookie">登录与cookie<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

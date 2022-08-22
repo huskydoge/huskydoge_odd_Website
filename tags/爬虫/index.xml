@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>爬虫 - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/%E7%88%AC%E8%99%AB/</link>
+        <description>爬虫 - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 22 Aug 2022 13:51:07 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%88%AC%E8%99%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>登录与cookie</title>
+    <link>http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/</link>
+    <pubDate>Mon, 22 Aug 2022 13:51:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>爬虫(二)HTTP库</title>
+    <link>http://example.org/posts/%E7%88%AC%E8%99%AB2/</link>
+    <pubDate>Mon, 22 Aug 2022 13:24:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%88%AC%E8%99%AB2/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
