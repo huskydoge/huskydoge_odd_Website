@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>爬虫(4)正则表达式 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="爬虫(4)正则表达式" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E7%88%AC%E8%99%AB4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-23T12:45:50+08:00" />
+<meta property="article:modified_time" content="2022-08-23T12:45:50+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="爬虫(4)正则表达式"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E7%88%AC%E8%99%AB4/" /><link rel="prev" href="http://example.org/posts/%E7%88%AC%E8%99%AB3/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "爬虫(4)正则表达式",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB4\/"
+        },"genre": "posts","keywords": "爬虫, python","wordcount":  5705 ,
+        "url": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB4\/","datePublished": "2022-08-23T12:45:50+08:00","dateModified": "2022-08-23T12:45:50+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HuskyDoge"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="LazyDog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="LazyDog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">爬虫(4)正则表达式</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-23">2022-08-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5705 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;<span id="/posts/%E7%88%AC%E8%99%AB4/" class="leancloud_visitors" data-flag-title="爬虫(4)正则表达式">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#字符串的表现形式">字符串的表现形式</a></li>
+        <li><a href="#正则基本介绍">正则基本介绍</a></li>
+        <li><a href="#基本元字符">基本元字符</a></li>
+        <li><a href="#预设元字符">预设元字符</a></li>
+        <li><a href="#边界匹配">边界匹配</a></li>
+        <li><a href="#重复匹配">重复匹配</a></li>
+        <li><a href="#逻辑分支">逻辑分支</a></li>
+        <li><a href="#分组">分组</a></li>
+        <li><a href="#贪婪与非贪婪">贪婪与非贪婪</a></li>
+        <li><a href="#rematchpattern-string">re.match(pattern, string)</a></li>
+        <li><a href="#researchpattern-string">re.search(pattern, string)</a></li>
+        <li><a href="#refindallpattern-string">re.findall(pattern, string)</a></li>
+        <li><a href="#refinditerpattern-string">re.finditer(pattern, string)</a></li>
+        <li><a href="#resplit">re.split</a></li>
+        <li><a href="#resubpattern-repl-string">re.sub(pattern, repl, string)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>正则表达式处理文本有如疾风扫秋叶，绝大部分编程语言都内置支持正则表达式，它应用在诸如表单验证、文本提取、替换等场景。爬虫系统更是离不开正则表达式，用好正则表达式往往能收到事半功倍的效果。</p>
+<p>介绍正则表达式前，先来看一个问题，下面这段文本来自豆瓣的某个网页链接，我对内容进行了缩减。<strong>问：如何提取文本中所有邮箱地址呢？</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">html = &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">qrcode-app</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">/pics/qrcode_app4@2x.png</span><span class="p">)</span> <span class="kc">no-repeat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;reply-doc content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>34613453@qq.com，谢谢了<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>30604259@qq.com麻烦楼主<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>490010464@163.com<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>谢谢<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      &#34;&#34;&#34;
+</span></span></code></pre></div><p>如果你还没接触过正则表达式，我想对此会是一筹莫展，不用正则，似乎想不到一种更好的方式来处理，不过，我们暂且放下这个问题，待学习完正则表达式之后再来考虑如何解决。</p>
+<h3 id="字符串的表现形式">字符串的表现形式</h3>
+<p>Python 字符串有几种表现形式，以<code>u</code>开头的字符串称为Unicode字符串，它不在本文讨论范围内，此外，你应该还看到过这两种写法：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; foo = &#34;hello&#34;
+&gt;&gt;&gt; bar = r&#34;hello&#34;
+</code></pre><p>前者是常规字符串，后者 <code>r</code> 开头的是<code>原始字符串</code>，两者有什么区别？因为在上面的例子中，它们都是由普通文本字符组成的串，在这里没什么区别，下面可以证明</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; foo is bar
+True
+&gt;&gt;&gt; foo == bar
+True
+</code></pre><p>但是，如果字符串中包括有特殊字符，会是什么情况呢？再来看一个例子：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; foo = &#34;\n&#34;
+&gt;&gt;&gt; bar = r&#34;\n&#34;
+
+&gt;&gt;&gt; foo, len(foo)
+(&#39;\n&#39;, 1)
+&gt;&gt;&gt; bar, len(bar)
+(&#39;\\n&#39;, 2)
+&gt;&gt;&gt; foo == bar
+False
+&gt;&gt;&gt;
+</code></pre><p><code>&quot;\n&quot;</code> 是一个转义字符，它在 ASCII 中表示换行符。而 <code>r&quot;\n&quot;</code> 是一个原始字符串，原始字符串不对特殊字符进行转义，它就是你看到的字面意思，由 &quot; \&quot; 和 &ldquo;n&rdquo; 两个字符组成的字符串。</p>
+<p>定义原始字符串可以用小写r或者大写R开头，比如 <code>r&quot;\b&quot;</code> 或者 <code>R&quot;\b&quot;</code> 都是允许的。<strong>在 Python 中，正则表达式一般用原始字符串的形式来定义，为什么呢？</strong></p>
+<p>举例来说，对于字符 <code>&quot;\b&quot;</code> 来说，它在 ASCII 中是有特殊意义的，表示退格键，而在正则表达式中，它是一个特殊的元字符，用于匹配一个单词的边界，为了能让正则编译器正确地表达它的意义就需要用原始字符串，当然也可以使用反斜杠 &quot; \&quot; 对常规定义的字符串进行转义</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; foo = &#34;\\b&#34;
+&gt;&gt;&gt; bar = r&#34;\b&#34;
+&gt;&gt;&gt; foo == bar
+True
+</code></pre><h3 id="正则基本介绍">正则基本介绍</h3>
+<p>正则表达式由<code>普通文本字符</code>和<code>特殊字符（元字符）</code>两种字符组成。元字符在正则表达式中具有特殊意义，它让正则表达式具有更丰富的表达能力。例如，正则表达式 <code>r&quot;a.d&quot;</code>中 ，字符<code>'a'</code>和 <code>'d'</code> 是普通字符，<code>.</code> 是元字符，<code>. </code>可以指代任意字符，它能匹配 &lsquo;a1d&rsquo;、&lsquo;a2d&rsquo;、&lsquo;acd&rsquo; ，它的匹配流程是：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://foofish.net/images/re.jpg"
+        data-srcset="https://foofish.net/images/re.jpg, https://foofish.net/images/re.jpg 1.5x, https://foofish.net/images/re.jpg 2x"
+        data-sizes="auto"
+        alt="https://foofish.net/images/re.jpg"
+        title="re" /></p>
+<p>Python 内置模块 <code>re</code> 是专门用于处理正则表达式的模块。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;a.d&#34;   # 正则表达式文本
+&gt;&gt;&gt; original_str = &#34;and&#34;  # 原始文本
+&gt;&gt;&gt; pattern = re.compile(rex)  # 正则表达式对象
+&gt;&gt;&gt; m = pattern.match(original_str)  # 匹配对象
+&gt;&gt;&gt; m 
+&lt;_sre.SRE_Match object at 0x101c85b28&gt;
+
+# 等价于
+&gt;&gt;&gt; re.match(r&#34;a.d&#34;, &#34;and&#34;)
+&lt;_sre.SRE_Match object at 0x10a15dcc8&gt;
+</code></pre><p>如果原文本字符串与正则表达式匹配，<strong>那么就会返回一个 <em>Match</em> 对象，当不匹配时，<em>match</em> 方法返回的 <em>None</em>，通过判断m是否为<em>None</em>可进行表单验证。</strong></p>
+<p>接下来，我们需要学习更多元字符。</p>
+<h3 id="基本元字符">基本元字符</h3>
+<ul>
+<li><code>.</code>：匹配除换行符以外的任意一个字符，例如：&ldquo;a.c&rdquo; 可以完全匹配 &ldquo;abc&rdquo;，也可以匹配 &ldquo;abcef&rdquo; 中的 &ldquo;abc&rdquo;</li>
+<li><code>\</code>： 转义字符，使特殊字符具有本来的意义，例如： &ldquo;1\.&ldquo;2 可以匹配 &ldquo;1.2&rdquo;</li>
+<li><code>[...]</code>：匹配方括号中的任意一个字符，例如：a[bcd]e 可以匹配 abe、ace、ade，它还支持范围操作，<strong>比如：a到z可表示为 &ldquo;a-z&rdquo;</strong>，0到9可表示为 &ldquo;0-9&rdquo;，<strong>注意，在 &ldquo;[]&rdquo; 中的特殊字符不再有特殊意义，就是它字面的意义</strong>，例如：<code>[.*]</code>就是匹配 . 或者 *</li>
+<li><code>[^...]</code>，字符集取反，表示只要不是括号中出现的字符都可以匹配，例如：&ldquo;a[^bcd]e&rdquo; 可匹配 aee、afe等</li>
+</ul>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;a.c&#34;, &#34;abc&#34;).group()
+&#39;abc&#39;
+&gt;&gt;&gt; re.match(r&#34;a.c&#34;, &#34;abcef&#34;).group()
+&#39;abc&#39;
+&gt;&gt;&gt; re.match(r&#34;1\.2&#34;, &#34;1.2&#34;).group()
+&#39;1.2&#39;
+&gt;&gt;&gt; re.match(r&#34;a[0-9]b&#34;, &#34;a2b&#34;).group()
+&#39;a2b&#39;
+&gt;&gt;&gt; re.match(r&#34;a[0-9]b&#34;, &#34;a5b11&#34;).group()
+&#39;a5b&#39;
+&gt;&gt;&gt; re.match(r&#34;a[.*?]b&#34;, &#34;a.b&#34;).group()
+&#39;a.b&#39;
+&gt;&gt;&gt; re.match(r&#34;abc[^\w]&#34;, &#34;abc!123&#34;).group()
+&#39;abc!
+</code></pre><p><code>group </code>方法返回原字符串(abcef)中与正则表达式相匹配的那部分子字符串(abc)，<strong>前提是要匹配成功 <em>match</em> 方法才会返回 <em>Match</em> 对象，进而才有<em>group</em>方法。</strong></p>
+<h3 id="预设元字符">预设元字符</h3>
+<ul>
+<li><code>\w</code> 匹配任意一个单词字符，包括数字和下划线，它等价于 [A-Za-z0-9_]，例如 a\wc 可以匹配 abc、acc</li>
+<li><code>\W</code> 匹配任意一个非单词字符，与 \w 操作相反，它等价于 [^A-Za-z0-9_]，例如： a\Wc 可匹配 a!c</li>
+<li><code>\s</code> 匹配任意一个<code>空白字符</code>，<code>空格、回车</code>等都是空白字符，例如：a\sc 可以配 a\nc，这里的 \n表示回车</li>
+<li><code>\S</code> 匹配任意一个非空白字符</li>
+<li><code>\d</code> 匹配任意一个数字，它等价于[0-9]，例如：a\dc 可匹配 a1c、a2c &hellip;</li>
+<li><code>\D</code> 匹配任意一个非数字</li>
+</ul>
+<h3 id="边界匹配">边界匹配</h3>
+<p>边界匹配相关的符号专门用于修饰字符。</p>
+<ul>
+<li><code>^</code> 匹配字符的开头，在字符串的前面，例如：^abc 表示匹配 a开头，后面紧随bc的字符串，它可以匹配 abc</li>
+<li><code>$</code> 匹配字符的结尾，在字符串的末尾位置，例如： hello$</li>
+</ul>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;^abc&#34;,&#34;abc&#34;).group()
+&#39;abc&#39;
+&gt;&gt;&gt; re.match(r&#34;^abc$&#34;,&#34;abc&#34;).group()
+&#39;abc&#39;
+</code></pre><h3 id="重复匹配">重复匹配</h3>
+<p>前面的元字符都是针对单个字符来匹配的，如果希望匹配的字符重复出现，比如匹配身份证号码，长度18位，那么就需要用到重复匹配的元字符</p>
+<ul>
+<li><code>*</code> 重复匹配零次或者更多次</li>
+<li><code>?</code> 重复匹配<strong>零次或者一次</strong></li>
+<li><code>+</code> 重复匹配1次或者多次</li>
+<li><code>{n}</code> 重复匹配n次</li>
+<li><code>{n,}</code> 重复匹配至少n次</li>
+<li><code>{n, m}</code> 重复匹配n到m次</li>
+</ul>
+<pre tabindex="0"><code># 简单匹配身份证号码，前面17位是数字，最后一位可以是数字或者字母X
+&gt;&gt;&gt; re.match(r&#34;\d{17}[\dX]&#34;, &#34;42350119900101153X&#34;).group()
+&#39;42350119900101153X&#39;
+
+# 匹配5到12的QQ号码
+&gt;&gt;&gt; re.match(r&#34;\d{5,12}$&#34;, &#34;4235011990&#34;).group()
+&#39;4235011990&#39;
+</code></pre><h3 id="逻辑分支">逻辑分支</h3>
+<p>匹配一个固定电话号码，不同地区规则不一样，有的地方区号是3位，电话是8位，有的地方区号是4位，电话为7位，区号与号码之间用 - 隔开，如果应对这样的需求呢？<strong>这时你需要用到逻辑分支条件字符</strong> <code>|</code>，它把表达式分为左右两部分，先尝试匹配左边部分，如果匹配成功就不再匹配后面部分了，这是逻辑 &ldquo;或&rdquo; 的关系</p>
+<pre tabindex="0"><code># abc|cde 可以匹配abc 或者 cde，但优先匹配abc
+&gt;&gt;&gt; re.match(r&#34;aa(abc|cde)&#34;,&#34;aaabccde&#34;).group()
+&#39;aaabc&#39;
+</code></pre><p>0\d{2}-\d{8}|0\d{3}-\d{7} 表达式以0开头，既可以匹配3位区号8位号码，也可以匹配4位区号7位号码</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;0\d{2}-\d{8}|0\d{3}-\d{7}&#34;, &#34;0755-4348767&#34;).group()
+&#39;0755-4348767&#39;
+&gt;&gt;&gt; re.match(r&#34;0\d{2}-\d{8}|0\d{3}-\d{7}&#34;, &#34;010-34827637&#34;).group()
+&#39;010-34827637&#39;
+</code></pre><h3 id="分组">分组</h3>
+<p>前面介绍的匹配规则都是针对单个字符而言的，如果想要重复匹配多个字符怎么办，答案是，**用子表达式（也叫分组）**来表示，分组用小括号&rdquo;()&ldquo;表示，例如 (abc){2} 表示匹配abc两次， 匹配一个IP地址时，可以使用 <code>(\d{1,3}\.){3}\d{1,3}</code>，因为IP是由4组数组3个点组成的，前面3组数字和3个点可以作为一个分组重复3次，最后一部分是一个1到3个数字组成的字符串。如：192.168.0.1。</p>
+<p>关于分组，<code>group </code>方法可用于提取匹配的字符串分组，默认它会把整个表达式的匹配结果当做第0个分组，就是不带参数的<code> group()</code> 或者是 <code>group(0)</code>，第一组括号中的分组用<code>group(1)</code>获取，以此类推</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.match(r&#34;(\d+)(\w+)&#34;, &#34;123abc&#34;)
+＃分组０，匹配整个正则表达式
+&gt;&gt;&gt; m.group()
+&#39;123abc&#39;
+#等价
+&gt;&gt;&gt; m.group(0)
+&#39;123abc&#39;
+# 分组1，匹配第一对括号
+&gt;&gt;&gt; m.group(1)
+&#39;123&#39;
+# 分组2，匹配第二对括号
+&gt;&gt;&gt; m.group(2)
+&#39;abc&#39;
+&gt;&gt;&gt;
+</code></pre><p>通过分组，我们可以从字符串中提取出想要的信息。另外，分组还可以通过指定名字的方式获取。</p>
+<pre tabindex="0"><code># 第一个分组的名字是number
+# 第二个分组的名字是char
+&gt;&gt;&gt; m = re.match(r&#34;(?P&lt;number&gt;\d+)(?P&lt;char&gt;\w+)&#34;, &#34;123abc&#34;)
+&gt;&gt;&gt; m.group(&#34;number&#34;)
+&#39;123&#39;
+# 等价
+&gt;&gt;&gt; m.group(1)
+&#39;123&#39;
+</code></pre><h3 id="贪婪与非贪婪">贪婪与非贪婪</h3>
+<p>默认情况下，正则表达式重复匹配时，在使整个表达式能得到匹配的前提下尽可能匹配多的字符，我们称之为贪婪模式，是一种贪得无厌的模式。例如： <code>r&quot;a.*b&quot;</code> 表示匹配 a 开头 b 结尾，中间可以是任意多个字符的字符串，如果用它来匹配 aaabcb，那么它会匹配整个字符串。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;a.*b&#34;, &#34;aaabcb&#34;).group()
+&#39;aaabcb&#39;
+</code></pre><p>有时，我们希望尽可能少的匹配，怎么办？只需要在量词后面加一个问号&rdquo; ？&quot;，在保证匹配的情况下尽可能少的匹配，比如刚才的例子，我们只希望匹配 aaab，那么只需要修改正则表达式为 <code>r&quot;a.*?b&quot;</code></p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;a.*?b&#34;, &#34;aaabcb&#34;).group()
+&#39;aaab&#39;
+&gt;&gt;&gt;
+</code></pre><p>非贪婪模式在爬虫应用中使用非常频繁。在网页上涉及img标签元素是相对路径的情况，我们需要把它替换成绝对路径</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; html = &#39;&lt;img src=&#34;/images/category.png&#34;&gt;&lt;img src=&#34;/images/js_framework.png&#34;&gt;&#39;
+
+# 非贪婪模式就匹配的两个img标签
+# 你可以改成贪婪模式看看可以匹配几个
+&gt;&gt;&gt; rex = r&#39;&lt;img.*?src=&#34;(.*?)&#34;&gt;&#39;
+&gt;&gt;&gt; re.findall(rex, html)
+[&#39;/images/category.png&#39;, &#39;/images/js_framework.png&#39;]
+&gt;&gt;&gt;
+&gt;&gt;&gt; def fun(match):
+...     img_tag = match.group()
+...     src = match.group(1)
+...     full_src = &#34;http://foofish.net&#34; + src
+...     new_img_tag = img_tag.replace(src, full_src)
+...     return new_img_tag
+...
+&gt;&gt;&gt; re.sub(rex, fun, html)
+&lt;img src=&#34;http://foofish.net/images/category.png&#34;&gt;&lt;img src=&#34;http://foofish.net/images/js_framework.png&#34;&gt;
+</code></pre><p><em>sub</em> 函数可以接受一个函数作为替换目标对象，函数返回值用来替换正则表达式匹配的部分，在这里，我把整个img标签定义为一个正则表达式 <em>r&rsquo;&rsquo;</em>，<em>group()</em> 返回的值是 <code>&lt;img src=&quot;/images/category.png&quot;&gt;</code>，而 <em>group(1)</em> 的返回值是 <em>/images/category.png</em>，最后，我用 <em>replace</em> 方法把相对路径替换成绝对路径。</p>
+<p>以上讲解了正则表达式的基本概念和语法以及<code>re</code>模块的基本使用方式，这节来详细说说 <code>re</code> 模块作为 Python 正则表达式引擎提供了哪些便利性操作。</p>
+<pre tabindex="0"><code> &gt;&gt;&gt; import re
+</code></pre><p>正则表达式的所有操作都是围绕着匹配对象(Match)进行的，只有表达式与字符串匹配才有可能进行后续操作。判断匹配与否有两个方法，分别是 <em>re.match()</em> 和 <em>re.search()</em>，两者有什么区别呢？</p>
+<h3 id="rematchpattern-string">re.match(pattern, string)</h3>
+<p><code>match </code>方法从字符串的起始位置开始检查，如果刚好有一个子字符串与正则表达式相匹配，则返回一个Match对象，<strong>只要起始位置不匹配则退出</strong>，不再往后检查了，返回 None</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;b.r&#34;, &#34;foobar&#34;)   # 不匹配
+&gt;&gt;&gt; re.match(r&#34;b.r&#34;, &#34;barfoo&#34;)   # 匹配
+&lt;_sre.SRE_Match object at 0x102f05b28&gt;
+&gt;&gt;&gt;
+</code></pre><h3 id="researchpattern-string">re.search(pattern, string)</h3>
+<p><code>search </code>方法虽然也是从起始位置开始检查，但是它在起始位置不匹配的时候会一直尝试往后检查，直到匹配为止，如果到字符串的末尾还没有匹配，则返回 None</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.search(r&#34;b.r&#34;, &#34;foobar&#34;) # 匹配
+&lt;_sre.SRE_Match object at 0x000000000254D578&gt;
+&gt;&gt;&gt; re.match(r&#34;b.r&#34;, &#34;foobr&#34;)  # 不匹配
+</code></pre><p>两者接收参数都是一样的，第一个参数是正则表达式，第二个是预匹配的字符串。另外，不管是<code>search</code>还是 <code>match</code>，一旦找到了匹配的子字符串，就立刻停止往后找，哪怕字符串中有多个可匹配的子字符串，例如</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.search(r&#34;f.o&#34;, &#34;foobarfeobar&#34;).group()
+&#39;foo&#39;
+</code></pre><p>两者的差异使得他们在应用场景上也不一样，如果是检查文本是否匹配某种模式，比如，检查字符串是不是有效的邮箱地址，则可以使用 match 来判断：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;[\w]+@[\w]+\.[\w]+$&#34;
+&gt;&gt;&gt; re.match(rex, &#34;123@qq.com&#34;)  # 匹配
+&lt;_sre.SRE_Match object at 0x102f05bf8&gt; 
+&gt;&gt;&gt; re.match(rex, &#34;the email is 123@qq.com&#34;) # 不匹配
+&gt;&gt;&gt;
+</code></pre><p>尽管第二个字符串中包含有邮件地址，但字符串整体不能当作一个邮件地址来使用，在网页上填邮件地址时，显然第二种写法是无效的。</p>
+<p>通常，<em>search</em> 方法可用于判断字符串中是否包含有与正则表达式相匹配的子字符串，还可以从中提出匹配的子字符串，例如：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;[\w]+@[\w]+\.[\w]+&#34;
+&gt;&gt;&gt; m = re.search(rex, &#34;the email is 123@qq.com .&#34;)
+&gt;&gt;&gt; m is None
+False
+&gt;&gt;&gt; m.group()
+&#39;123@qq.com&#39;
+&gt;&gt;&gt;
+</code></pre><p>细心的你可能已经发现了，上面例子与前面例子的正则表达式写法有细微区别，前者多一个元字符 <code>$</code>，它的目的是用于完全匹配字符串。<strong>因为不加 $，那么下面这种情况用match方法也匹配，显示这在表单验证时是无法满足要求的。</strong></p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;[\w]+@[\w]+\.[\w]+&#34;
+&gt;&gt;&gt; re.match(rex, &#34;123@qq.com is my email&#34;)
+&lt;_sre.SRE_Match object at 0x10cadebf8&gt;
+&gt;&gt;&gt;
+</code></pre><p>那么有没有可能不加$，就可以判断是否完全匹配字符串呢？在 Python3 中，<code>re.fullmatch</code> 就可以满足这样的需求。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;[\w]+@[\w]+\.[\w]+&#34;
+&gt;&gt;&gt; re.fullmatch(rex, &#34;123@qq.com is my email&#34;) # 不匹配
+&gt;&gt;&gt; re.fullmatch(rex, &#34;123@qq.com&#34;) # 匹配
+&lt;_sre.SRE_Match object; span=(0, 10), match=&#39;123@qq.com&#39;&gt;
+</code></pre><p>虽然二者都可以通过 <code>group()</code> 提取出匹配的子字符串，但是，如果字符串中有多个匹配的子字符串时，两个方法都不行，因为它们都是在一旦匹配了第一个子字符串，就不再往后匹配了。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.search(rex, &#34;email is 123@qq.com, anthor email is abc@gmail.com !&#34;)
+&gt;&gt;&gt; m.group()
+&#39;123@qq.com&#39;
+</code></pre><p>那么如何把文本中的所有匹配的邮件地址提取出来呢？re 模块为我们准备了 <code>re.findall() </code> 和 <code> re.finditer()</code>  这两个方法，它们会返回文本中所有与正则表达式相匹配的内容。前者返回的是一个列表(list)对象，后者返回的是一个迭代器(iterator)。</p>
+<h3 id="refindallpattern-string">re.findall(pattern, string)</h3>
+<pre tabindex="0"><code>&gt;&gt;&gt; emails = re.findall(rex, &#34;email is 123@qq.com, anthor email is abc@gmail.com&#34;)
+&gt;&gt;&gt; emails
+[&#39;123@qq.com&#39;, &#39;abc@gmail.com&#39;]
+</code></pre><p><code>findall</code> 返回的对象是由匹配的子字符串组成的列表，它返回了所有匹配的邮件地址。</p>
+<h3 id="refinditerpattern-string">re.finditer(pattern, string)</h3>
+<pre tabindex="0"><code>&gt;&gt;&gt; emails = re.finditer(rex, &#34;email is 123@qq.com, anthor email is abc@gmail.com&#34;)
+&gt;&gt;&gt; emails
+&lt;callable-iterator object at 0x0000000002592390&gt;
+&gt;&gt;&gt; for e in emails:
+...     print(e.group())
+...
+123@qq.com
+abc@gmail.com
+</code></pre><p><code>finditer </code>返回的对象是由 Match 对象组成的迭代器，因为里面的元素是Match对象，所以要获取里面的邮件地址还需要调用group方法来提取。</p>
+<h3 id="resplit">re.split</h3>
+<p>我们都知道字符串有一个<code>split</code>方法，可根据某个子串分隔字符串，如：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;this is a string.&#34;.split(&#34; &#34;)
+[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;string.&#39;]
+</code></pre><p>但该方法有一个缺陷，比如上面的字符串，根据空格分隔字符串时，字符串后面多一个点，如果用 <code> re.split</code> 就可以避免这种情况。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; words = re.split(r&#34;\W+&#34;, &#34;this is a string.&#34;)
+&gt;&gt;&gt; words
+[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;string&#39;, &#39;&#39;]
+&gt;&gt;&gt; list(filter(lambda x: x, words))
+# lambda x: x 的意思是 x 非空的就是True， 就在words里选出来
+[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;string&#39;]
+&gt;&gt;&gt;
+</code></pre><p>re.split是一种更为高级的字符串分隔操作的方法。在这里，<strong>split根据非字母正则来分隔字符串</strong>，但凡是 string.split 没法处理的问题，可以考虑使用re模块下的split方法来处理。此外，正则表达式中如果有分组括号，那么返回结果又不一致，这个可以留给大家查阅文档，某些场景用得着。</p>
+<h3 id="resubpattern-repl-string">re.sub(pattern, repl, string)</h3>
+<p>re.split是一种更为高级的字符串分隔操作的方法。在这里，split根据非字母正则来分隔字符串，但凡是 string.split 没法处理的问题，可以考虑使用re模块下的split方法来处理。此外，正则表达式中如果有分组括号，那么返回结果又不一致，这个可以留给大家查阅文档，某些场景用得着。</p>
+<p>把所有邮箱地址替换成 <a href="mailto:admin@qq.com" rel="">admin@qq.com</a>
+</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; rex = r&#34;[\w]+@[\w]+\.[\w]+&#34; # 邮件地址正则
+&gt;&gt;&gt; re.sub(rex, &#34;admin@qq.com&#34;, &#34;234@qq.com, 456@qq.com &#34;)
+&#39;admin@qq.com, admin@qq.com &#39;
+&gt;&gt;&gt;
+</code></pre><p>另外一个例子，就是上次讲过的将 img 标签的 src 路径替换成绝对完整的URL地址</p>
+<pre tabindex="0"><code>html = &#34;&#34;&#34;
+        ...
+        &lt;img src=&#34;/images/category.png&#34;&gt;
+        this is anthor words
+        &lt;img src=&#34;http://foofish.net/images/js_framework.png&#34;&gt;
+       &#34;&#34;&#34;
+</code></pre><p>如果用字符串的replace方法是没法实现了，这时需要用到正则表达式的 <code>re.sub</code>，正则表达式应用了非贪婪模式，使用了一个分组，用于提取 src 的路径。</p>
+<pre tabindex="0"><code>rex = r&#39;.*?&lt;img src=&#34;(.*?)&#34;.*?&gt;&#39;
+</code></pre><p>这里我们要把替换目标 repl 作为函数来处理。</p>
+<pre tabindex="0"><code>def fun(m):
+    img_tag = m.group()
+    src = m.group(1)
+    if not src.startswith(&#34;http:&#34;):
+        full_src = &#34;http://foofish.net&#34; + src
+    else:
+        full_src = src
+    new_img_tag = img_tag.replace(src, full_src)
+    return new_img_tag
+</code></pre><p>引擎会自动把所有匹配的结果应用到该函数中，函数的参数就是每一个匹配的Match对象，通过 group(1) 提取分组后判断是否为一个完整的URL路径，只有是不完整的我们才替换，否则还是按照原来的方式返回。</p>
+<pre tabindex="0"><code>new_html = re.compile(rex).sub(fun, html)
+print(new_html)
+# 输出
+...
+&lt;img src=&#34;http://foofish.net/images/category.png&#34;&gt;
+this is anthor words
+&lt;img src=&#34;http://foofish.net/images/js_framework.png&#34;&gt;
+</code></pre><p>如果还想知道替换次数是多少，那么可以使用 <code>re.subn</code>方法，这个方法具体使用可以参考文档，留着读者自己思考。</p>
+<p>此外，以上方法都有一个默认的 flag 参数，该参数用于改变匹配的行为，常用的可选值有：</p>
+<ul>
+<li>re.I(IGNORECASE): 忽略大小写（括号内的单词为完整写法，两种方式都支持）</li>
+<li>re.M(MULTILINE): 多行模式，改变&rsquo;^&lsquo;和&rsquo;$&lsquo;的行为</li>
+<li>re.S(DOTALL): 改变&rsquo;.&lsquo;的行为，默认 . 只能匹配除换行之外的字符，加上它就可以匹配换行了 例如：</li>
+</ul>
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;foo&#34;, &#34;FoObar&#34;, re.I)
+&lt;_sre.SRE_Match object; span=(0, 3), match=&#39;FoO&#39;&gt;
+&gt;&gt;&gt;
+</code></pre><p>以上介绍的都是 re 模块下面的方法，其实，这些只不过是一些简便方法，例如 <em>re.match</em> 方法</p>
+<pre tabindex="0"><code>re.match(r&#39;foo&#39;, &#39;foo bar&#39;)
+</code></pre><p>等价于</p>
+<pre tabindex="0"><code>pattern = re.compile(r&#39;foo&#39;)
+pattern.match(&#39;foo bar&#39;)
+</code></pre><p>那么，后者有什么好处呢？为了提高正则匹配的速度，它可以重复利用正则对象，如果一个正则表达式需要匹配多个字符串，那么就推荐后者，先编译在去匹配。更多使用方式可以参考文档 <a href="https://docs.python.org/3/library/re.html#search-vs-match" target="_blank" rel="noopener noreffer">https://docs.python.org/3/library/re.html</a>
+</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB4/" data-title="爬虫(4)正则表达式" data-hashtags="爬虫,python"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB4/" data-hashtag="爬虫"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB4/" data-title="爬虫(4)正则表达式"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB4/" data-title="爬虫(4)正则表达式"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB4/" data-title="爬虫(4)正则表达式"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E7%2588%25AC%25E8%2599%25AB4%2f&amp;description=%e7%88%ac%e8%99%ab%284%29%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a>,&nbsp;<a href="/tags/python/">python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E7%88%AC%E8%99%AB3/" class="prev" rel="prev" title="爬虫(三)BeautifulSoup"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>爬虫(三)BeautifulSoup</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

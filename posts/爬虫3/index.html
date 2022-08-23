@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>爬虫(三)BeautifulSoup - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="爬虫(三)BeautifulSoup" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E7%88%AC%E8%99%AB3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-23T12:04:06+08:00" />
+<meta property="article:modified_time" content="2022-08-23T12:04:06+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="爬虫(三)BeautifulSoup"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E7%88%AC%E8%99%AB3/" /><link rel="prev" href="http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/" /><link rel="next" href="http://example.org/posts/%E7%88%AC%E8%99%AB4/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "爬虫(三)BeautifulSoup",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB3\/"
+        },"genre": "posts","keywords": "爬虫, python","wordcount":  2318 ,
+        "url": "http:\/\/example.org\/posts\/%E7%88%AC%E8%99%AB3\/","datePublished": "2022-08-23T12:04:06+08:00","dateModified": "2022-08-23T12:04:06+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HuskyDoge"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="LazyDog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="LazyDog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">爬虫(三)BeautifulSoup</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-23">2022-08-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2318 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E7%88%AC%E8%99%AB3/" class="leancloud_visitors" data-flag-title="爬虫(三)BeautifulSoup">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装-beautifulsoup">安装 BeautifulSoup</a></li>
+        <li><a href="#html-标签">HTML 标签</a></li>
+        <li><a href="#使用-beautifulsoup">使用 BeautifulSoup</a></li>
+        <li><a href="#tag">Tag</a></li>
+        <li><a href="#navigablestring">NavigableString</a></li>
+        <li><a href="#遍历文档树">遍历文档树</a></li>
+        <li><a href="#搜索文档树">搜索文档树</a></li>
+        <li><a href="#find_all">find_all()</a></li>
+        <li><a href="#find">find()</a></li>
+        <li><a href="#get_text">get_text()</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>不同的网站返回的内容通常有多种不同的格式，一种是 json 格式，这类数据对开发者来说最友好。另一种 XML 格式的，还有一种最常见格式的是 HTML 文档。</p>
+<p>BeautifulSoup 专注于 HTML 文档操作，名字来源于 Lewis Carroll 的一首同名诗歌。</p>
+<p>BeautifulSoup 是一个用于解析 HTML 文档的 Python 库，通过 BeautifulSoup，你只需要用很少的代码就可以提取出 HTML 中任何感兴趣的内容，此外，它还有一定的 HTML 容错能力，对于一个格式不完整的HTML 文档，它也可以正确处理。</p>
+<h3 id="安装-beautifulsoup">安装 BeautifulSoup</h3>
+<pre tabindex="0"><code>pip install beautifulsoup4
+</code></pre><p>BeautifulSoup3 被官方放弃维护，你要下载最新的版本 BeautifulSoup4。</p>
+<h3 id="html-标签">HTML 标签</h3>
+<p>学习 BeautifulSoup4 前有必要先对 HTML 文档有一个基本认识，如下代码，HTML 是一个树形组织结构。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>hello, world<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>BeautifulSoup<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>如何使用BeautifulSoup<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>  
+</span></span></code></pre></div><ul>
+<li>它由很多标签（Tag）组成，比如 html、head、title等等都是标签</li>
+<li>一个标签对构成一个节点，比如 &hellip; 是一个根节点</li>
+<li>节点之间存在某种关系，比如 h1 和 p 互为邻居，他们是相邻的兄弟（sibling）节点</li>
+<li>h1 是 body 的直接子（children）节点，还是 html 的子孙（descendants）节点</li>
+<li>body 是 p 的父（parent）节点，html 是 p 的祖辈（parents）节点</li>
+<li>嵌套在标签之间的字符串是该节点下的一个特殊子节点，比如 “hello, world” 也是一个节点，只不过没名字。</li>
+</ul>
+<h3 id="使用-beautifulsoup">使用 BeautifulSoup</h3>
+<p>构建一个 BeautifulSoup 对象需要<code>两个参数</code>:</p>
+<ul>
+<li>第一个参数是将要解析的 HTML 文本字符串</li>
+<li>第二个参数告诉 BeautifulSoup 使用哪个解析器来解析 HTML。</li>
+</ul>
+<p>解析器负责把 HTML 解析成相关的对象，而 BeautifulSoup 负责操作数据（增删改查）。”html.parser” 是Python内置的解析器，”lxml” 则是一个基于c语言开发的解析器，它的执行速度更快，不过它需要额外安装</p>
+<p>通过 BeautifulSoup 对象就可以定位到 HTML 中的任何一个标签节点。</p>
+<pre tabindex="0"><code>from bs4 import BeautifulSoup  
+text = &#34;&#34;&#34;
+&lt;html&gt;  
+    &lt;head&gt;
+     &lt;title &gt;hello, world&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;BeautifulSoup&lt;/h1&gt;
+        &lt;p class=&#34;bold&#34;&gt;如何使用BeautifulSoup&lt;/p&gt;
+        &lt;p class=&#34;big&#34; id=&#34;key1&#34;&gt; 第二个p标签&lt;/p&gt;
+        &lt;a href=&#34;http://foofish.net&#34;&gt;python&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;  
+&#34;&#34;&#34;
+soup = BeautifulSoup(text, &#34;html.parser&#34;)
+
+# title 标签
+&gt;&gt;&gt; soup.title
+&lt;title&gt;hello, world&lt;/title&gt;
+
+# p 标签
+&gt;&gt;&gt; soup.p
+&lt;p class=&#34;bold&#34;&gt;\u5982\u4f55\u4f7f\u7528BeautifulSoup&lt;/p&gt;
+
+# p 标签的内容
+&gt;&gt;&gt; soup.p.string
+u&#39;\u5982\u4f55\u4f7f\u7528BeautifulSoup&#39;
+</code></pre><p>BeatifulSoup 将 HTML 抽象成为 4 类主要的数据类型，分别是<code>Tag </code>, <code>NavigableString</code> , <code>BeautifulSoup</code>，<code>Comment </code>。每个标签节点就是一个Tag对象，NavigableString 对象一般是包裹在Tag对象中的字符串，BeautifulSoup 对象代表整个 HTML 文档。例如：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; type(soup)
+&lt;class &#39;bs4.BeautifulSoup&#39;&gt;
+&gt;&gt;&gt; type(soup.h1)
+&lt;class &#39;bs4.element.Tag&#39;&gt;
+&gt;&gt;&gt; type(soup.p.string)
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+</code></pre><h3 id="tag">Tag</h3>
+<p>每个 <code>Tag</code> 都有一个名字，它对应 HTML 的<code>标签名称</code>。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.h1.name
+u&#39;h1&#39;
+&gt;&gt;&gt; soup.p.name
+u&#39;p&#39;
+</code></pre><p>标签还可以有属性，属性的访问方式和字典是类似的，它返回一个列表对象</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.p[&#39;class&#39;]
+[u&#39;bold&#39;]
+</code></pre><h3 id="navigablestring">NavigableString</h3>
+<p>获取标签中的内容，直接使用<code>.stirng</code>即可获取，它是一个 NavigableString 对象，你可以显式地将它转换为 unicode 字符串。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.p.string
+u&#39;\u5982\u4f55\u4f7f\u7528BeautifulSoup&#39;
+&gt;&gt;&gt; type(soup.p.string)
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&gt;&gt;&gt; unicode_str = unicode(soup.p.string)
+&gt;&gt;&gt; unicode_str
+u&#39;\u5982\u4f55\u4f7f\u7528BeautifulSoup&#39;
+</code></pre><p>基本概念介绍完，现在可以正式进入主题了，如何从 HTML 中找到我们关心的数据？BeautifulSoup 提供了两种方式，一种是遍历，另一种是搜索，通常两者结合来完成查找任务。</p>
+<h3 id="遍历文档树">遍历文档树</h3>
+<p>遍历文档树，顾名思义，就是是从根节点 html 标签开始遍历，直到找到目标元素为止，遍历的一个缺陷是，如果你要找的内容在文档的末尾，那么它要遍历整个文档才能找到它，速度上就慢了。因此还需要配合第二种方法。</p>
+<p>通过遍历文档树的方式获取标签节点可以直接通过 <code>.标签名</code>的方式获取，例如：</p>
+<p>获取 body 标签：</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.body
+&lt;body&gt;\n&lt;h1&gt;BeautifulSoup&lt;/h1&gt;\n&lt;p class=&#34;bold&#34;&gt;\u5982\u4f55\u4f7f\u7528BeautifulSoup&lt;/p&gt;\n&lt;/body&gt;
+</code></pre><p>获取 p 标签</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.body.p
+&lt;p class=&#34;bold&#34;&gt;\u5982\u4f55\u4f7f\u7528BeautifulSoup&lt;/p&gt;
+</code></pre><p>获取 p 标签的内容</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.body.p.string
+\u5982\u4f55\u4f7f\u7528BeautifulSoup
+</code></pre><p>前面说了，内容也是一个节点，这里就可以用 <code>.string</code> 的方式得到。<strong>遍历文档树的另一个缺点是只能获取到与之匹配的第一个子节点</strong>，例如，如果有两个相邻的 p 标签时，第二个标签就没法通过 <code>.p</code> 的方式获取，这是需要借用 next_sibling 属性获取相邻且在后面的节点。此外，还有很多不怎么常用的属性，比如：<code>.contents </code>获取所有子节点，<code>.parent </code>获取父节点，更多的参考请查看<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id32" target="_blank" rel="noopener noreffer">官方文档</a>
+。</p>
+<h3 id="搜索文档树">搜索文档树</h3>
+<p>搜索文档树是通过指定标签名来搜索元素，另外还可以通过指定标签的属性值来精确定位某个节点元素，最常用的两个方法就是 find 和 find_all。这两个方法在 BeatifulSoup 和 Tag 对象上都可以被调用。</p>
+<h3 id="find_all">find_all()</h3>
+<pre tabindex="0"><code>find_all( name , attrs , recursive , text , **kwargs )
+</code></pre><p>find_all 的返回值是一个 Tag 组成的列表，方法调用非常灵活，所有的参数都是可选的。</p>
+<p>第一个参数 name 是标签节点的名字。</p>
+<pre tabindex="0"><code># 找到所有标签名为title的节点
+&gt;&gt;&gt; soup.find_all(&#34;title&#34;)
+[&lt;title&gt;hello, world&lt;/title&gt;]
+&gt;&gt;&gt; soup.find_all(&#34;p&#34;)
+[&lt;p class=&#34;bold&#34;&gt;\xc8\xe7\xba\xce\xca\xb9\xd3\xc3BeautifulSoup&lt;/p&gt;, 
+&lt;p class=&#34;big&#34;&gt; \xb5\xda\xb6\xfe\xb8\xf6p\xb1\xea\xc7\xa9&lt;/p&gt;]
+</code></pre><p>第二个参数是标签的class属性值</p>
+<pre tabindex="0"><code># 找到所有class属性为big的p标签
+&gt;&gt;&gt; soup.find_all(&#34;p&#34;, &#34;big&#34;)
+[&lt;p class=&#34;big&#34;&gt; \xb5\xda\xb6\xfe\xb8\xf6p\xb1\xea\xc7\xa9&lt;/p&gt;]
+</code></pre><p>等效于</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.find_all(&#34;p&#34;, class_=&#34;big&#34;)
+[&lt;p class=&#34;big&#34;&gt; \xb5\xda\xb6\xfe\xb8\xf6p\xb1\xea\xc7\xa9&lt;/p&gt;]
+</code></pre><p>因为 class 是 Python 关键字，所以这里指定为 class_。</p>
+<p>kwargs 是标签的属性名值对，例如：查找有<code>href</code>(指定超链接目标的URL)属性值为 &ldquo;<a href="http://foofish.net" target="_blank" rel="noopener noreffer">http://foofish.net</a>
+&rdquo; 的标签</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.find_all(href=&#34;http://foofish.net&#34;)
+[&lt;a href=&#34;http://foofish.net&#34;&gt;python&lt;/a&gt;]
+</code></pre><p>当然，它还支持正则表达式</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; import re
+&gt;&gt;&gt; soup.find_all(href=re.compile(&#34;^http&#34;))
+[&lt;a href=&#34;http://foofish.net&#34;&gt;python&lt;/a&gt;]
+</code></pre><p>属性除了可以是具体的值、正则表达式之外，它还可以是一个布尔值（True/Flase），<strong>表示有属性或者没有该属性</strong>。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; soup.find_all(id=&#34;key1&#34;)
+[&lt;p class=&#34;big&#34; id=&#34;key1&#34;&gt; \xb5\xda\xb6\xfe\xb8\xf6p\xb1\xea\xc7\xa9&lt;/p&gt;]
+&gt;&gt;&gt; soup.find_all(id=True)
+[&lt;p class=&#34;big&#34; id=&#34;key1&#34;&gt; \xb5\xda\xb6\xfe\xb8\xf6p\xb1\xea\xc7\xa9&lt;/p&gt;]
+</code></pre><p>遍历和搜索相结合查找，先定位到 body 标签，缩小搜索范围，再从 body 中找 a 标签。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; body_tag = soup.body
+&gt;&gt;&gt; body_tag.find_all(&#34;a&#34;)
+[&lt;a href=&#34;http://foofish.net&#34;&gt;python&lt;/a&gt;]
+</code></pre><h3 id="find">find()</h3>
+<p>find 方法跟 find_all 类似，唯一不同的地方是，它返回的单个 Tag 对象而非列表，如果没找到匹配的节点则返回 None。<strong>如果匹配多个 Tag，只返回第0个。</strong></p>
+<pre tabindex="0"><code>&gt;&gt;&gt; body_tag.find(&#34;a&#34;)
+&lt;a href=&#34;http://foofish.net&#34;&gt;python&lt;/a&gt;
+&gt;&gt;&gt; body_tag.find(&#34;p&#34;)
+&lt;p class=&#34;bold&#34;&gt;\xc8\xe7\xba\xce\xca\xb9\xd3\xc3BeautifulSoup&lt;/p&gt;
+</code></pre><h3 id="get_text">get_text()</h3>
+<p>获取标签里面内容，除了可以使用 <code>.string </code>之外，还可以使用 <code>get_text </code>方法，不同的地方在于前者返回的一个 <code>NavigableString </code>对象，后者返回的是 <code>unicode </code>类型的字符串。</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; p1 = body_tag.find(&#39;p&#39;).get_text()
+&gt;&gt;&gt; type(p1)
+&lt;type &#39;unicode&#39;&gt;
+&gt;&gt;&gt; p1
+u&#39;\xc8\xe7\xba\xce\xca\xb9\xd3\xc3BeautifulSoup&#39;
+
+&gt;&gt;&gt; p2 = body_tag.find(&#34;p&#34;).string
+&gt;&gt;&gt; type(p2)
+&lt;class &#39;bs4.element.NavigableString&#39;&gt;
+&gt;&gt;&gt; p2
+u&#39;\xc8\xe7\xba\xce\xca\xb9\xd3\xc3BeautifulSoup&#39;
+&gt;&gt;&gt;
+</code></pre><p>实际场景中我们一般使用 get_text 方法获取标签中的内容。</p>
+<h3 id="总结">总结</h3>
+<p>BeatifulSoup 是一个用于操作 HTML 文档的 Python 库，初始化 BeatifulSoup 时，需要指定 HTML 文档字符串和具体的解析器。BeatifulSoup 有3类常用的数据类型，分别是 Tag、NavigableString、和 BeautifulSoup。查找 HTML元素有两种方式，分别是遍历文档树和搜索文档树，通常快速获取数据需要二者结合。最后是一个实践项目：<a href="https://foofish.net/python-crawler-html2pdf.html" target="_blank" rel="noopener noreffer">用 Requests 和 BeatifulSoup 把廖雪峰的教程转换成 PDF 电子书</a>
+。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB3/" data-title="爬虫(三)BeautifulSoup" data-hashtags="爬虫,python"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB3/" data-hashtag="爬虫"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB3/" data-title="爬虫(三)BeautifulSoup"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB3/" data-title="爬虫(三)BeautifulSoup"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E7%88%AC%E8%99%AB3/" data-title="爬虫(三)BeautifulSoup"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E7%2588%25AC%25E8%2599%25AB3%2f&amp;description=%e7%88%ac%e8%99%ab%28%e4%b8%89%29BeautifulSoup" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a>,&nbsp;<a href="/tags/python/">python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/" class="prev" rel="prev" title="登录与cookie"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>登录与cookie</a>
+            <a href="/posts/%E7%88%AC%E8%99%AB4/" class="next" rel="next" title="爬虫(4)正则表达式">爬虫(4)正则表达式<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
