@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>“Linux” - Tag - HuskyDoge&#39;s World</title>
+        <title>Linux - Tag - HuskyDoge&#39;s World</title>
         <link>http://example.org/tags/linux/</link>
-        <description>“Linux” - Tag - HuskyDoge&#39;s World</description>
+        <description>Linux - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
             <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux文件权限</title>
