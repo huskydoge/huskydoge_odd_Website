@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Shell - Tag - HuskyDoge&#39;s World</title>
-        <link>http://example.org/tags/shell/</link>
-        <description>Shell - Tag - HuskyDoge&#39;s World</description>
+        <title>“Linux” - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/linux/</link>
+        <description>“Linux” - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/shell/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux文件权限</title>
     <link>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</link>
     <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
@@ -19,14 +19,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C/</guid>
     <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Shell</title>
-    <link>http://example.org/posts/shell/</link>
-    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/posts/shell/</guid>
-    <description><![CDATA[echo + text pwd: 当前路径 cd .:当前目录 cd ..:上级目录 cd /：根目录 ls -l:显示文件的详细信息 rm -rf:用强制权限删除，避免烦人的提醒信息 mv: mv命令将]]></description>
 </item>
 </channel>
 </rss>
