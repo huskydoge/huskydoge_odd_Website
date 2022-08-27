@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>健康 - Category - HuskyDoge&#39;s World</title>
+        <link>http://example.org/categories/%E5%81%A5%E5%BA%B7/</link>
+        <description>健康 - Category - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%81%A5%E5%BA%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>健身笔记</title>
+    <link>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[饮食 黄金时间： ​ 运动后30分钟内摄入蛋白质最佳 热身 静态拉伸 ​ 静态拉伸就是把自己的身体摆放到关节活动度极限位置附近，然后保持这个动作持续10-]]></description>
+</item>
+<item>
+    <title>肌肉与力量的关系</title>
+    <link>http://example.org/posts/%E8%82%8C%E8%82%89%E4%B8%8E%E5%8A%9B%E9%87%8F%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E8%82%8C%E8%82%89%E4%B8%8E%E5%8A%9B%E9%87%8F%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
