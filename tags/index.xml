@@ -45,6 +45,14 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Vim</title>
+    <link>http://example.org/tags/vim/</link>
+    <pubDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/vim/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>library</title>
     <link>http://example.org/tags/library/</link>
     <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/char/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>git</title>
-    <link>http://example.org/tags/git/</link>
-    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/git/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

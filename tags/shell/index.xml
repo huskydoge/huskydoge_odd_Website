@@ -21,6 +21,14 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Vim</title>
+    <link>http://example.org/posts/vim/</link>
+    <pubDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/vim/</guid>
+    <description><![CDATA[vi的使用 vi分为三种模式： 一般命令模式(command mode) 移动光标 删除字符 复制粘贴 不能编辑文件内容 编辑模式(insert mode) 编辑文件内容 命令行]]></description>
+</item>
+<item>
     <title>Shell</title>
     <link>http://example.org/posts/shell/</link>
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
