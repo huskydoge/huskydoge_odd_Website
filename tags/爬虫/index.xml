@@ -10,7 +10,7 @@
     <pubDate>Tue, 23 Aug 2022 12:45:50 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB4/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p>转载自python之禅</p>]]></description>
 </item>
 <item>
     <title>爬虫(三)BeautifulSoup</title>
@@ -18,7 +18,7 @@
     <pubDate>Tue, 23 Aug 2022 12:04:06 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB3/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p>转载自python之禅</p>]]></description>
 </item>
 <item>
     <title>登录与cookie</title>
@@ -34,7 +34,7 @@
     <pubDate>Mon, 22 Aug 2022 13:24:57 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB2/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p>转载自python之禅</p>]]></description>
 </item>
 <item>
     <title>爬虫(一)HTTP协议</title>
@@ -42,7 +42,7 @@
     <pubDate>Sun, 21 Aug 2022 23:52:25 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB1/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p>转载自python之禅</p>]]></description>
 </item>
 </channel>
 </rss>
