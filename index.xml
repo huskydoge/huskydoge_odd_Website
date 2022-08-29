@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Tqdm</title>
+    <link>http://example.org/posts/tqdm/</link>
+    <pubDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/tqdm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Linux文件权限</title>
     <link>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</link>
     <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB1/</guid>
     <description><![CDATA[<p>转载自python之禅</p>]]></description>
-</item>
-<item>
-    <title>Vim</title>
-    <link>http://example.org/posts/vim/</link>
-    <pubDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/vim/</guid>
-    <description><![CDATA[vi的使用 vi分为三种模式： 一般命令模式(command mode) 移动光标 删除字符 复制粘贴 不能编辑文件内容 编辑模式(insert mode) 编辑文件内容 命令行]]></description>
 </item>
 </channel>
 </rss>
