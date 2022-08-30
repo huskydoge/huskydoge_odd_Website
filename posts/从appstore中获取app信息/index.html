@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>从Appstore上爬取app信息 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="从Appstore上爬取app信息" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-29T18:22:15+08:00" />
+<meta property="article:modified_time" content="2022-08-29T18:22:15+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从Appstore上爬取app信息"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" /><link rel="prev" href="http://example.org/posts/tqdm/" /><link rel="next" href="http://example.org/posts/requests-xpath/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从Appstore上爬取app信息",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF\/"
+        },"genre": "posts","keywords": "爬虫","wordcount":  900 ,
+        "url": "http:\/\/example.org\/posts\/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF\/","datePublished": "2022-08-29T18:22:15+08:00","dateModified": "2022-08-29T18:22:15+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HuskyDoge"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="LazyDog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="LazyDog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">从Appstore上爬取app信息</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自学笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-29">2022-08-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;900 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" class="leancloud_visitors" data-flag-title="从Appstore上爬取app信息">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading"></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#任务描述">任务描述</a></li>
+        <li><a href="#代码如下">代码如下</a></li>
+        <li><a href="#疑问记录">疑问记录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="heading"></h3>
+<h1 id="从appstore中爬取app信息">从Appstore中爬取App信息</h1>
+<h3 id="任务描述">任务描述</h3>
+<p>我们可以在如下页面：</p>
+<p><a href="https://apps.apple.com/cn/genre/ios-%e6%97%85%e8%a1%8c/id6003" target="_blank" rel="noopener noreffer">https://apps.apple.com/cn/genre/ios-%E6%97%85%E8%A1%8C/id6003 (链接到外部网站。)链接到外部网站。</a>
+</p>
+<p>看到Apple iOS 应用商店（AppStore）中的所有应用（app）的相关页面，例如对于“春秋航空”其页面是：</p>
+<p><a href="https://apps.apple.com/cn/app/%e6%98%a5%e7%a7%8b%e8%88%aa%e7%a9%ba-%e4%bd%8e%e4%bb%b7%e6%9c%ba%e7%a5%a8%e9%a2%84%e8%ae%a2/id460033035" target="_blank" rel="noopener noreffer">https://apps.apple.com/cn/app/%E6%98%A5%E7%A7%8B%E8%88%AA%E7%A9%BA-%E4%BD%8E%E4%BB%B7%E6%9C%BA%E7%A5%A8%E9%A2%84%E8%AE%A2/id460033035 (链接到外部网站。)链接到外部网站。</a>
+</p>
+<p>我们可以从每个app对应的页面上获取到很多信息，例如对于“春秋航空”，我们可以得到下面一些信息：</p>
+<ul>
+<li>app对应的ID：460033035</li>
+<li>app名称：春秋航空-低价机票预订</li>
+<li>app类别：旅游</li>
+<li>app开发者：春秋航空 Spring Airlines</li>
+<li>app供应商：Spring Airlines Co.,Ltd</li>
+<li>app评分：4.5 • 6,880 个评分</li>
+<li>app最新版本： 7.1.5</li>
+<li>发布日期：2022年7月1日</li>
+<li>app价格：免费</li>
+</ul>
+<p>我们写一个爬虫：</p>
+<p>1 获取<a href="https://apps.apple.com/cn/genre/ios-%e6%97%85%e8%a1%8c/id6003" target="_blank" rel="noopener noreffer"> https://apps.apple.com/cn/ (链接到外部网站。)链接到外部网站。</a>
+ 下面所有app的信息页面</p>
+<p>2 分析每个页面，为每个app提取上述类别的信息</p>
+<h3 id="代码如下">代码如下</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tqdm</span> <span class="c1"># 进度条显示</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start_url</span> <span class="o">=</span> <span class="s1">&#39;https://apps.apple.com/cn/genre/ios-</span><span class="si">%E</span><span class="s1">6</span><span class="si">%97%</span><span class="s1">85</span><span class="si">%E</span><span class="s1">8%A1%8C/id6003&#39;</span> <span class="c1"># 起初界面</span>
+</span></span><span class="line"><span class="cl"><span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user-agent&#39;</span><span class="p">:</span><span class="s2">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#34;</span><span class="p">}</span> <span class="c1"># 防爬</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">start_url</span><span class="p">,</span><span class="n">headers</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">html_str</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="cl"><span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_str</span><span class="p">)</span>    
+</span></span><span class="line"><span class="cl"><span class="n">app_urls</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//*[@id=&#34;selectedcontent&#34;]/div[1]/ul//a/@href&#39;</span><span class="p">)</span> <span class="c1"># 获取母页面</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># 用于储存数据</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_id&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_category&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_developer&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_supplier&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_score&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_version&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_release_date&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;price&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取信息</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_info</span><span class="p">(</span><span class="n">app_url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">app_url</span><span class="p">,</span><span class="n">headers</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">html_str</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># response.encoding = &#34;utf-8&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_str</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_id</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_id</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;/html/head/meta[10]/@content&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_id&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_id</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_name</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//h1[@class=&#34;product-header__title app-header__title&#34;]/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">list</span><span class="p">(</span><span class="n">app_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\u202c</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 去除 \u202a 和 \u202c 这两个奇怪的字符</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_name&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_name</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_category</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_category</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//dl[@class=&#34;information-list information-list--app medium-																	columns l-row&#34;]/div[3]/dd/a/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_category&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_category</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_developer</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_developer</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//h2/a[@dir]/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_developer&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_developer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_supplier</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_supplier</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//dd[@class = &#34;information-list__item__definition&#34;]/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_supplier&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_supplier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">#记录 app_score</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_score</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//figure[@class = &#34;we-star-rating&#34;]/figcaption/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#处理可能没有评分的情况</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">app_score</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_score&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_score</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_score&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;Nan&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_version</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_version</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//p[@class =&#34;l-column small-6 medium-12 whats-																						new__latest__version&#34;]/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_version&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_version</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 app_release_date</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app_release_date</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//time[@aria-label]/text()&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;app_release_date&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app_release_date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># 记录 price</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># 不同的网页price的Full Xpath有不同，所以要自己写</span>
+</span></span><span class="line"><span class="cl">    <span class="n">price</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//div/dt[text()=&#34;价格&#34;]/following-sibling::dd/text()&#39;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;price&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">price</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">app_urls</span><span class="p">):</span> <span class="c1">#tqdm 提供进度条</span>
+</span></span><span class="line"><span class="cl">    <span class="n">get_info</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span> <span class="c1"># 用于最后导出数据</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&#34;App Information.csv&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 工作完成</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;done&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="疑问记录">疑问记录</h3>
+<ul>
+<li>如果直接从chrome上复制元素的Xpath爬取的数据总为空，必须要减少路径长度才行，原因未知。</li>
+<li>对于etree的element对象，从网上爬取到中文字符有可能出现奇怪的编码，比如<code>\u202a</code>和<code>\u202c</code>，最后我消除的办法是先将对象转换为str类型然后用字符串处理消除。</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" data-title="从Appstore上爬取app信息" data-hashtags="爬虫"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" data-hashtag="爬虫"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" data-title="从Appstore上爬取app信息"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" data-title="从Appstore上爬取app信息"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/" data-title="从Appstore上爬取app信息"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E4%25BB%258Eappstore%25E4%25B8%25AD%25E8%258E%25B7%25E5%258F%2596app%25E4%25BF%25A1%25E6%2581%25AF%2f&amp;description=%e4%bb%8eAppstore%e4%b8%8a%e7%88%ac%e5%8f%96app%e4%bf%a1%e6%81%af" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tqdm/" class="prev" rel="prev" title="Tqdm"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Tqdm</a>
+            <a href="/posts/requests-xpath/" class="next" rel="next" title="Requests 和 Xpath">Requests 和 Xpath<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.102.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -5,6 +5,14 @@
         <description>Linux - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
             <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux文件与目录的默认权限与隐藏权限</title>
+    <link>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</link>
+    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Linux文件权限</title>
     <link>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</link>
     <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>

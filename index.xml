@@ -4,14 +4,38 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Requests 和 Xpath</title>
+    <link>http://example.org/posts/requests-xpath/</link>
+    <pubDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/requests-xpath/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>从Appstore上爬取app信息</title>
+    <link>http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/</link>
+    <pubDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Tqdm</title>
     <link>http://example.org/posts/tqdm/</link>
     <pubDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/tqdm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Linux文件与目录的默认权限与隐藏权限</title>
+    <link>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</link>
+    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -60,30 +84,6 @@
     <pubDate>Tue, 23 Aug 2022 12:04:06 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E8%99%AB3/</guid>
-    <description><![CDATA[<p>转载自python之禅</p>]]></description>
-</item>
-<item>
-    <title>登录与cookie</title>
-    <link>http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/</link>
-    <pubDate>Mon, 22 Aug 2022 13:51:07 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%99%BB%E5%BD%95%E4%B8%8Ecookie/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>爬虫(二)HTTP库</title>
-    <link>http://example.org/posts/%E7%88%AC%E8%99%AB2/</link>
-    <pubDate>Mon, 22 Aug 2022 13:24:57 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%88%AC%E8%99%AB2/</guid>
-    <description><![CDATA[<p>转载自python之禅</p>]]></description>
-</item>
-<item>
-    <title>爬虫(一)HTTP协议</title>
-    <link>http://example.org/posts/%E7%88%AC%E8%99%AB1/</link>
-    <pubDate>Sun, 21 Aug 2022 23:52:25 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%88%AC%E8%99%AB1/</guid>
     <description><![CDATA[<p>转载自python之禅</p>]]></description>
 </item>
 </channel>

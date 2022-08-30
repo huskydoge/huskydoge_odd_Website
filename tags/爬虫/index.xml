@@ -4,7 +4,23 @@
         <link>http://example.org/tags/%E7%88%AC%E8%99%AB/</link>
         <description>爬虫 - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%88%AC%E8%99%AB/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%88%AC%E8%99%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Requests 和 Xpath</title>
+    <link>http://example.org/posts/requests-xpath/</link>
+    <pubDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/requests-xpath/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>从Appstore上爬取app信息</title>
+    <link>http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/</link>
+    <pubDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E4%BB%8Eappstore%E4%B8%AD%E8%8E%B7%E5%8F%96app%E4%BF%A1%E6%81%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Tqdm</title>
     <link>http://example.org/posts/tqdm/</link>
     <pubDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</pubDate>
