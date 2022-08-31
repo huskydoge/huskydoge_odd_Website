@@ -20,7 +20,9 @@
     <pubDate>Tue, 30 Aug 2022 21:45:49 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%88%AC%E5%8F%96%E7%94%B5%E9%94%AF%E4%BA%BA%E6%BC%AB%E7%94%BB/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/crawler.png" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>Requests 和 Xpath</title>
