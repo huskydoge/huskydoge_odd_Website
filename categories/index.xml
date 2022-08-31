@@ -4,7 +4,15 @@
         <link>http://example.org/categories/</link>
         <description>Categories - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 31 Aug 2022 13:39:20 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>“自动化办公”</title>
+    <link>http://example.org/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</link>
+    <pubDate>Wed, 31 Aug 2022 13:39:20 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>自学笔记</title>
     <link>http://example.org/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Mon, 29 Aug 2022 18:22:15 &#43;0800</pubDate>
