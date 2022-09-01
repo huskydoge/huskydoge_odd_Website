@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/xlwings/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-31T13:39:20+08:00" />
-<meta property="article:modified_time" content="2022-08-31T21:20:38+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-09-01T22:38:35+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Xlwings"/>
@@ -25,7 +25,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/xlwings\/"
         },"genre": "posts","wordcount":  4850 ,
-        "url": "http:\/\/example.org\/posts\/xlwings\/","datePublished": "2022-08-31T13:39:20+08:00","dateModified": "2022-08-31T21:20:38+08:00","license": "All Mine","publisher": {
+        "url": "http:\/\/example.org\/posts\/xlwings\/","datePublished": "2022-08-31T13:39:20+08:00","dateModified": "2022-09-01T22:38:35+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -113,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Xlwings</h1><h2 class="single-subtitle">转载自知乎无欢不散</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://zhuanlan.zhihu.com/p/441862955" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
-</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>“自动化办公”</a></span></div>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>自动化办公</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-31">2022-08-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4850 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;10 minutes&nbsp;<span id="/posts/xlwings/" class="leancloud_visitors" data-flag-title="Xlwings">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
@@ -165,180 +165,180 @@
         alt="https://pic2.zhimg.com/80/v2-9d2d621c37d94fd2440807a5c12923d5_1440w.jpg"
         title="img" /></p>
 <h3 id="41-pip安装xlwings"><strong>4.1 pip安装xlwings</strong></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">pip install xlwings
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">xlwings</span>
 </span></span></code></pre></div><h3 id="42-基本操作"><strong>4.2 基本操作</strong></h3>
 <p>引入库</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import xlwings as xw 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span> 
 </span></span></code></pre></div><p>打开Excel程序，默认设置：程序可见，只打开不新建工作薄</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app = xw.App(visible=True,add_book=False)
-</span></span><span class="line"><span class="cl">#新建工作簿 (如果不接下一条代码的话，Excel只会一闪而过，卖个萌就走了）
-</span></span><span class="line"><span class="cl">wb = app.books.add()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#新建工作簿 (如果不接下一条代码的话，Excel只会一闪而过，卖个萌就走了）</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
 </span></span></code></pre></div><p>打开已有工作簿（支持绝对路径和相对路径）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb = app.books.open(&#39;example.xlsx&#39;)
-</span></span><span class="line"><span class="cl">#练习的时候建议直接用下面这条
-</span></span><span class="line"><span class="cl">#wb = xw.Book(&#39;example.xlsx&#39;)
-</span></span><span class="line"><span class="cl">#这样的话就不会频繁打开新的Excel
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;example.xlsx&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#练习的时候建议直接用下面这条</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#wb = xw.Book(&#39;example.xlsx&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#这样的话就不会频繁打开新的Excel</span>
 </span></span></code></pre></div><p>保存工作簿</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb.save(&#39;example.xlsx&#39;)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;example.xlsx&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><p>退出工作簿（可省略）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb.close()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span></code></pre></div><p>退出Excel</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app.quit()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p><strong>三个例子：</strong>（1）打开已存在的Excel文档</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 导入xlwings模块
-</span></span><span class="line"><span class="cl">import xlwings as xw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 导入xlwings模块</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 打开Excel程序，默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭
-</span></span><span class="line"><span class="cl">app=xw.App(visible=True,add_book=False)
-</span></span><span class="line"><span class="cl">app.display_alerts=False
-</span></span><span class="line"><span class="cl">app.screen_updating=False
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开Excel程序，默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">display_alerts</span><span class="o">=</span><span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">screen_updating</span><span class="o">=</span><span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 文件位置：filepath，打开test文档，然后保存，关闭，结束程序
-</span></span><span class="line"><span class="cl">filepath=r&#39;g:\Python Scripts\test.xlsx&#39;
-</span></span><span class="line"><span class="cl">wb=app.books.open(filepath)
-</span></span><span class="line"><span class="cl">wb.save()
-</span></span><span class="line"><span class="cl">wb.close()
-</span></span><span class="line"><span class="cl">app.quit()
+</span></span><span class="line"><span class="cl"><span class="c1"># 文件位置：filepath，打开test文档，然后保存，关闭，结束程序</span>
+</span></span><span class="line"><span class="cl"><span class="n">filepath</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;g:\Python Scripts\test.xlsx&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p>（2）新建Excel文档，命名为test.xlsx，并保存在D盘</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import xlwings as xw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">app=xw.App(visible=True,add_book=False)
-</span></span><span class="line"><span class="cl">wb=app.books.add()
-</span></span><span class="line"><span class="cl">wb.save(r&#39;d:\test.xlsx&#39;)
-</span></span><span class="line"><span class="cl">wb.close()
-</span></span><span class="line"><span class="cl">app.quit()
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;d:\test.xlsx&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p>（3）在单元格输入值新建test.xlsx，在sheet1的第一个单元格输入 “人生” ，然后保存关闭，退出Excel程序。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> import xlwings as xw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"> app=xw.App(visible=True,add_book=False)
-</span></span><span class="line"><span class="cl"> wb=app.books.add()
+</span></span><span class="line"><span class="cl"> <span class="n">app</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"> # wb就是新建的工作簿(workbook)，下面则对wb的sheet1的A1单元格赋值
-</span></span><span class="line"><span class="cl"> wb.sheets[&#39;sheet1&#39;].range(&#39;A1&#39;).value=&#39;人生&#39;
-</span></span><span class="line"><span class="cl"> wb.save(r&#39;d:\test.xlsx&#39;)
-</span></span><span class="line"><span class="cl"> wb.close()
-</span></span><span class="line"><span class="cl"> app.quit()
+</span></span><span class="line"><span class="cl"> <span class="c1"># wb就是新建的工作簿(workbook)，下面则对wb的sheet1的A1单元格赋值</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="s1">&#39;sheet1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;人生&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;d:\test.xlsx&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p>打开已保存的test.xlsx，在sheet2的第二个单元格输入“苦短”，然后保存关闭，退出Excel程序</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> import xlwings as xw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"> app=xw.App(visible=True,add_book=False)
-</span></span><span class="line"><span class="cl"> wb=app.books.open(r&#39;d:\test.xlsx&#39;)
+</span></span><span class="line"><span class="cl"> <span class="n">app</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;d:\test.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"> # wb就是新建的工作簿(workbook)，下面则对wb的sheet1的A1单元格赋值
-</span></span><span class="line"><span class="cl"> wb.sheets[&#39;sheet1&#39;].range(&#39;A1&#39;).value=&#39;苦短&#39;
-</span></span><span class="line"><span class="cl"> wb.save()
-</span></span><span class="line"><span class="cl"> wb.close()
-</span></span><span class="line"><span class="cl"> app.quit()
+</span></span><span class="line"><span class="cl"> <span class="c1"># wb就是新建的工作簿(workbook)，下面则对wb的sheet1的A1单元格赋值</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="s1">&#39;sheet1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;苦短&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p>掌握以上代码，已经完全可以把Excel当作一个txt文本进行数据储存了，也可以读取Excel文件的数据，进行计算后，并将结果保存在Excel中。</p>
 <h3 id="43-引用工作薄工作表和单元格"><strong>4.3 引用工作薄、工作表和单元格</strong></h3>
 <p>（1）按名字引用工作簿，注意工作簿应该首先被打开</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb=xw.books[&#39;工作簿的名字‘]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿的名字‘]</span>
 </span></span></code></pre></div><p>（2）引用活动的工作薄</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb=xw.books.active
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">active</span>
 </span></span></code></pre></div><p>（3）引用工作簿中的sheet</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht=xw.books[&#39;工作簿的名字‘].sheets[&#39;sheet的名字&#39;]
-</span></span><span class="line"><span class="cl"># 或者
-</span></span><span class="line"><span class="cl">wb=xw.books[&#39;工作簿的名字&#39;]
-</span></span><span class="line"><span class="cl">sht=wb.sheets[sheet的名字]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿的名字‘].sheets[&#39;</span><span class="n">sheet的名字</span><span class="s1">&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿的名字&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="n">sheet的名字</span><span class="p">]</span>
 </span></span></code></pre></div><p>（4）引用活动sheet</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht=xw.sheets.active
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">active</span>
 </span></span></code></pre></div><p>（5）引用A1单元格</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">rng=xw.books[&#39;工作簿的名字‘].sheets[&#39;sheet的名字&#39;]
-</span></span><span class="line"><span class="cl"># 或者
-</span></span><span class="line"><span class="cl">sht=xw.books[&#39;工作簿的名字‘].sheets[&#39;sheet的名字&#39;]
-</span></span><span class="line"><span class="cl">rng=sht.range(&#39;A1&#39;)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿的名字‘].sheets[&#39;</span><span class="n">sheet的名字</span><span class="s1">&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿的名字‘].sheets[&#39;</span><span class="n">sheet的名字</span><span class="s1">&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><p>（6）引用活动sheet上的单元格</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 注意Range首字母大写
-</span></span><span class="line"><span class="cl">rng=xw.Range(&#39;A1&#39;)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 注意Range首字母大写</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#其中需要注意的是单元格的完全引用路径是：
-</span></span><span class="line"><span class="cl"># 第一个Excel程序的第一个工作薄的第一张sheet的第一个单元格
-</span></span><span class="line"><span class="cl">xw.apps[0].books[0].sheets[0].range(&#39;A1&#39;)
-</span></span><span class="line"><span class="cl">迅速引用单元格的方式是
-</span></span><span class="line"><span class="cl">sht=xw.books[&#39;名字&#39;].sheets[&#39;名字&#39;]
+</span></span><span class="line"><span class="cl"><span class="c1">#其中需要注意的是单元格的完全引用路径是：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 第一个Excel程序的第一个工作薄的第一张sheet的第一个单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">apps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">迅速引用单元格的方式是</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;名字&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="s1">&#39;名字&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># A1单元格
-</span></span><span class="line"><span class="cl">rng=sht[’A1&#39;]
+</span></span><span class="line"><span class="cl"><span class="c1"># A1单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="p">[</span><span class="err">’</span><span class="n">A1</span><span class="s1">&#39;]</span>
 </span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl"># A1:B5单元格
-</span></span><span class="line"><span class="cl">rng=sht[&#39;A1:B5&#39;]
+</span></span><span class="line"><span class="cl"><span class="c1"># A1:B5单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="p">[</span><span class="s1">&#39;A1:B5&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl"># 在第i+1行，第j+1列的单元格
-</span></span><span class="line"><span class="cl"># B1单元格
-</span></span><span class="line"><span class="cl">rng=sht[0,1]
+</span></span><span class="line"><span class="cl"><span class="c1"># 在第i+1行，第j+1列的单元格</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># B1单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl"># A1:J10
-</span></span><span class="line"><span class="cl">rng=sht[:10,:10]
+</span></span><span class="line"><span class="cl"><span class="c1"># A1:J10</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="p">[:</span><span class="mi">10</span><span class="p">,:</span><span class="mi">10</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">#PS： 对于单元格也可以用表示行列的tuple进行引用
-</span></span><span class="line"><span class="cl"># A1单元格的引用
-</span></span><span class="line"><span class="cl">xw.Range(1,1)
+</span></span><span class="line"><span class="cl"><span class="c1">#PS： 对于单元格也可以用表示行列的tuple进行引用</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A1单元格的引用</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">#A1:C3单元格的引用
-</span></span><span class="line"><span class="cl">xw.Range((1,1),(3,3))
+</span></span><span class="line"><span class="cl"><span class="c1">#A1:C3单元格的引用</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">Range</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 </span></span></code></pre></div><p>引用单元格：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">rng = sht.range(&#39;a1&#39;)
-</span></span><span class="line"><span class="cl">#rng = sht[&#39;a1&#39;]
-</span></span><span class="line"><span class="cl">#rng = sht[0,0] 第一行的第一列即a1,相当于pandas的切片
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rng = sht[&#39;a1&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rng = sht[0,0] 第一行的第一列即a1,相当于pandas的切片</span>
 </span></span></code></pre></div><p>引用区域：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">rng = sht.range(&#39;a1:a5&#39;)
-</span></span><span class="line"><span class="cl">#rng = sht[&#39;a1:a5&#39;]
-</span></span><span class="line"><span class="cl">#rng = sht[:5,0]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1:a5&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rng = sht[&#39;a1:a5&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#rng = sht[:5,0]</span>
 </span></span></code></pre></div><h3 id="44-写入读取数据"><strong>4.4 写入&amp;读取数据</strong></h3>
 <p><strong>1.写入数据（1）选择起始单元格A1,写入字符串‘Hello’</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a1&#39;).value = &#39;Hello&#39;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
 </span></span></code></pre></div><p><strong>（2）写入列表</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 行存储：将列表[1,2,3]储存在A1：C1中
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).value=[1,2,3]
-</span></span><span class="line"><span class="cl"># 列存储：将列表[1,2,3]储存在A1:A3中
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).options(transpose=True).value=[1,2,3]
-</span></span><span class="line"><span class="cl"># 将2x2表格，即二维数组，储存在A1:B2中，如第一行1，2，第二行3，4
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).options(expand=&#39;table&#39;)=[[1,2],[3,4]]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 行存储：将列表[1,2,3]储存在A1：C1中</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 列存储：将列表[1,2,3]储存在A1:A3中</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将2x2表格，即二维数组，储存在A1:B2中，如第一行1，2，第二行3，4</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="s1">&#39;table&#39;</span><span class="p">)</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
 </span></span></code></pre></div><ul>
 <li><strong>默认按行插入：A1:D1分别写入1,2,3,4</strong></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a1&#39;).value = [1,2,3,4]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 </span></span></code></pre></div><p>等同于</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a1:d1&#39;).value = [1,2,3,4]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1:d1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 </span></span></code></pre></div><ul>
 <li><strong>按列插入：A2:A5分别写入5,6,7,8</strong></li>
 </ul>
 <p>你可能会想：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a2:a5&#39;).value = [5,6,7,8]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a2:a5&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 </span></span></code></pre></div><p>但是你会发现xlwings还是会按行处理的，上面一行等同于：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a2&#39;).value = [5,6,7,8]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 </span></span></code></pre></div><p>正确语法:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a2&#39;).options(transpose=True).value = [5,6,7,8]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 </span></span></code></pre></div><p>既然默认的是按行写入，我们就把它倒过来嘛（transpose），单词要打对，如果你打错单词，它不会报错，而会按默认的行来写入（别问我怎么知道的）</p>
 <ul>
 <li><strong>多行输入就要用二维列表了：</strong></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">sht.range(&#39;a6&#39;).expand(&#39;table&#39;).value = [[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;],[&#39;d&#39;,&#39;e&#39;,&#39;f&#39;],[&#39;g&#39;,&#39;h&#39;,&#39;i&#39;]]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a6&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">]]</span>
 </span></span></code></pre></div><p><strong>2.读取数据（1）读取单个值</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 将A1的值，读取到a变量中
-</span></span><span class="line"><span class="cl">a=sht.range(&#39;A1&#39;).value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 将A1的值，读取到a变量中</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><p><strong>（2）将值读取到列表中</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">#将A1到A2的值，读取到a列表中
-</span></span><span class="line"><span class="cl">a=sht.range(&#39;A1:A2&#39;).value
-</span></span><span class="line"><span class="cl"># 将第一行和第二行的数据按二维数组的方式读取
-</span></span><span class="line"><span class="cl">a=sht.range(&#39;A1:B2&#39;).value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#将A1到A2的值，读取到a列表中</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1:A2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将第一行和第二行的数据按二维数组的方式读取</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1:B2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><ul>
 <li><strong>选取一列的数据</strong></li>
 </ul>
 <p>先计算单元格的行数(前提是连续的单元格)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">rng = sht.range(&#39;a1&#39;).expand(&#39;table&#39;)
-</span></span><span class="line"><span class="cl">nrows = rng.rows.count
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rng</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;a1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">nrows</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">rows</span><span class="o">.</span><span class="n">count</span>
 </span></span></code></pre></div><p>接着就可以按准确范围读取了</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">a = sht.range(f&#39;a1:a{nrows}&#39;).value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a1:a</span><span class="si">{</span><span class="n">nrows</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><ul>
 <li><strong>选取一行的数据</strong></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ncols = rng.columns.count
-</span></span><span class="line"><span class="cl">#用切片
-</span></span><span class="line"><span class="cl">fst_col = sht[0,:ncols].value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ncols</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">count</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#用切片</span>
+</span></span><span class="line"><span class="cl"><span class="n">fst_col</span> <span class="o">=</span> <span class="n">sht</span><span class="p">[</span><span class="mi">0</span><span class="p">,:</span><span class="n">ncols</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><h3 id="45-常用函数和方法"><strong>4.5 常用函数和方法</strong></h3>
 <p><strong>1.Book工作薄常用的api</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wb=xw.books[‘工作簿名称&#39;]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="err">‘</span><span class="n">工作簿名称</span><span class="s1">&#39;]</span>
 </span></span></code></pre></div><ul>
 <li>wb.activate() 激活为当前工作簿</li>
 <li>wb.fullname 返回工作簿的绝对路径</li>
@@ -347,132 +347,132 @@
 <li>wb. close() 关闭工作簿</li>
 </ul>
 <p>代码示例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 引用Excel程序中，当前的工作簿
-</span></span><span class="line"><span class="cl">wb=xw.books.acitve
-</span></span><span class="line"><span class="cl"># 返回工作簿的绝对路径
-</span></span><span class="line"><span class="cl">x=wb.fullname
-</span></span><span class="line"><span class="cl"># 返回工作簿的名称
-</span></span><span class="line"><span class="cl">x=wb.name
-</span></span><span class="line"><span class="cl"># 保存工作簿，默认路径为工作簿原路径，若未保存则为脚本所在的路径
-</span></span><span class="line"><span class="cl">x=wb.save(path=None)
-</span></span><span class="line"><span class="cl"># 关闭工作簿
-</span></span><span class="line"><span class="cl">x=wb.close()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 引用Excel程序中，当前的工作簿</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">acitve</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回工作簿的绝对路径</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="o">=</span><span class="n">wb</span><span class="o">.</span><span class="n">fullname</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回工作簿的名称</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="o">=</span><span class="n">wb</span><span class="o">.</span><span class="n">name</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 保存工作簿，默认路径为工作簿原路径，若未保存则为脚本所在的路径</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="o">=</span><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭工作簿</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="o">=</span><span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span></code></pre></div><p><strong>2.sheet常用的api</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 引用某指定sheet
-</span></span><span class="line"><span class="cl">sht=xw.books[&#39;工作簿名称&#39;].sheets[&#39;sheet的名称&#39;]
-</span></span><span class="line"><span class="cl"># 激活sheet为活动工作表
-</span></span><span class="line"><span class="cl">sht.activate()
-</span></span><span class="line"><span class="cl"># 清除sheet的内容和格式
-</span></span><span class="line"><span class="cl">sht.clear()
-</span></span><span class="line"><span class="cl"># 清除sheet的内容
-</span></span><span class="line"><span class="cl">sht.contents()
-</span></span><span class="line"><span class="cl"># 获取sheet的名称
-</span></span><span class="line"><span class="cl">sht.name
-</span></span><span class="line"><span class="cl"># 删除sheet
-</span></span><span class="line"><span class="cl">sht.delete
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 引用某指定sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="s1">&#39;工作簿名称&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="s1">&#39;sheet的名称&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 激活sheet为活动工作表</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 清除sheet的内容和格式</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 清除sheet的内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">contents</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取sheet的名称</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">name</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">delete</span>
 </span></span></code></pre></div><p><strong>3.range常用的api</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 引用当前活动工作表的单元格
-</span></span><span class="line"><span class="cl">rng=xw.Range(&#39;A1&#39;)
-</span></span><span class="line"><span class="cl"># 加入超链接
-</span></span><span class="line"><span class="cl"># rng.add_hyperlink(r&#39;www.baidu.com&#39;,&#39;百度&#39;,‘提示：点击即链接到百度&#39;)
-</span></span><span class="line"><span class="cl"># 取得当前range的地址
-</span></span><span class="line"><span class="cl">rng.address
-</span></span><span class="line"><span class="cl">rng.get_address()
-</span></span><span class="line"><span class="cl"># 清除range的内容
-</span></span><span class="line"><span class="cl">rng.clear_contents()
-</span></span><span class="line"><span class="cl"># 清除格式和内容
-</span></span><span class="line"><span class="cl">rng.clear()
-</span></span><span class="line"><span class="cl"># 取得range的背景色,以元组形式返回RGB值
-</span></span><span class="line"><span class="cl">rng.color
-</span></span><span class="line"><span class="cl"># 设置range的颜色
-</span></span><span class="line"><span class="cl">rng.color=(255,255,255)
-</span></span><span class="line"><span class="cl"># 清除range的背景色
-</span></span><span class="line"><span class="cl">rng.color=None
-</span></span><span class="line"><span class="cl"># 获得range的第一列列标
-</span></span><span class="line"><span class="cl">rng.column
-</span></span><span class="line"><span class="cl"># 返回range中单元格的数据
-</span></span><span class="line"><span class="cl">rng.count
-</span></span><span class="line"><span class="cl"># 返回current_region
-</span></span><span class="line"><span class="cl">rng.current_region
-</span></span><span class="line"><span class="cl"># 返回ctrl + 方向
-</span></span><span class="line"><span class="cl">rng.end(&#39;down&#39;)
-</span></span><span class="line"><span class="cl"># 获取公式或者输入公式
-</span></span><span class="line"><span class="cl">rng.formula=&#39;=SUM(B1:B5)&#39;
-</span></span><span class="line"><span class="cl"># 数组公式
-</span></span><span class="line"><span class="cl">rng.formula_array
-</span></span><span class="line"><span class="cl"># 获得单元格的绝对地址
-</span></span><span class="line"><span class="cl">rng.get_address(row_absolute=True, column_absolute=True,include_sheetname=False, external=False)
-</span></span><span class="line"><span class="cl"># 获得列宽
-</span></span><span class="line"><span class="cl">rng.column_width
-</span></span><span class="line"><span class="cl"># 返回range的总宽度
-</span></span><span class="line"><span class="cl">rng.width
-</span></span><span class="line"><span class="cl"># 获得range的超链接
-</span></span><span class="line"><span class="cl">rng.hyperlink
-</span></span><span class="line"><span class="cl"># 获得range中右下角最后一个单元格
-</span></span><span class="line"><span class="cl">rng.last_cell
-</span></span><span class="line"><span class="cl"># range平移
-</span></span><span class="line"><span class="cl">rng.offset(row_offset=0,column_offset=0)
-</span></span><span class="line"><span class="cl">#range进行resize改变range的大小
-</span></span><span class="line"><span class="cl">rng.resize(row_size=None,column_size=None)
-</span></span><span class="line"><span class="cl"># range的第一行行标
-</span></span><span class="line"><span class="cl">rng.row
-</span></span><span class="line"><span class="cl"># 行的高度，所有行一样高返回行高，不一样返回None
-</span></span><span class="line"><span class="cl">rng.row_height
-</span></span><span class="line"><span class="cl"># 返回range的总高度
-</span></span><span class="line"><span class="cl">rng.height
-</span></span><span class="line"><span class="cl"># 返回range的行数和列数
-</span></span><span class="line"><span class="cl">rng.shape
-</span></span><span class="line"><span class="cl"># 返回range所在的sheet
-</span></span><span class="line"><span class="cl">rng.sheet
-</span></span><span class="line"><span class="cl">#返回range的所有行
-</span></span><span class="line"><span class="cl">rng.rows
-</span></span><span class="line"><span class="cl"># range的第一行
-</span></span><span class="line"><span class="cl">rng.rows[0]
-</span></span><span class="line"><span class="cl"># range的总行数
-</span></span><span class="line"><span class="cl">rng.rows.count
-</span></span><span class="line"><span class="cl"># 返回range的所有列
-</span></span><span class="line"><span class="cl">rng.columns
-</span></span><span class="line"><span class="cl"># 返回range的第一列
-</span></span><span class="line"><span class="cl">rng.columns[0]
-</span></span><span class="line"><span class="cl"># 返回range的列数
-</span></span><span class="line"><span class="cl">rng.columns.count
-</span></span><span class="line"><span class="cl"># 所有range的大小自适应
-</span></span><span class="line"><span class="cl">rng.autofit()
-</span></span><span class="line"><span class="cl"># 所有列宽度自适应
-</span></span><span class="line"><span class="cl">rng.columns.autofit()
-</span></span><span class="line"><span class="cl"># 所有行宽度自适应
-</span></span><span class="line"><span class="cl">rng.rows.autofit()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 引用当前活动工作表的单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 加入超链接</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># rng.add_hyperlink(r&#39;www.baidu.com&#39;,&#39;百度&#39;,‘提示：点击即链接到百度&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 取得当前range的地址</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">address</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">get_address</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 清除range的内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">clear_contents</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 清除格式和内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 取得range的背景色,以元组形式返回RGB值</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">color</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置range的颜色</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 清除range的背景色</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">color</span><span class="o">=</span><span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获得range的第一列列标</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">column</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range中单元格的数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">count</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回current_region</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">current_region</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回ctrl + 方向</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取公式或者输入公式</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;=SUM(B1:B5)&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 数组公式</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">formula_array</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获得单元格的绝对地址</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">get_address</span><span class="p">(</span><span class="n">row_absolute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">column_absolute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">include_sheetname</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">external</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获得列宽</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">column_width</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的总宽度</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">width</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获得range的超链接</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">hyperlink</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获得range中右下角最后一个单元格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">last_cell</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># range平移</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">row_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#range进行resize改变range的大小</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">row_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">column_size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># range的第一行行标</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">row</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 行的高度，所有行一样高返回行高，不一样返回None</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">row_height</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的总高度</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">height</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的行数和列数</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">shape</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range所在的sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">sheet</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#返回range的所有行</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">rows</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># range的第一行</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># range的总行数</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">rows</span><span class="o">.</span><span class="n">count</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的所有列</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">columns</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的第一列</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 返回range的列数</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">count</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 所有range的大小自适应</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">autofit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 所有列宽度自适应</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">autofit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 所有行宽度自适应</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">rows</span><span class="o">.</span><span class="n">autofit</span><span class="p">()</span>
 </span></span></code></pre></div><p>4.books 工作簿集合的api</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 新建工作簿
-</span></span><span class="line"><span class="cl">xw.books.add()
-</span></span><span class="line"><span class="cl"># 引用当前活动工作簿
-</span></span><span class="line"><span class="cl">xw.books.active
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 新建工作簿</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 引用当前活动工作簿</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">active</span>
 </span></span></code></pre></div><p>4.sheets 工作表的集合</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 新建工作表
-</span></span><span class="line"><span class="cl">xw.sheets.add(name=None,before=None,after=None)
-</span></span><span class="line"><span class="cl"># 引用当前活动sheet
-</span></span><span class="line"><span class="cl">xw.sheets.active
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 新建工作表</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">before</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">after</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 引用当前活动sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">xw</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">active</span>
 </span></span></code></pre></div><h3 id="46-数据结构"><strong>4.6 数据结构</strong></h3>
 <p><strong>1.一维数据</strong>python的列表，可以和Excel中的行列进行数据交换，python中的一维列表，在Excel中默认为一行数据。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import xlwings as xw
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">sht=xw.sheets.active
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">=</span><span class="n">xw</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">active</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将1，2，3分别写入了A1，B1，C1单元格中
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).value=[1,2,3]
+</span></span><span class="line"><span class="cl"><span class="c1"># 将1，2，3分别写入了A1，B1，C1单元格中</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将A1，B1，C1单元格的值存入list1列表中
-</span></span><span class="line"><span class="cl">list1=sht.range(&#39;A1:C1&#39;).value
+</span></span><span class="line"><span class="cl"><span class="c1"># 将A1，B1，C1单元格的值存入list1列表中</span>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1:C1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将1，2，3分别写入了A1，A2，A3单元格中
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).options(transpose=True).value=[1,2,3]
+</span></span><span class="line"><span class="cl"><span class="c1"># 将1，2，3分别写入了A1，A2，A3单元格中</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将A1，A2，A3单元格中值存入list1列表中
-</span></span><span class="line"><span class="cl">list1=sht.range(&#39;A1:A3&#39;).value
+</span></span><span class="line"><span class="cl"><span class="c1"># 将A1，A2，A3单元格中值存入list1列表中</span>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1:A3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><p><strong>2.二维数据</strong>python的二维列表，可以转换为Excel中的行列。二维列表，即列表中的元素还是列表。在Excel中，二维列表中的列表元素，代表Excel表格中的一列。例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 将a1,a2,a3输入第一列，b1,b2,b3输入第二列
-</span></span><span class="line"><span class="cl">list1=[[‘a1’,&#39;a2&#39;,&#39;a3&#39;],[&#39;b1&#39;,&#39;b2&#39;,&#39;b3&#39;]]
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).value=list1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 将a1,a2,a3输入第一列，b1,b2,b3输入第二列</span>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span><span class="o">=</span><span class="p">[[</span><span class="err">‘</span><span class="n">a1</span><span class="err">’</span><span class="p">,</span><span class="s1">&#39;a2&#39;</span><span class="p">,</span><span class="s1">&#39;a3&#39;</span><span class="p">],[</span><span class="s1">&#39;b1&#39;</span><span class="p">,</span><span class="s1">&#39;b2&#39;</span><span class="p">,</span><span class="s1">&#39;b3&#39;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="n">list1</span>
 </span></span></code></pre></div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -481,12 +481,12 @@
         data-sizes="auto"
         alt="https://pic3.zhimg.com/80/v2-a5f83d0e9ff79e972115085eb11e5a5e_1440w.jpg"
         title="img" /></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 将A1：B3的值赋给二维列表list1
-</span></span><span class="line"><span class="cl">list1=sht.range(&#39;A1:B3&#39;).value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 将A1：B3的值赋给二维列表list1</span>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1:B3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </span></span></code></pre></div><p><strong>3.Excel中区域的选取表格</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 选取第一列
-</span></span><span class="line"><span class="cl">rng=sht. range(&#39;A1&#39;).expand(&#39;down&#39;)
-</span></span><span class="line"><span class="cl">rng.value=[&#39;a1&#39;,&#39;a2&#39;,&#39;a3&#39;]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 选取第一列</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span> <span class="nb">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span><span class="s1">&#39;a2&#39;</span><span class="p">,</span><span class="s1">&#39;a3&#39;</span><span class="p">]</span>
 </span></span></code></pre></div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -495,9 +495,9 @@
         data-sizes="auto"
         alt="https://pic2.zhimg.com/80/v2-37b2d1504f91dae6703b8b4c748274fd_1440w.jpg"
         title="img" /></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 选取第一行
-</span></span><span class="line"><span class="cl">rng=sht.range(&#39;A1&#39;).expand(&#39;right&#39;)
-</span></span><span class="line"><span class="cl">rng=[&#39;a1&#39;,&#39;b1&#39;]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 选取第一行</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span>
 </span></span></code></pre></div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -506,9 +506,9 @@
         data-sizes="auto"
         alt="https://pic2.zhimg.com/80/v2-412902e2af43ae48155ae3571321680d_1440w.jpg"
         title="img" /></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 选取表格
-</span></span><span class="line"><span class="cl">rng.sht.range(&#39;A1&#39;).expand(&#39;table&#39;)
-</span></span><span class="line"><span class="cl">rng.value=[[‘a1’,&#39;a2&#39;,&#39;a3&#39;],[&#39;b1&#39;,&#39;b2&#39;,&#39;b3&#39;]]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 选取表格</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="p">[[</span><span class="err">‘</span><span class="n">a1</span><span class="err">’</span><span class="p">,</span><span class="s1">&#39;a2&#39;</span><span class="p">,</span><span class="s1">&#39;a3&#39;</span><span class="p">],[</span><span class="s1">&#39;b1&#39;</span><span class="p">,</span><span class="s1">&#39;b2&#39;</span><span class="p">,</span><span class="s1">&#39;b3&#39;</span><span class="p">]]</span>
 </span></span></code></pre></div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -520,115 +520,115 @@
 <h3 id="47-xlwings生成图表"><strong>4.7 xlwings生成图表</strong></h3>
 <p>生成图表的方法，具体方法也可参见：<a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzUzODYwMDAzNA%3D%3D%26mid%3D2247517310%26idx%3D3%26sn%3D5009e65912c662ea566077890586e902%26chksm%3Dfad7f373cda07a65e9c467a2630ec78b5bc54a71583086f60f3d609877dd042eb55434f0b337%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener noreffer">Python 操作 Excel 库 xlwings 常用操作详解！</a>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import xlwings as xw
-</span></span><span class="line"><span class="cl">app = xw.App()
-</span></span><span class="line"><span class="cl">wb = app.books.active
-</span></span><span class="line"><span class="cl">sht = wb.sheets.active
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">active</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">active</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">chart = sht.charts.add(100, 10)  # 100, 10 为图表放置的位置坐标。以像素为单位。
-</span></span><span class="line"><span class="cl">chart.set_source_data(sht.range(&#39;A1&#39;).expand())  # 参数为表格中的数据区域。
-</span></span><span class="line"><span class="cl"># chart.chart_type = i               # 用来设置图表类型，具体参数件下面详细说明。
-</span></span><span class="line"><span class="cl">chart.api[1].ChartTitle.Text = i          # 用来设置图表的标题。
+</span></span><span class="line"><span class="cl"><span class="n">chart</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">charts</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 100, 10 为图表放置的位置坐标。以像素为单位。</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart</span><span class="o">.</span><span class="n">set_source_data</span><span class="p">(</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">())</span>  <span class="c1"># 参数为表格中的数据区域。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># chart.chart_type = i               # 用来设置图表类型，具体参数件下面详细说明。</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart</span><span class="o">.</span><span class="n">api</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ChartTitle</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">i</span>          <span class="c1"># 用来设置图表的标题。</span>
 </span></span></code></pre></div><p>示例代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import xlwings as xw
-</span></span><span class="line"><span class="cl">app = xw.App()
-</span></span><span class="line"><span class="cl">wb = app.books.active
-</span></span><span class="line"><span class="cl">sht = wb.sheets.active
-</span></span><span class="line"><span class="cl"># 生成图表的数据
-</span></span><span class="line"><span class="cl">sht.range(&#39;A1&#39;).value = [[&#39;时间&#39;, &#39;数量&#39;], [&#39;1日&#39;, 2], [&#39;2日&#39;, 1], [&#39;3日&#39;, 3]
-</span></span><span class="line"><span class="cl">             , [&#39;4日&#39;, 4], [&#39;5日&#39;, 5], [&#39;6日&#39;, 6]]
-</span></span><span class="line"><span class="cl">&#34;&#34;&#34;图表类型参数，被注释的那几个，无法生成对应的图表&#34;&#34;&#34;
-</span></span><span class="line"><span class="cl">dic = {
-</span></span><span class="line"><span class="cl">  &#39;3d_area&#39;: -4098,
-</span></span><span class="line"><span class="cl">  &#39;3d_area_stacked&#39;: 78,
-</span></span><span class="line"><span class="cl">  &#39;3d_area_stacked_100&#39;: 79,
-</span></span><span class="line"><span class="cl">  &#39;3d_bar_clustered&#39;: 60,
-</span></span><span class="line"><span class="cl">  &#39;3d_bar_stacked&#39;: 61,
-</span></span><span class="line"><span class="cl">  &#39;3d_bar_stacked_100&#39;: 62,
-</span></span><span class="line"><span class="cl">  &#39;3d_column&#39;: -4100,
-</span></span><span class="line"><span class="cl">  &#39;3d_column_clustered&#39;: 54,
-</span></span><span class="line"><span class="cl">  &#39;3d_column_stacked&#39;: 55,
-</span></span><span class="line"><span class="cl">  &#39;3d_column_stacked_100&#39;: 56,
-</span></span><span class="line"><span class="cl">  &#39;3d_line&#39;: -4101,
-</span></span><span class="line"><span class="cl">  &#39;3d_pie&#39;: -4102,
-</span></span><span class="line"><span class="cl">  &#39;3d_pie_exploded&#39;: 70,
-</span></span><span class="line"><span class="cl">  &#39;area&#39;: 1,
-</span></span><span class="line"><span class="cl">  &#39;area_stacked&#39;: 76,
-</span></span><span class="line"><span class="cl">  &#39;area_stacked_100&#39;: 77,
-</span></span><span class="line"><span class="cl">  &#39;bar_clustered&#39;: 57,
-</span></span><span class="line"><span class="cl">  &#39;bar_of_pie&#39;: 71,
-</span></span><span class="line"><span class="cl">  &#39;bar_stacked&#39;: 58,
-</span></span><span class="line"><span class="cl">  &#39;bar_stacked_100&#39;: 59,
-</span></span><span class="line"><span class="cl">  &#39;bubble&#39;: 15,
-</span></span><span class="line"><span class="cl">  &#39;bubble_3d_effect&#39;: 87,
-</span></span><span class="line"><span class="cl">  &#39;column_clustered&#39;: 51,
-</span></span><span class="line"><span class="cl">  &#39;column_stacked&#39;: 52,
-</span></span><span class="line"><span class="cl">  &#39;column_stacked_100&#39;: 53,
-</span></span><span class="line"><span class="cl">  &#39;cone_bar_clustered&#39;: 102,
-</span></span><span class="line"><span class="cl">  &#39;cone_bar_stacked&#39;: 103,
-</span></span><span class="line"><span class="cl">  &#39;cone_bar_stacked_100&#39;: 104,
-</span></span><span class="line"><span class="cl">  &#39;cone_col&#39;: 105,
-</span></span><span class="line"><span class="cl">  &#39;cone_col_clustered&#39;: 99,
-</span></span><span class="line"><span class="cl">  &#39;cone_col_stacked&#39;: 100,
-</span></span><span class="line"><span class="cl">  &#39;cone_col_stacked_100&#39;: 101,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_bar_clustered&#39;: 95,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_bar_stacked&#39;: 96,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_bar_stacked_100&#39;: 97,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_col&#39;: 98,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_col_clustered&#39;: 92,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_col_stacked&#39;: 93,
-</span></span><span class="line"><span class="cl">  &#39;cylinder_col_stacked_100&#39;: 94,
-</span></span><span class="line"><span class="cl">  &#39;doughnut&#39;: -4120,
-</span></span><span class="line"><span class="cl">  &#39;doughnut_exploded&#39;: 80,
-</span></span><span class="line"><span class="cl">  &#39;line&#39;: 4,
-</span></span><span class="line"><span class="cl">  &#39;line_markers&#39;: 65,
-</span></span><span class="line"><span class="cl">  &#39;line_markers_stacked&#39;: 66,
-</span></span><span class="line"><span class="cl">  &#39;line_markers_stacked_100&#39;: 67,
-</span></span><span class="line"><span class="cl">  &#39;line_stacked&#39;: 63,
-</span></span><span class="line"><span class="cl">  &#39;line_stacked_100&#39;: 64,
-</span></span><span class="line"><span class="cl">  &#39;pie&#39;: 5,
-</span></span><span class="line"><span class="cl">  &#39;pie_exploded&#39;: 69,
-</span></span><span class="line"><span class="cl">  &#39;pie_of_pie&#39;: 68,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_bar_clustered&#39;: 109,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_bar_stacked&#39;: 110,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_bar_stacked_100&#39;: 111,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_col&#39;: 112,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_col_clustered&#39;: 106,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_col_stacked&#39;: 107,
-</span></span><span class="line"><span class="cl">  &#39;pyramid_col_stacked_100&#39;: 108,
-</span></span><span class="line"><span class="cl">  &#39;radar&#39;: -4151,
-</span></span><span class="line"><span class="cl">  &#39;radar_filled&#39;: 82,
-</span></span><span class="line"><span class="cl">  &#39;radar_markers&#39;: 81,
-</span></span><span class="line"><span class="cl">  # &#39;stock_hlc&#39;: 88,
-</span></span><span class="line"><span class="cl">  # &#39;stock_ohlc&#39;: 89,
-</span></span><span class="line"><span class="cl">  # &#39;stock_vhlc&#39;: 90,
-</span></span><span class="line"><span class="cl">  # &#39;stock_vohlc&#39;: 91,
-</span></span><span class="line"><span class="cl">  # &#39;surface&#39;: 83,
-</span></span><span class="line"><span class="cl">  # &#39;surface_top_view&#39;: 85,
-</span></span><span class="line"><span class="cl">  # &#39;surface_top_view_wireframe&#39;: 86,
-</span></span><span class="line"><span class="cl">  # &#39;surface_wireframe&#39;: 84,
-</span></span><span class="line"><span class="cl">  &#39;xy_scatter&#39;: -4169,
-</span></span><span class="line"><span class="cl">  &#39;xy_scatter_lines&#39;: 74,
-</span></span><span class="line"><span class="cl">  &#39;xy_scatter_lines_no_markers&#39;: 75,
-</span></span><span class="line"><span class="cl">  &#39;xy_scatter_smooth&#39;: 72,
-</span></span><span class="line"><span class="cl">  &#39;xy_scatter_smooth_no_markers&#39;: 73
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">w = 385
-</span></span><span class="line"><span class="cl">h = 241
-</span></span><span class="line"><span class="cl">n = 0
-</span></span><span class="line"><span class="cl">x = 100
-</span></span><span class="line"><span class="cl">y = 10
-</span></span><span class="line"><span class="cl">for i in dic.keys():
-</span></span><span class="line"><span class="cl">  xx = x + n % 3*w  # 用来生成图表放置的x坐标。
-</span></span><span class="line"><span class="cl">  yy = y + n//3*h   # 用来生成图表放置的y坐标。
-</span></span><span class="line"><span class="cl">  chart = sht.charts.add(xx, yy)
-</span></span><span class="line"><span class="cl">  chart.set_source_data(sht.range(&#39;A1&#39;).expand())
-</span></span><span class="line"><span class="cl">  chart.chart_type = i
-</span></span><span class="line"><span class="cl">  chart.api[1].ChartTitle.Text = i
-</span></span><span class="line"><span class="cl">  n += 1
-</span></span><span class="line"><span class="cl">wb.save(&#39;chart_图表&#39;)
-</span></span><span class="line"><span class="cl">wb.close()
-</span></span><span class="line"><span class="cl">app.quit()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">active</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="o">.</span><span class="n">active</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成图表的数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;时间&#39;</span><span class="p">,</span> <span class="s1">&#39;数量&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;1日&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;2日&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;3日&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">             <span class="p">,</span> <span class="p">[</span><span class="s1">&#39;4日&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;5日&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;6日&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;图表类型参数，被注释的那几个，无法生成对应的图表&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_area&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4098</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_area_stacked&#39;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_area_stacked_100&#39;</span><span class="p">:</span> <span class="mi">79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_bar_clustered&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_bar_stacked&#39;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_bar_stacked_100&#39;</span><span class="p">:</span> <span class="mi">62</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_column&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_column_clustered&#39;</span><span class="p">:</span> <span class="mi">54</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_column_stacked&#39;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_column_stacked_100&#39;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_line&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4101</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_pie&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4102</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;3d_pie_exploded&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;area_stacked&#39;</span><span class="p">:</span> <span class="mi">76</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;area_stacked_100&#39;</span><span class="p">:</span> <span class="mi">77</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bar_clustered&#39;</span><span class="p">:</span> <span class="mi">57</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bar_of_pie&#39;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bar_stacked&#39;</span><span class="p">:</span> <span class="mi">58</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bar_stacked_100&#39;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bubble&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;bubble_3d_effect&#39;</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;column_clustered&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;column_stacked&#39;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;column_stacked_100&#39;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_bar_clustered&#39;</span><span class="p">:</span> <span class="mi">102</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_bar_stacked&#39;</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_bar_stacked_100&#39;</span><span class="p">:</span> <span class="mi">104</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_col&#39;</span><span class="p">:</span> <span class="mi">105</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_col_clustered&#39;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_col_stacked&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cone_col_stacked_100&#39;</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_bar_clustered&#39;</span><span class="p">:</span> <span class="mi">95</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_bar_stacked&#39;</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_bar_stacked_100&#39;</span><span class="p">:</span> <span class="mi">97</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_col&#39;</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_col_clustered&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_col_stacked&#39;</span><span class="p">:</span> <span class="mi">93</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cylinder_col_stacked_100&#39;</span><span class="p">:</span> <span class="mi">94</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;doughnut&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4120</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;doughnut_exploded&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line_markers&#39;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line_markers_stacked&#39;</span><span class="p">:</span> <span class="mi">66</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line_markers_stacked_100&#39;</span><span class="p">:</span> <span class="mi">67</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line_stacked&#39;</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;line_stacked_100&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pie&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pie_exploded&#39;</span><span class="p">:</span> <span class="mi">69</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pie_of_pie&#39;</span><span class="p">:</span> <span class="mi">68</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_bar_clustered&#39;</span><span class="p">:</span> <span class="mi">109</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_bar_stacked&#39;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_bar_stacked_100&#39;</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_col&#39;</span><span class="p">:</span> <span class="mi">112</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_col_clustered&#39;</span><span class="p">:</span> <span class="mi">106</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_col_stacked&#39;</span><span class="p">:</span> <span class="mi">107</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;pyramid_col_stacked_100&#39;</span><span class="p">:</span> <span class="mi">108</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;radar&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4151</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;radar_filled&#39;</span><span class="p">:</span> <span class="mi">82</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;radar_markers&#39;</span><span class="p">:</span> <span class="mi">81</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;stock_hlc&#39;: 88,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;stock_ohlc&#39;: 89,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;stock_vhlc&#39;: 90,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;stock_vohlc&#39;: 91,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;surface&#39;: 83,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;surface_top_view&#39;: 85,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;surface_top_view_wireframe&#39;: 86,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># &#39;surface_wireframe&#39;: 84,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;xy_scatter&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4169</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;xy_scatter_lines&#39;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;xy_scatter_lines_no_markers&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;xy_scatter_smooth&#39;</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;xy_scatter_smooth_no_markers&#39;</span><span class="p">:</span> <span class="mi">73</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="mi">385</span>
+</span></span><span class="line"><span class="cl"><span class="n">h</span> <span class="o">=</span> <span class="mi">241</span>
+</span></span><span class="line"><span class="cl"><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">  <span class="n">xx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="o">*</span><span class="n">w</span>  <span class="c1"># 用来生成图表放置的x坐标。</span>
+</span></span><span class="line"><span class="cl">  <span class="n">yy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">n</span><span class="o">//</span><span class="mi">3</span><span class="o">*</span><span class="n">h</span>   <span class="c1"># 用来生成图表放置的y坐标。</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart</span> <span class="o">=</span> <span class="n">sht</span><span class="o">.</span><span class="n">charts</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart</span><span class="o">.</span><span class="n">set_source_data</span><span class="p">(</span><span class="n">sht</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart</span><span class="o">.</span><span class="n">chart_type</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart</span><span class="o">.</span><span class="n">api</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ChartTitle</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">  <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;chart_图表&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p>效果如下：</p>
 <p><img
         class="lazyload"
@@ -680,30 +680,30 @@
         alt="https://pic1.zhimg.com/80/v2-4fc6fd80e8658efa40196a0fea2e3664_1440w.jpg"
         title="img" /></p>
 <p><strong>程序示例：</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 3.4.2 xlwings 新建 Excle 文档
-</span></span><span class="line"><span class="cl">def fun3_4_2():
-</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
-</span></span><span class="line"><span class="cl">    visible
-</span></span><span class="line"><span class="cl">    Ture：可见excel
-</span></span><span class="line"><span class="cl">    False：不可见excel
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 3.4.2 xlwings 新建 Excle 文档</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fun3_4_2</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    visible
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Ture：可见excel
+</span></span></span><span class="line"><span class="cl"><span class="s2">    False：不可见excel
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    add_book
+</span></span></span><span class="line"><span class="cl"><span class="s2">    True:打开excel并且新建工作簿
+</span></span></span><span class="line"><span class="cl"><span class="s2">    False：不新建工作簿
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    add_book
-</span></span><span class="line"><span class="cl">    True:打开excel并且新建工作簿
-</span></span><span class="line"><span class="cl">    False：不新建工作簿
-</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
-</span></span><span class="line"><span class="cl">    app = xw.App(visible=True, add_book=False)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 新建工作簿 (如果不接下一条代码的话，Excel只会一闪而过，卖个萌就走了）</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">add</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 新建工作簿 (如果不接下一条代码的话，Excel只会一闪而过，卖个萌就走了）
-</span></span><span class="line"><span class="cl">    wb = app.books.add()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 保存工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;example.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 保存工作簿
-</span></span><span class="line"><span class="cl">    wb.save(&#39;example.xlsx&#39;)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出工作簿
-</span></span><span class="line"><span class="cl">    wb.close()
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出Excel
-</span></span><span class="line"><span class="cl">    app.quit()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出Excel</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p><strong>执行程序后文件夹增加了“example.xlsx”:</strong></p>
 <p><img
         class="lazyload"
@@ -732,24 +732,24 @@
         alt="https://pic2.zhimg.com/80/v2-a1f65cd2c6e29c30201d80419f67e2d1_1440w.jpg"
         title="img" /></p>
 <p><strong>运行程序：</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># 3.4.3 xlwings 打开已存在的Excel文件
-</span></span><span class="line"><span class="cl">def fun3_4_3():
-</span></span><span class="line"><span class="cl">    # 新建Excle 默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭
-</span></span><span class="line"><span class="cl">    app = xw.App(visible=True, add_book=False)
-</span></span><span class="line"><span class="cl">    app.display_alerts = False
-</span></span><span class="line"><span class="cl">    app.screen_updating = False
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 3.4.3 xlwings 打开已存在的Excel文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fun3_4_3</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 新建Excle 默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">display_alerts</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">screen_updating</span> <span class="o">=</span> <span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 打开已存在的Excel文件
-</span></span><span class="line"><span class="cl">    wb=app.books.open(&#39;./3_4 xlwings 修改操作练习.xlsx&#39;)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 打开已存在的Excel文件</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./3_4 xlwings 修改操作练习.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 保存工作簿
-</span></span><span class="line"><span class="cl">    wb.save(&#39;example_2.xlsx&#39;)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 保存工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;example_2.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出工作簿
-</span></span><span class="line"><span class="cl">    wb.close()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出Excel
-</span></span><span class="line"><span class="cl">    app.quit()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出Excel</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p><strong>生成新的表格：</strong></p>
 <p><img
         class="lazyload"
@@ -769,39 +769,39 @@
         alt="https://pic2.zhimg.com/80/v2-88dabfbb91483783aafc14811834f7e1_1440w.jpg"
         title="img" /></p>
 <p><strong>3. xlwings 读写 Excel程序示例：</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">#  3.4.4 xlwings读写 Excel
-</span></span><span class="line"><span class="cl">def fun3_4_4():
-</span></span><span class="line"><span class="cl">    # 新建Excle 默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭
-</span></span><span class="line"><span class="cl">    app = xw.App(visible=True, add_book=False)
-</span></span><span class="line"><span class="cl">    app.display_alerts = False
-</span></span><span class="line"><span class="cl">    app.screen_updating = False
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#  3.4.4 xlwings读写 Excel</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fun3_4_4</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 新建Excle 默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_book</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">display_alerts</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">screen_updating</span> <span class="o">=</span> <span class="kc">False</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 打开已存在的Excel文件
-</span></span><span class="line"><span class="cl">    wb=app.books.open(&#39;./3_4 xlwings 修改操作练习.xlsx&#39;)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 打开已存在的Excel文件</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./3_4 xlwings 修改操作练习.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 获取sheet对象
-</span></span><span class="line"><span class="cl">    print(wb.sheets)
-</span></span><span class="line"><span class="cl">    sheet = wb.sheets[0]
-</span></span><span class="line"><span class="cl">    # sheet = wb.sheets[&#34;sheet1&#34;]
+</span></span><span class="line"><span class="cl">    <span class="c1"># 获取sheet对象</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sheet</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">sheets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># sheet = wb.sheets[&#34;sheet1&#34;]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 读取Excel信息
-</span></span><span class="line"><span class="cl">    cellB1_value = sheet.range(&#39;B1&#39;).value
-</span></span><span class="line"><span class="cl">    print(&#34;单元格B1内容为：&#34;,cellB1_value)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 读取Excel信息</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cellB1_value</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;B1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;单元格B1内容为：&#34;</span><span class="p">,</span><span class="n">cellB1_value</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 清除单元格内容和格式
-</span></span><span class="line"><span class="cl">    sheet.range(&#39;A1&#39;).clear()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 清除单元格内容和格式</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sheet</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 写入单元格
-</span></span><span class="line"><span class="cl">    sheet.range(&#39;A1&#39;).value = &#34;xlwings写入&#34;
+</span></span><span class="line"><span class="cl">    <span class="c1"># 写入单元格</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sheet</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&#34;xlwings写入&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 保存工作簿
-</span></span><span class="line"><span class="cl">    wb.save(&#39;example_3.xlsx&#39;)
+</span></span><span class="line"><span class="cl">    <span class="c1"># 保存工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;example_3.xlsx&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出工作簿
-</span></span><span class="line"><span class="cl">    wb.close()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出工作簿</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # 退出Excel
-</span></span><span class="line"><span class="cl">    app.quit()
+</span></span><span class="line"><span class="cl">    <span class="c1"># 退出Excel</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </span></span></code></pre></div><p><strong>执行效果：</strong></p>
 <p><img
         class="lazyload"
@@ -822,7 +822,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-08-31</span>
+                <span>Updated on 2022-09-01</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
