@@ -186,7 +186,7 @@ L(\hat y,y)=\frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2 \tag{2}
 $$
 结合公式(1)，进一步得到：
 $$
-m^<em>,b^</em>=arg\underset{m,b}min \frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2
+m^*,b^*=arg\underset{m,b}min \frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2
 $$
 <code>argmin(expression) </code>的意思是寻找使得表达式值最小的参数</p>
 <p>其实，这就是<code>最小二乘法</code>的数学表示，&ldquo;二乘&quot;表示平方，&ldquo;最小&quot;表示损失最小。</p>
@@ -216,10 +216,10 @@ $$
 \mathbf{w}=\left[\begin{array}{c}w_1 \newline w_2 \newline \vdots \newline w_D \newline w_{D+1}\end{array}\right]
 $$
 $$
-\mathbf{X}=\left[\begin{array}{c}x_1 \ x_2 \ \vdots \ x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \ x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \ x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right)
+\mathbf{X}=\left[\begin{array}{c}x_1 \newline x_2 \newline \vdots \newline x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \newline x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \newline \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \newline x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right)
 $$
 $$
-\mathbf{y}=\left[\begin{array}{c}y_1 \ y_2 \ \vdots \
+\mathbf{y}=\left[\begin{array}{c}y_1 \newline y_2 \newline \vdots \newline
 y_N\end{array}\right]
 $$</p>
 <p>由此可以进一步推出：
@@ -234,7 +234,7 @@ $$
 公式最右边的记号叫做 $L_2$ 范数的平方</p>
 <p><strong>L2范数</strong>是指向量中各个元素的平方和再开平方。
 $$
-|x|<em>2 = \sqrt{\sum</em>{i=1}^{n}x_i^2}
+||x||<em>2 = \sqrt{\sum</em>{i=1}^{n}x_i^2}
 $$
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
