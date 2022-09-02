@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 01 Sep 2022 22:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 01 Sep 2022 22:39:51 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Creation</title>
+    <link>http://example.org/posts/creation/</link>
+    <pubDate>Thu, 01 Sep 2022 22:39:51 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/creation/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>预测模型1</title>
     <link>http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/</link>
     <pubDate>Thu, 01 Sep 2022 22:17:42 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C/</guid>
     <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>健身笔记</title>
-    <link>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E5%81%A5%E8%BA%AB%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[饮食 黄金时间： ​ 运动后30分钟内摄入蛋白质最佳 热身 静态拉伸 ​ 静态拉伸就是把自己的身体摆放到关节活动度极限位置附近，然后保持这个动作持续10-]]></description>
 </item>
 </channel>
 </rss>
