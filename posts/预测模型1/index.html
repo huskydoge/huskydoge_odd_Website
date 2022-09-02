@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/"
-        },"genre": "posts","wordcount":  1525 ,
+        },"genre": "posts","wordcount":  1524 ,
         "url": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/","datePublished": "2022-09-01T22:17:42+08:00","dateModified": "2022-09-01T22:17:42+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">预测模型1</h1><h2 class="single-subtitle">线性回归、岭回归和分层回归</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学建模</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1525 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1524 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型1">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -186,7 +186,7 @@ L(\hat y,y)=\frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2 \tag{2}
 $$
 结合公式(1)，进一步得到：
 $$
-m^<em>,b^</em>=arg\underset{m,b}min \frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2 \tag{2}
+m^<em>,b^</em>=arg\underset{m,b}min \frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2
 $$
 <code>argmin(expression) </code>的意思是寻找使得表达式值最小的参数</p>
 <p>其实，这就是<code>最小二乘法</code>的数学表示，&ldquo;二乘&quot;表示平方，&ldquo;最小&quot;表示损失最小。</p>
@@ -213,7 +213,7 @@ y_i=b+\sum_{d=1}^{D}w_dx_{i,d}
 $$
 为了方便起见，可以将b归纳到向量<strong>w</strong>中。让 $ b = W_{D+1}$然后将其添加到特征向量<strong>w</strong> 的最后一位，并将D维特征拓展为D+1维。
 $$
-\mathbf{w}=\left[\begin{array}{c}w_1 \ w_2 \ \vdots \ w_D \ w_{D+1}\end{array}\right]
+\mathbf{w}=\left[\begin{array}{c}w_1 \newline w_2 \newline \vdots \newline w_D \newline w_{D+1}\end{array}\right]
 $$
 $$
 \mathbf{X}=\left[\begin{array}{c}x_1 \ x_2 \ \vdots \ x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \ x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \ x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right)
