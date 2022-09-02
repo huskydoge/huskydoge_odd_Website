@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/"
-        },"genre": "posts","wordcount":  927 ,
+        },"genre": "posts","wordcount":  970 ,
         "url": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/","datePublished": "2022-09-01T22:17:42+08:00","dateModified": "2022-09-01T22:17:42+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,7 +114,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">预测模型1</h1><h2 class="single-subtitle">线性回归、岭回归和分层回归</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学建模</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;927 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;970 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型1">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -159,23 +159,31 @@
 <h3 id="一元线性回归">一元线性回归</h3>
 <p>一元线性回归的基本公式就是早早学过的直线表达式
 $$
-y=mx+b
+y=mx+b \tag{1}
 $$
 我们的任务就是选取 $m,b$ 两个参数使直线和给定的数据对 $(x,y)$ 拟合的最好</p>
-<figure><a class="lightgallery" href="%5cimages%5cmath%5cLinearRegression.png" title="\images\math\LinearRegression.png" data-thumbnail="\images\math\LinearRegression.png" data-sub-html="<h2>线性回归示意图</h2>">
+<figure><a class="lightgallery" href="%5cimages%5cMath%5cLinearRegression.png" title="\images\Math\LinearRegression.png" data-thumbnail="\images\Math\LinearRegression.png" data-sub-html="<h2>线性回归示意图</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="%5cimages%5cmath%5cLinearRegression.png"
-            data-srcset="%5cimages%5cmath%5cLinearRegression.png, %5cimages%5cmath%5cLinearRegression.png 1.5x, %5cimages%5cmath%5cLinearRegression.png 2x"
+            data-src="%5cimages%5cMath%5cLinearRegression.png"
+            data-srcset="%5cimages%5cMath%5cLinearRegression.png, %5cimages%5cMath%5cLinearRegression.png 1.5x, %5cimages%5cMath%5cLinearRegression.png 2x"
             data-sizes="auto"
-            alt="\images\math\LinearRegression.png" />
+            alt="\images\Math\LinearRegression.png" />
     </a><figcaption class="image-caption">线性回归示意图</figcaption>
     </figure>
 <p>那么评价衡量这个模型的拟合的好坏程度呢？</p>
 <p>用损失函数(Loss Function)/ 代价函数(Cost Function)。其值越大，表示该模型拟合效果越差。一般用如下记号表示损失函数：
 $$
 L(\hat y,y)
+$$
+对于线性回归，常用的一个损失函数为：
+$$
+L(\hat y,y)=\frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2 \tag{2}
+$$
+结合公式(1)，进一步得到：
+$$
+m^<em>,b^</em>
 $$</p>
 <h3 id="定类性变量和定性变量">定类(性)变量和定性变量</h3>
 <p><code>定性变量</code>是统计学的概念，又名<code>分类变量 </code>，观测的个体只能归属于几种互不相容类别中的一种时，一般是用非数字来表达其类别，这样的观测数据称为<code>定性变量</code>。</p>
