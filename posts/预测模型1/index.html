@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/"
-        },"genre": "posts","wordcount":  705 ,
+        },"genre": "posts","wordcount":  2188 ,
         "url": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/","datePublished": "2022-09-01T22:17:42+08:00","dateModified": "2022-09-01T22:17:42+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -114,8 +114,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">预测模型1</h1><h2 class="single-subtitle">线性回归、岭回归和分层回归</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学建模</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;705 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型1">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2188 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型1">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -125,9 +125,11 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#线性回归">线性回归</a>
       <ul>
-        <li></li>
+        <li><a href="#一元线性回归">一元线性回归</a></li>
+        <li><a href="#多元线性回归">多元线性回归</a></li>
+        <li><a href="#多重共线性">多重共线性</a></li>
       </ul>
     </li>
   </ul>
@@ -135,6 +137,127 @@
             </div><div class="content" id="content"><p><code>回归(Regression)</code></p>
 <p>指研究一组随机变量 $(Y_1,Y_2,\dots,Y_i)$和另一组$(X_1，X_2，…，X_k)$变量之间关系的统计分析方法，又称多重回归分析。通常$(Y_1,Y_2,\dots,Y_i)$是因变量，$(X_1，X_2，…，X_k) $是<a href="https://baike.baidu.com/item/%e8%87%aa%e5%8f%98%e9%87%8f/6895256?fromModule=lemma_inlink" target="_blank" rel="noopener noreffer">自变量</a>
 。</p>
+<h2 id="线性回归">线性回归</h2>
+<p><code>线性回归</code>是利用数理统计中回归分析，来确定<strong>两种或两种以上变量</strong>间相互依赖的定量关系的一种统计分析方法。</p>
+<p>在线性回归分析中，<strong>只包括一个自变量和一个因变量</strong>，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。</p>
+<p>如果回归分析中包括两个或两个以上的自变量，且因变量和自变量之间是线性关系，则称为<code>多元线性回归分析</code>。</p>
+<p>并不是所有的数据集都可以用一元线性回归来建模。现实世界中的问题往往更复杂，变量几乎不可能非常理想化地符合线性模型的要求。因此使用线性回归，需要遵守下面几个假设：</p>
+<ul>
+<li>线性回归是一个回归问题。</li>
+<li>要预测的变量 y 与自变量 x 的关系是线性的。</li>
+<li>各项误差服从正太分布，均值为0，与 x 同方差。</li>
+<li>变量 x 的分布要有变异性, 不能让值都一样</li>
+<li>多元线性回归中不同特征之间应该相互独立，避免线性相关。</li>
+</ul>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>回归和分类、定性变量和定量变量<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>与回归相对的是分类问题（classification），分类问题要预测的变量<code>y</code>输出集合是有限的，预测值只能是有限集合内的一个。当要预测的变量<code>y</code>输出集合是无限且连续，我们称之为回归。比如，天气预报预测明天是否下雨，是一个二分类问题；预测明天的降雨量多少，就是一个回归问题。</p>
+<p><code>定性变量</code>是统计学的概念，又名<code>分类变量 </code>，观测的个体只能归属于几种互不相容类别中的一种时，一般是用非数字来表达其类别，这样的观测数据称为<code>定性变量</code>。
+<code>定量变量 </code>也就是通常所说的连续量，如长度、重量、产量、人口、速度和温度等，它们是由测量或计数、统计所得到的量，这些变量具有数值特征，称为<code>定量变量</code>。</p>
+</div>
+        </div>
+    </div>
+<h3 id="一元线性回归">一元线性回归</h3>
+<p>一元线性回归的基本公式就是早早学过的直线表达式
+$$
+y=mx+b \tag{1}
+$$
+我们的任务就是选取 $m,b$ 两个参数使直线和给定的数据对 $(x,y)$ 拟合的最好</p>
+<figure><a class="lightgallery" href="/images/Math/LinearRegression.png" title="/images/Math/LinearRegression.png" data-thumbnail="/images/Math/LinearRegression.png" data-sub-html="<h2>线性回归示意图</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/Math/LinearRegression.png"
+            data-srcset="/images/Math/LinearRegression.png, /images/Math/LinearRegression.png 1.5x, /images/Math/LinearRegression.png 2x"
+            data-sizes="auto"
+            alt="/images/Math/LinearRegression.png" />
+    </a><figcaption class="image-caption">线性回归示意图</figcaption>
+    </figure>
+<p>那么评价衡量这个模型的拟合的好坏程度呢？</p>
+<p>用损失函数(Loss Function)/ 代价函数(Cost Function)。其值越大，表示该模型拟合效果越差。一般用如下记号表示损失函数：
+$$
+L(\hat y,y)
+$$
+对于线性回归，常用的一个损失函数为：
+$$
+L(\hat y,y)=\frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2 \tag{2}
+$$
+结合公式(1)，进一步得到：
+$$
+m^*,b^*=arg\underset{m,b}min \frac{1}{N} \sum_{1}^{N}(\hat y_{i}-y_{i})^2
+$$
+<code>argmin(expression) </code>的意思是寻找使得表达式值最小的参数</p>
+<p>其实，这就是<code>最小二乘法</code>的数学表示，&ldquo;二乘&quot;表示平方，&ldquo;最小&quot;表示损失最小。</p>
+<p>那么求解时，只要对m和b求偏导数：
+$$
+\begin{align}
+\frac{\partial}{\partial m} L(m, b)&amp;=\frac{2}{N} \sum_{i=1}^N x_i\left(m x_i+b-y_i\right) \
+&amp;=2 m\left(\frac{1}{N} \sum_{i=1}^N x_i{ }^2\right)+2 b\left(\frac{1}{N} \sum_{i=1}^N x_i\right)-2\left(\frac{1}{N} \sum_{i=1}^N x_i y_i\right)
+\end{align}
+$$</p>
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial b} L(m, b)&amp;=\frac{2}{N} \sum_{i=1}^N m x_i+b-y_i \
+&amp;=2 m\left(\frac{1}{N} \sum_{i=1}^N x_i\right)+2 b-2\left(\frac{1}{N} \sum_{i=1}^N y_i\right)
+\end{aligned}
+$$</p>
+<p>然后让两个偏导数分别等于0，即可得到所求参数的值。</p>
+<h3 id="多元线性回归">多元线性回归</h3>
+<p>现实中，我们想要得到的某个预测结果往往由多个因素决定。假如共有D个维度的影响因素，机器学习中也将这D个影响因素称为特征(feature)。</p>
+<p>与一元情况类似，每个样本都有一个需要预测的y值，但是变量却是一个D维的向量<strong>X</strong>。原来的参数m也变为了一个D维的向量<strong>w</strong>。</p>
+<p>如此一来，样本i的预测值 $y_i$则可以表示为：
+$$
+y_i=b+\sum_{d=1}^{D}w_dx_{i,d}
+$$
+为了方便起见，可以将b归纳到向量<strong>w</strong>中。让 $ b = W_{D+1}$然后将其添加到特征向量<strong>w</strong> 的最后一位，并将D维特征拓展为D+1维。
+$$
+\mathbf{w}=\left[\begin{array}{c}w_1 \newline w_2 \newline \vdots \newline w_D \newline w_{D+1}\end{array}\right]
+$$
+$$
+\mathbf{X}=\left[\begin{array}{c}x_1 \newline x_2 \newline \vdots \newline x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \newline x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \newline \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \newline x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right)
+$$
+$$
+\mathbf{y}=\left[\begin{array}{c}y_1 \newline y_2 \newline \vdots \newline
+y_N\end{array}\right]
+$$</p>
+<p>由此可以进一步推出：
+$$
+\mathbf{y}=\mathbf{X}\mathbf{w}
+$$
+多元线性回归的损失函数如下
+$$
+L(w)=(\mathbf{X} \mathbf{w}-\mathbf{y})^{\top}(\mathbf{X} \mathbf{w}-\mathbf{y})=|\mathbf{X} \mathbf{w}-\mathbf{y}|_2^2
+\tag{a}
+$$
+公式最右边的记号叫做 $L_2$ 范数的平方</p>
+<p><strong>L2范数</strong>是指向量中各个元素的平方和再开平方。
+$$
+||x||<em>2 = \sqrt{\sum</em>{i=1}^{n}x_i^2}
+$$
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>范数<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><strong>L1范数</strong>是指向量中各个元素绝对值之和。</div>
+        </div>
+    </div></p>
+<p>等式a对w求导得到：</p>
+<p>$$
+\frac{\partial}{\partial \mathbf{w}} L(\mathbf{w})=2 \mathbf{X}^{\top}(\mathbf{X} \mathbf{w}-\mathbf{y})=0
+$$
+进一步可得：
+$$
+\mathbf{X}^{\top} \mathbf{X} \mathbf{w}=\mathbf{X}^{\top} \mathbf{y} \Rightarrow\left(\mathbf{X}^{\top} \mathbf{X}\right)^{-1} \mathbf{X}^{\top} \mathbf{X} \mathbf{w}=\left(\mathbf{X}^{\top} \mathbf{X}\right)^{-1} \mathbf{X}^{\top} \mathbf{y}
+$$</p>
+<p>$$
+\mathbf{w}^*=\left(\mathbf{X}^{\top} \mathbf{X}\right)^{-1} \mathbf{X}^{\top} \mathbf{y} \tag{normal equation}
+$$</p>
+<p>由此我们知道，多元线性回归的最优解其实就是在解这个称为<code>Normal Equation</code>的矩阵方程。</p>
+<h3 id="多重共线性">多重共线性</h3>
 <h4 id="定义">定义</h4>
 <p>在多元线性回归模型经典假设中，其重要假定之一是回归模型的解释变量之间不存在线性关系，也就是说，解释变量 $X1，X2，……，Xk$ 中的任何一个都不能是其他解释变量的线性组合。</p>
 <p>如果违背这一假定，即线性回归模型中某一个解释变量与其他解释变量间存在线性关系，就称线性回归模型中存在<strong>多重共线性</strong>。<strong>严重的多重共线性可能会产生问题，因为它可以增大回归系数的方差，使它们变得不稳定</strong>。以下是不稳定系数导致的一些后果：</p>
@@ -155,7 +278,6 @@
             <div class="admonition-content"><p>方差膨胀系数(variance inflation factor，VIF)是衡量<a href="https://baike.baidu.com/item/%e5%a4%9a%e5%85%83%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b/2437588?fromModule=lemma_inlink" target="_blank" rel="noopener noreffer">多元线性回归模型</a>
 中复 (多重)共线性严重程度的一种度量。</p>
 <p>它表示回归系数估计量的方差与假设自变量间不线性相关时方差相比的比值。</p>
-<!-- raw HTML omitted -->
 </div>
         </div>
     </div></div><div class="post-footer" id="post-footer">
