@@ -213,12 +213,16 @@ y_i=b+\sum_{d=1}^{D}w_dx_{i,d}
 $$
 为了方便起见，可以将b归纳到向量<strong>w</strong>中。让 $ b = W_{D+1}$然后将其添加到特征向量<strong>w</strong> 的最后一位，并将D维特征拓展为D+1维。
 $$
-\mathbf{w}=\left[\begin{array}{c}w_1 \ w_2 \ \vdots \ w_D \ w_{D+1}\end{array}\right] \ \
-\mathbf{X}=\left[\begin{array}{c}x_1 \ x_2 \ \vdots \ x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \ x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \ x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right) \ \
+\mathbf{w}=\left[\begin{array}{c}w_1 \ w_2 \ \vdots \ w_D \ w_{D+1}\end{array}\right]
+$$
+$$
+\mathbf{X}=\left[\begin{array}{c}x_1 \ x_2 \ \vdots \ x_N\end{array}\right]=\left(\begin{array}{ccccc}x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1, D} &amp; 1 \ x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2, D} &amp; 1 \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \ x_{N, 1} &amp; x_{N, 2} &amp; \cdots &amp; x_{N, D} &amp; 1\end{array}\right)
+$$
+$$
 \mathbf{y}=\left[\begin{array}{c}y_1 \ y_2 \ \vdots \
 y_N\end{array}\right]
-$$
-由此可以进一步推出：
+$$</p>
+<p>由此可以进一步推出：
 $$
 \mathbf{y}=\mathbf{X}\mathbf{w}
 $$
@@ -228,19 +232,19 @@ L(w)=(\mathbf{X} \mathbf{w}-\mathbf{y})^{\top}(\mathbf{X} \mathbf{w}-\mathbf{y})
 \tag{a}
 $$
 公式最右边的记号叫做 $L_2$ 范数的平方</p>
+<p><strong>L2范数</strong>是指向量中各个元素的平方和再开平方。
+$$
+|x|<em>2 = \sqrt{\sum</em>{i=1}^{n}x_i^2}
+$$
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>范数<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><strong>L1范数</strong>是指向量中各个元素绝对值之和。
-<strong>L2范数</strong>是指向量中各个元素的平方和再开平方。
-$$
-|x|<em>2 = \sqrt{\sum</em>{i=1}^{n}x_i^2}
-$$</p>
+            <div class="admonition-content"><strong>L1范数</strong>是指向量中各个元素绝对值之和。</p>
 <!-- raw HTML omitted --></div>
         </div>
-    </div></div><div class="post-footer" id="post-footer">
+    </div></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
