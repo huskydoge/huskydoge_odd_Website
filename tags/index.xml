@@ -4,7 +4,23 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 30 Aug 2022 21:45:49 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Fri, 02 Sep 2022 23:38:23 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOs</title>
+    <link>http://example.org/tags/macos/</link>
+    <pubDate>Fri, 02 Sep 2022 23:38:23 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/macos/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Shell</title>
+    <link>http://example.org/tags/shell/</link>
+    <pubDate>Fri, 02 Sep 2022 23:38:23 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/shell/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>爬虫</title>
     <link>http://example.org/tags/%E7%88%AC%E8%99%AB/</link>
     <pubDate>Tue, 30 Aug 2022 21:45:49 &#43;0800</pubDate>
@@ -37,14 +53,6 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Shell</title>
-    <link>http://example.org/tags/shell/</link>
-    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/shell/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>python</title>
     <link>http://example.org/tags/python/</link>
     <pubDate>Tue, 23 Aug 2022 12:45:50 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Sun, 17 Jul 2022 11:05:51 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/machine-learning/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>C&#43;&#43;</title>
-    <link>http://example.org/tags/c&#43;&#43;/</link>
-    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/c&#43;&#43;/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

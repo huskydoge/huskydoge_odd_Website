@@ -4,7 +4,15 @@
         <link>http://example.org/tags/macos/</link>
         <description>MacOs - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/macos/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Fri, 02 Sep 2022 23:38:23 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/macos/" rel="self" type="application/rss+xml" /><item>
+    <title>Mac终端自定义命令</title>
+    <link>http://example.org/posts/mac%E7%BB%88%E7%AB%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Fri, 02 Sep 2022 23:38:23 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/mac%E7%BB%88%E7%AB%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[最近养成了写(复制粘贴)博客的习惯，又因为需要运用github远程仓库管理的相关操作，经常要git commit -am &quot;new&quot; git push 进行这些重复操作，所以就想到直接]]></description>
+</item>
+<item>
     <title>Shell</title>
     <link>http://example.org/posts/shell/</link>
     <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
