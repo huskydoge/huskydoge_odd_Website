@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>预测模型1 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="预测模型1" />
+        <title>预测模型(1) - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="预测模型(1)" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" /><meta property="article:section" content="posts" />
@@ -12,19 +12,19 @@
 <meta property="article:modified_time" content="2022-09-01T22:17:42+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="预测模型1"/>
+<meta name="twitter:title" content="预测模型(1)"/>
 <meta name="twitter:description" content=""/>
 <meta name="application-name" content="Husky&#39;s World">
 <meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" /><link rel="prev" href="http://example.org/posts/xlwings/" /><link rel="next" href="http://example.org/posts/creation/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "预测模型1",
+        "headline": "预测模型(1)",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/"
-        },"genre": "posts","wordcount":  2141 ,
+        },"genre": "posts","wordcount":  2494 ,
         "url": "http:\/\/example.org\/posts\/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1\/","datePublished": "2022-09-01T22:17:42+08:00","dateModified": "2022-09-01T22:17:42+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -111,11 +111,11 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">预测模型1</h1><h2 class="single-subtitle">线性回归、岭回归和分层回归</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">预测模型(1)</h1><h2 class="single-subtitle">线性回归、岭回归和分层回归</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学建模</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2141 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型1">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-01">2022-09-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2494 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" class="leancloud_visitors" data-flag-title="预测模型(1)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -248,7 +248,22 @@ $$</p>
 <h3 id="多重共线性">多重共线性</h3>
 <h4 id="定义">定义</h4>
 <p>在多元线性回归模型经典假设中，其重要假定之一是回归模型的解释变量之间不存在线性关系，也就是说，解释变量 $X1，X2，……，Xk$ 中的任何一个都不能是其他解释变量的线性组合。</p>
-<p>如果违背这一假定，即线性回归模型中某一个解释变量与其他解释变量间存在线性关系，就称线性回归模型中存在<strong>多重共线性</strong>。<strong>严重的多重共线性可能会产生问题，因为它可以增大回归系数的方差，使它们变得不稳定</strong>。以下是不稳定系数导致的一些后果：</p>
+<p>如果线性回归模型中某一个解释变量与其他解释变量间存在线性关系，就称线性回归模型中存在<strong>多重共线性</strong>。</p>
+<p>如果
+$$
+c_1 X_{1 i}+c_2 X_{2 i}+\ldots+c_k X_{k i}=0 \newline
+i=1,2, \ldots, n
+$$
+其中 $c_i$ 不全为0，则某个解释变量可以由其他解释变量的线性组合表示，则称为解释变量间存在<code>完全共线性</code>。</p>
+<p>如果存在
+$$
+\begin{gathered}
+c_1 X_{1 i}+c_2 X_{2 i}+\ldots+c_k X_{k i}+v_i=0 \
+\mathrm{i}=1,2, \ldots, \mathrm{n}
+\end{gathered}
+$$
+其中 $c_i$ 不全为 $0, v_i$ 为随机误差项, 则称为<code>一般共线性(近似共线性)</code>或者<code>交互相关(intercorrelated)</code></p>
+<p><strong>严重的多重共线性可能会产生问题，因为它可以增大回归系数的方差，使它们变得不稳定</strong>。以下是不稳定系数导致的一些后果：</p>
 <ul>
 <li>即使预测变量和响应之间存在显著关系，系数也可能看起来并不显著。</li>
 <li>高度相关的预测变量的系数在样本之间差异很大。</li>
@@ -268,7 +283,26 @@ $$</p>
 <p>它表示回归系数估计量的方差与假设自变量间不线性相关时方差相比的比值。</p>
 </div>
         </div>
-    </div></div><div class="post-footer" id="post-footer">
+    </div>
+<p><strong>VIF检验的具体步骤如下：</strong></p>
+<ul>
+<li>
+<p>设原方程为：$Y=\beta_1+\beta_2 X_2+\beta_3 X_3+\ldots+\beta_k X_k+\mathbf{u}$</p>
+</li>
+<li>
+<p>我们需要计算k个VIF，每个 $X_i$ 一个VIF，具体步骤又分以下三步：</p>
+<p>(1) Xi 对原方程中其它全部解释变量进行<code>OLS(ordinary least squares, 普通最小二乘回归法)回归</code>, 例如, 若 $\mathbf{i}=1$, 则回归下面的方程:
+$$
+X_1=\alpha_1+\alpha_2 X_2+\alpha_3 X_3+\ldots+\alpha_k X_k+v
+$$
+(2) 计算的方差膨胀因子(VIF):
+$$
+\operatorname{VIF}\left(\hat{\beta}_i\right)=\frac{1}{\left(1-R_i^2\right)} \Longrightarrow \hat{\beta}<em>i=\frac{\hat{\sigma}<em>u^2}{\sum</em>{j=1}^n\left(x</em>{i j}-\bar{x}<em>i\right)^2} \cdot V I F_i
+$$
+其中 $\mathbf{R}</em>{\mathrm{i}}{ }^2$ 是第一步辅助回归的决定系数。
+(3) 分析多重共线性的程度, 一般认为VIF大于10时（严格是5），代表模型存在严重的共线性问题。</p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -277,7 +311,7 @@ $$</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型1"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型1"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型1"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型1"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E9%25A2%2584%25E6%25B5%258B%25E6%25A8%25A1%25E5%259E%258B1%2f&amp;description=%e9%a2%84%e6%b5%8b%e6%a8%a1%e5%9e%8b1" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型(1)"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型(1)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型(1)"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/" data-title="预测模型(1)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E9%25A2%2584%25E6%25B5%258B%25E6%25A8%25A1%25E5%259E%258B1%2f&amp;description=%e9%a2%84%e6%b5%8b%e6%a8%a1%e5%9e%8b%281%29" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
