@@ -65,4 +65,5 @@
             <loc>http://example.org/posts/hello/</loc><lastmod>2022-07-16T13:51:21&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/ml_note/</loc><lastmod>2022-07-18T23:20:12&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/ml_note1/</loc><lastmod>2022-07-18T23:20:12&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/%E9%80%A0%E5%AD%97/</loc><lastmod>2022-07-06T15:55:33&#43;08:00</lastmod></url></urlset>
+            <loc>http://example.org/posts/%E9%80%A0%E5%AD%97/</loc><lastmod>2022-07-06T15:55:33&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/friends/</loc><lastmod>2022-09-03T14:39:21&#43;08:00</lastmod></url></urlset>
