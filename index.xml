@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 04 Sep 2022 09:16:08 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 05 Sep 2022 11:40:38 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>你的睡眠科学吗？</title>
+    <link>http://example.org/posts/sleep/</link>
+    <pubDate>Mon, 05 Sep 2022 11:40:38 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/sleep/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>HTML5读书笔记(1)</title>
     <link>http://example.org/posts/html5%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Sun, 04 Sep 2022 09:16:08 &#43;0800</pubDate>
@@ -78,14 +86,6 @@
     <pubDate>Mon, 29 Aug 2022 13:14:42 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/tqdm/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Linux文件与目录的默认权限与隐藏权限</title>
-    <link>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</link>
-    <pubDate>Tue, 23 Aug 2022 18:22:15 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
