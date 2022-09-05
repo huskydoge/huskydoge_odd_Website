@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/html52/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-05T15:12:20+08:00" />
-<meta property="article:modified_time" content="2022-09-05T16:01:52+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-09-05T16:44:10+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTML5(2)"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/html52\/"
-        },"genre": "posts","keywords": "HTML5","wordcount":  610 ,
-        "url": "http:\/\/example.org\/posts\/html52\/","datePublished": "2022-09-05T15:12:20+08:00","dateModified": "2022-09-05T16:01:52+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "HTML5","wordcount":  1149 ,
+        "url": "http:\/\/example.org\/posts\/html52\/","datePublished": "2022-09-05T15:12:20+08:00","dateModified": "2022-09-05T16:44:10+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -135,11 +135,11 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML5(2)</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTML5(2)</h1><h2 class="single-subtitle">基本语法</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;610 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/html52/" class="leancloud_visitors" data-flag-title="HTML5(2)">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1149 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/html52/" class="leancloud_visitors" data-flag-title="HTML5(2)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -152,8 +152,23 @@
     <li><a href="#html-属性">HTML 属性</a></li>
     <li><a href="#html-文本格式化标签">HTML 文本格式化标签</a></li>
     <li><a href="#html-计算机输出-标签">HTML &ldquo;计算机输出&rdquo; 标签</a></li>
-    <li><a href="#html-引文-引用-及标签定义">HTML 引文, 引用, 及标签定义</a></li>
     <li><a href="#html-折行">HTML 折行</a></li>
+    <li><a href="#html-链接---target-属性">HTML 链接 - target 属性</a>
+      <ul>
+        <li><a href="#属性值">属性值</a></li>
+      </ul>
+    </li>
+    <li><a href="#html-head-元素">HTML &lt;head&gt; 元素</a></li>
+    <li><a href="#html-title-元素">HTML &lt;title&gt; 元素</a></li>
+    <li><a href="#html-base-元素">HTML &lt;base&gt; 元素</a></li>
+    <li><a href="#html-link-元素">HTML &lt;link&gt; 元素</a></li>
+    <li><a href="#html-style-元素">HTML &lt;style&gt; 元素</a></li>
+    <li><a href="#html-meta-元素">HTML &lt;meta&gt; 元素</a>
+      <ul>
+        <li><a href="#针对搜索引擎的关键词">针对搜索引擎的关键词</a></li>
+      </ul>
+    </li>
+    <li><a href="#html-script-元素">HTML &lt;script&gt; 元素</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="html-属性">HTML 属性</h2>
@@ -170,9 +185,8 @@
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>注意！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><pre><code>在某些个别的情况下，比如属性值本身就含有双引号，那么必须使用单引号。
-</code></pre>
-<p>​	例如：name=&lsquo;John &ldquo;ShotGun&rdquo; Nelson&rsquo;</p>
+            <div class="admonition-content"><p>​	在某些个别的情况下，比如属性值本身就含有双引号，那么必须使用单引号。	例如：</p>
+<p>​									<code>name='John &quot;ShotGun&quot; Nelson'</code></p>
 </div>
         </div>
     </div>
@@ -210,8 +224,8 @@
 <td style="text-align:left">定义注释</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>[&lt;p&gt;]</code>(<a href="https://www.runoob.com/tags/tag-p.html" target="_blank" rel="noopener noreffer">https://www.runoob.com/tags/tag-p.html</a>
-)</td>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-p.html" target="_blank" rel="noopener noreffer"><code>&lt;p&gt;</code></a>
+</td>
 <td style="text-align:left">定义一个段落</td>
 </tr>
 <tr>
@@ -287,75 +301,29 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-code.html" target="_blank" rel="noopener noreffer"><!-- raw HTML omitted --></a>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-code.html" target="_blank" rel="noopener noreffer"><code>&lt;code&gt;</code></a>
 </td>
 <td style="text-align:left">定义计算机代码</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-kbd.html" target="_blank" rel="noopener noreffer"><!-- raw HTML omitted --></a>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-kbd.html" target="_blank" rel="noopener noreffer"><code>&lt;kbd&gt;</code></a>
 </td>
 <td style="text-align:left">定义键盘码</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-samp.html" target="_blank" rel="noopener noreffer"><!-- raw HTML omitted --></a>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-samp.html" target="_blank" rel="noopener noreffer"><code>&lt;sample&gt;</code></a>
 </td>
 <td style="text-align:left">定义计算机代码样本</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-var.html" target="_blank" rel="noopener noreffer"><!-- raw HTML omitted --></a>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-var.html" target="_blank" rel="noopener noreffer"><code>&lt;var&gt;</code></a>
 </td>
 <td style="text-align:left">定义变量</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-pre.html" target="_blank" rel="noopener noreffer"><!-- raw HTML omitted --></a>
+<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-pre.html" target="_blank" rel="noopener noreffer"><code>&lt;pre&gt;</code></a>
 </td>
 <td style="text-align:left">定义预格式文本</td>
-</tr>
-</tbody>
-</table>
-<h2 id="html-引文-引用-及标签定义">HTML 引文, 引用, 及标签定义</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">标签</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-abbr.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义缩写</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-address.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义地址</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-bdo.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义文字方向</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-blockquote.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义长的引用</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-q.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义短的引用语</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-cite.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义引用、引证</td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://www.runoob.com/tags/tag-dfn.html" target="_blank" rel="noopener noreffer"></a>
-</td>
-<td style="text-align:left">定义一个定义项目。</td>
 </tr>
 </tbody>
 </table>
@@ -370,7 +338,120 @@
 <p>当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
 </div>
         </div>
-    </div></div><div class="post-footer" id="post-footer">
+    </div>
+<h2 id="html-链接---target-属性">HTML 链接 - target 属性</h2>
+<p>使用 target 属性，你可以定义被链接的文档在何处显示。</p>
+<p>下面的这行会在新窗口打开文档：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://huskydoge.github.io/&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener noreferrer&#34;</span><span class="p">&gt;</span>huskydoge‘s blog!<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="属性值">属性值</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">_blank</td>
+<td style="text-align:left">在新窗口中打开被链接文档。</td>
+</tr>
+<tr>
+<td style="text-align:left">_self</td>
+<td style="text-align:left">在被点击时的同一框架中打开被链接文档（默认）。</td>
+</tr>
+<tr>
+<td style="text-align:left">_parent</td>
+<td style="text-align:left">在父框架中打开被链接文档。</td>
+</tr>
+<tr>
+<td style="text-align:left">_top</td>
+<td style="text-align:left">在窗口主体中打开被链接文档。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_title" target="_blank" rel="noopener noreffer">文档的标题</a>
+</p>
+<!-- raw HTML omitted -->
+</li>
+<li>
+<p><a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_base" target="_blank" rel="noopener noreffer">所有链接一个目标</a>
+</p>
+<p>如何使用 base 标签使页面中的所有标签在新窗口中打开。</p>
+</li>
+<li>
+<p><a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_meta" target="_blank" rel="noopener noreffer">文档描述</a>
+</p>
+<p>使用 <!-- raw HTML omitted --> 元素来描述文档。</p>
+</li>
+<li>
+<p><a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_keywords" target="_blank" rel="noopener noreffer">文档关键词</a>
+</p>
+<p>使用 <!-- raw HTML omitted --> 元素来定义文档的关键词。</p>
+</li>
+<li>
+<p><a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_redirect" target="_blank" rel="noopener noreffer">重定向用户</a>
+</p>
+<p>如何把用户重定向到新的网址。</p>
+</li>
+</ul>
+<h2 id="html-head-元素">HTML &lt;head&gt; 元素</h2>
+<!-- raw HTML omitted -->
+<p>以下标签都可以添加到 head 部分：<!-- raw HTML omitted -->、<!-- raw HTML omitted -->、<!-- raw HTML omitted -->、<!-- raw HTML omitted -->、<!-- raw HTML omitted --> 以及 <!-- raw HTML omitted -->。</p>
+<h2 id="html-title-元素">HTML &lt;title&gt; 元素</h2>
+<!-- raw HTML omitted -->
+<p>title 元素在所有 HTML/XHTML 文档中都是必需的。</p>
+<p>title 元素能够：</p>
+<ul>
+<li>定义浏览器工具栏中的标题</li>
+<li>提供页面被添加到收藏夹时显示的标题</li>
+<li>显示在搜索引擎结果中的页面标题</li>
+</ul>
+<p>一个简化的 HTML 文档：</p>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+The content of the document......
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="html-base-元素">HTML &lt;base&gt; 元素</h2>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>&lt;head&gt;
+&lt;base href=&#34;http://www.w3school.com.cn/images/&#34; /&gt;
+&lt;base target=&#34;_blank&#34; /&gt;
+&lt;/head&gt;
+</code></pre><h2 id="html-link-元素">HTML &lt;link&gt; 元素</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>&lt;head&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;mystyle.css&#34; /&gt;
+&lt;/head&gt;
+</code></pre><h2 id="html-style-元素">HTML &lt;style&gt; 元素</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="html-meta-元素">HTML &lt;meta&gt; 元素</h2>
+<p>元数据（metadata）是关于数据的信息。</p>
+<!-- raw HTML omitted -->
+<p>典型的情况是，meta 元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。</p>
+<!-- raw HTML omitted -->
+<p>元数据可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务。</p>
+<h3 id="针对搜索引擎的关键词">针对搜索引擎的关键词</h3>
+<p>一些搜索引擎会利用 meta 元素的 name 和 content 属性来索引您的页面。</p>
+<p>下面的 meta 元素定义页面的描述：</p>
+<pre tabindex="0"><code>&lt;meta name=&#34;description&#34; content=&#34;Free Web tutorials on HTML, CSS, XML&#34; /&gt;
+</code></pre><p>下面的 meta 元素定义页面的关键词：</p>
+<pre tabindex="0"><code>&lt;meta name=&#34;keywords&#34; content=&#34;HTML, CSS, XML&#34; /&gt;
+</code></pre><p>name 和 content 属性的作用是描述页面的内容。</p>
+<h2 id="html-script-元素">HTML &lt;script&gt; 元素</h2>
+<!-- raw HTML omitted --></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
