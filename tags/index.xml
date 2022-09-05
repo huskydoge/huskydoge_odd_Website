@@ -4,10 +4,18 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 05 Sep 2022 15:12:20 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 05 Sep 2022 17:10:48 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>JavaScript</title>
+    <link>http://example.org/tags/javascript/</link>
+    <pubDate>Mon, 05 Sep 2022 17:10:48 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>HTML5</title>
     <link>http://example.org/tags/html5/</link>
-    <pubDate>Mon, 05 Sep 2022 15:12:20 &#43;0800</pubDate>
+    <pubDate>Mon, 05 Sep 2022 16:54:02 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/html5/</guid>
     <description><![CDATA[]]></description>
@@ -74,14 +82,6 @@
     <pubDate>Sat, 06 Aug 2022 11:47:52 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/vim/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>library</title>
-    <link>http://example.org/tags/library/</link>
-    <pubDate>Thu, 21 Jul 2022 13:55:34 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/library/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
