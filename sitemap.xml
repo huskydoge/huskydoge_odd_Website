@@ -12,6 +12,8 @@
             <loc>http://example.org/posts/html53/</loc><lastmod>2022-09-05T17:42:50&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html52/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/%E6%97%A5%E8%AE%B0/</loc><lastmod>2022-09-05T11:47:52&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</loc><lastmod>2022-09-05T11:47:52&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/sleep/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/%E5%81%A5%E5%BA%B7/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html5/</loc><lastmod>2022-09-05T15:15:56&#43;08:00</lastmod></url><url>
@@ -44,8 +46,6 @@
             <loc>http://example.org/posts/%E7%88%AC%E8%99%AB1/</loc><lastmod>2022-08-21T23:52:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/vim/</loc><lastmod>2022-08-28T23:52:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/vim/</loc><lastmod>2022-08-28T23:52:25&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/%E6%97%A5%E8%AE%B0/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</loc><lastmod>2022-08-06T11:47:52&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/library/</loc><lastmod>2022-07-21T14:29:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/numpy/</loc><lastmod>2022-07-21T14:29:25&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/pandas/</loc><lastmod>2022-07-21T14:28:40&#43;08:00</lastmod></url><url>
