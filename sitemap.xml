@@ -2,20 +2,22 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>http://example.org/categories/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/exercise/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/%E5%81%A5%E5%BA%B7/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/%E8%B7%91%E6%AD%A5/</loc><lastmod>2022-09-07T11:40:15&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/c&#43;&#43;/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/cerrcout/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/html5/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html54/</loc><lastmod>2022-09-05T17:42:50&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html53/</loc><lastmod>2022-09-05T17:42:50&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html52/</loc><lastmod>2022-09-06T14:23:31&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/%E6%97%A5%E8%AE%B0/</loc><lastmod>2022-09-05T11:47:52&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</loc><lastmod>2022-09-05T11:47:52&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/sleep/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/%E5%81%A5%E5%BA%B7/</loc><lastmod>2022-09-05T15:20:55&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/html5/</loc><lastmod>2022-09-05T15:15:56&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/macos/</loc><lastmod>2022-09-02T23:38:23&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/mac%E7%BB%88%E7%AB%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</loc><lastmod>2022-09-02T23:38:23&#43;08:00</lastmod></url><url>
@@ -32,7 +34,6 @@
             <loc>http://example.org/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc><lastmod>2022-08-31T21:20:38&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/tools/</loc><lastmod>2022-08-31T21:20:38&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/tqdm/</loc><lastmod>2022-08-31T21:20:38&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/tags/exercise/</loc><lastmod>2022-08-23T18:22:15&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/linux/</loc><lastmod>2022-08-23T18:22:15&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%9A%84%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90%E5%92%8C%E9%9A%90%E8%97%8F%E6%9D%83%E9%99%90/</loc><lastmod>2022-08-23T18:22:15&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</loc><lastmod>2022-08-23T18:22:15&#43;08:00</lastmod></url><url>
