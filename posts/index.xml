@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 07 Sep 2022 11:40:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>第一斯特林数公式的理解</title>
+    <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+    <pubDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>跑步</title>
     <link>http://example.org/posts/%E8%B7%91%E6%AD%A5/</link>
     <pubDate>Wed, 07 Sep 2022 11:40:15 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/mac%E7%BB%88%E7%AB%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[最近养成了写(复制粘贴)博客的习惯，又因为需要运用github远程仓库管理的相关操作，经常要git commit -am &quot;new&quot; git push 进行这些重复操作，所以就想到直接]]></description>
-</item>
-<item>
-    <title>预测模型(1)</title>
-    <link>http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/</link>
-    <pubDate>Thu, 01 Sep 2022 22:17:42 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B1/</guid>
-    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>
