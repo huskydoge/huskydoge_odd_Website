@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3\/"
-        },"genre": "posts","keywords": "组合数学","wordcount":  656 ,
+        },"genre": "posts","keywords": "组合数学","wordcount":  584 ,
         "url": "http:\/\/example.org\/posts\/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3\/","datePublished": "2022-09-07T22:50:40+08:00","dateModified": "2022-09-07T22:50:40+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -138,7 +138,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">第一斯特林数公式的理解</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;656 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;584 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/" class="leancloud_visitors" data-flag-title="第一斯特林数公式的理解">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -160,11 +160,9 @@
 <h4 id="定义">定义</h4>
 <p>第一类斯特林数$𝑆1(𝑛,𝑚)$表示n个<strong>有区别</strong>的小球拼成m个环（无空）的方案数。</p>
 <h4 id="递推式">递推式</h4>
-<p>{{ &lt; raw &gt;}}
-[
+<p>$$
 S_1(n, m)=S_1(n-1, m-1)+(n-1) \times S_1(n-1, m)
-]
-{{ &lt; /raw &gt;}}
+$$
 无非是两种情况:</p>
 <ul>
 <li>
@@ -175,29 +173,23 @@ S_1(n, m)=S_1(n-1, m-1)+(n-1) \times S_1(n-1, m)
 </li>
 </ul>
 <h4 id="重要性质">重要性质</h4>
-<p>{{ &lt; raw &gt;}}
-[
+<p>$$
 n !=\sum_{i=0}^n S_1(n, i)
-]
-{{ &lt; /raw &gt;}}
+$$
 要证明这个性质，先引入<code>置换</code>的概念。</p>
 <p>所谓<code>置换</code>, 其实就是对元素的重排。比如：
-{{ &lt; raw &gt;}}
-[
+$$
 \left(\begin{array}{ccccc}1&amp;2&amp;3&amp;\cdots &amp;n \newline
 2&amp;1&amp;3&amp;\cdots &amp;n\end{array}\right)
-]
-{{ &lt; /raw &gt;}}
+$$
 这里的置换就是：
-{{ &lt; raw &gt;}}
-[
+$$
 1 \rightarrow 2 \newline
 2 \rightarrow 1 \newline
 3 \rightarrow 3 \newline
 \vdots \newline
 n \rightarrow n
-]
-{{ &lt; /raw &gt;}}
+$$
 那么如何理解公式（2）呢？</p>
 <p>首先，我们要把$ S_1(n, i)$中的环对应为置换。比如， $ S_1(n, i)$的某个环：</p>
 <p>{{ &lt; mermaid &gt;}}
@@ -205,44 +197,34 @@ graph TB
 A(1)&ndash;&gt;B(4)&ndash;&gt;C(3)&ndash;&gt;D(2)&ndash;&gt;A(1)</p>
 <p>{{ &lt; /mermaid &gt;}}</p>
 <p>和置换：
-{{ &lt; raw &gt;}}
-[
+$$
 \left(\begin{array}{cccccc}1&amp;2&amp;3&amp;4&amp;\cdots &amp;n \newline
 \downarrow &amp;\downarrow &amp;\downarrow &amp;\downarrow &amp;\cdots &amp;\downarrow \newline
 4&amp;1&amp;2&amp;3&amp;\cdots &amp;n\end{array}\right)
-]
-{{ &lt; /raw &gt;}}
+$$
 相对应。</p>
 <p>而对于 $n!$ （即所有n级排列的数量），其中每一个n级排列：
-{{ &lt; raw &gt;}}
-[
+$$
 i_1,i_2,\cdots,i_n
-]
-{{ &lt; /raw &gt;}}
+$$
 都对应着一个置换：
-{{ &lt; raw &gt;}}
-[
+$$
 \left(\begin{array}{cccccc}1&amp;2&amp;3&amp;\cdots &amp;n \newline
 \downarrow &amp;\downarrow &amp;\downarrow &amp;\cdots &amp;\downarrow \newline
 i_1&amp;i_2&amp;i_3&amp;\cdots &amp;i_n\end{array}\right)
-]
-{{ &lt; /raw &gt;}}</p>
+$$</p>
 <p>接着，把这个置换做一个无交分解，且尽可能要求分解，<strong>使得组数最大</strong>：
-{{ &lt; raw &gt;}}
-[
+$$
 \left(\begin{array}{cccccc}j_1&amp;j_2&amp;j_3&amp;\cdots &amp;j_{k_1} \newline
 i_{j_1}&amp;i_{j_2}&amp;i_{j_3}&amp;\cdots &amp;j_{i_n}\end{array}\right)<em>{\sigma_1}<br>
 \left(\begin{array}{cccccc}\cdots \cdots \newline \cdots \cdots \end{array}\right)</em>{\sigma_2}\ \cdots \left(\begin{array}{cccccc}\cdots \cdots \newline \cdots \cdots \end{array}\right)_{\sigma_t}<br>
-]
-{{ &lt; /raw &gt;}}
+$$
 括号下标作为记号。同时，分组满足同一组中置换前和置换后，所含元素是相同的，如：
-{{ &lt; raw &gt;}}
-[
+$$
 \left(\begin{array}{cccccc}1&amp;2&amp;3&amp;4 \newline
 \downarrow &amp;\downarrow &amp;\downarrow &amp;\downarrow  \newline
 4&amp;1&amp;2&amp;3\end{array}\right)
-]
-{{ &lt; /raw &gt;}}
+$$
 这其实就是我们所说的<code>置换环</code>。</p>
 <p>于是，$\sigma_1,\sigma_2,\sigma_3,\cdots,\sigma_t$ 就对应了 $S_1(n,t)$ 中的一种情况，即把n个不同的小球，分成了t组，然后每组成一个环。（事实上，$S_1(n,t)$中有很多情况，考虑圆排列）</p>
 <p>那么，我们可以把第一类斯特林数中的环理解成置换环, 全排列和斯特林数就一一对应了。</p></div><div class="post-footer" id="post-footer">
