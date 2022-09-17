@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841\/"
-        },"genre": "posts","keywords": "数据结构","wordcount":  832 ,
+        },"genre": "posts","keywords": "数据结构","wordcount":  837 ,
         "url": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841\/","datePublished": "2022-09-16T08:00:51+08:00","dateModified": "2022-09-16T08:00:51+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -138,7 +138,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">时空间复杂度</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;832 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;837 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" class="leancloud_visitors" data-flag-title="时空间复杂度">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -163,8 +163,11 @@
 <code>分支语句</code>按照执行语句多的那个分支计算。</p>
 <h2 id="时间复杂度定义">时间复杂度定义</h2>
 <p>如果当n趋于无穷时，T(n)/f(n)的极限为一个非零常数，称O(f(n))为算法的渐进时问复杂度，简称时间复杂度。这种形式称为大O表示法。</p>
-<p>$\exists C， N_0, \forall n&gt;N_0, s.t. T(n) \le C*f(n)$ 则O(f(n))称为算法的时间复杂度</p>
-<p><strong>注意</strong></p>
+<p>$$
+\exists C， N_0, \forall \quad n&gt;N_0, s.t. T(n) \le C\times f(n)
+$$
+则O(f(n))称为算法的时间复杂度</p>
+<p><strong>注意</strong>:</p>
 <p>执行次数和数据规模n的变化没有关系的语句，可不计入。</p>
 <ol>
 <li>
@@ -184,7 +187,9 @@
 </ul>
 <h2 id="求和定理">求和定理</h2>
 <p>假定T1（n)、T2(n)是程序P1、P2的运行时间，并且T1（n)是O(f(n))的，而T2(n)是O(g(n))的。那么，先运行P1、再运行P2的总的运行时间是:</p>
-<p>​								$T1(n)+T2(n)=O(MAX(f(n), g(n)) $</p>
+<p>$$
+T1(n)+T2(n)=O(MAX(f(n), g(n)))
+$$</p>
 <h2 id="求积定理">求积定理</h2>
 <p>如果T1(n) 和T2(n)分别是O(f(n))和O(g(n))的，那么T1(n)T2(n)是O(f(n)g(n))的</p>
 <p>通常考虑三个方面：最好、最坏和平均情况的时间复杂度。一般用最坏情况作为算法的时问复杂度。</p>
