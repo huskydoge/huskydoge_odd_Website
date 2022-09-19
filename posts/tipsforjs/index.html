@@ -9,13 +9,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/tipsforjs/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-16T23:02:14+08:00" />
-<meta property="article:modified_time" content="2022-09-18T19:48:41+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-09-19T20:11:06+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="记录Js中一些独特的语法"/>
 <meta name="twitter:description" content="包括Web API"/>
 <meta name="application-name" content="Husky&#39;s World">
-<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/tipsforjs/" /><link rel="prev" href="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/tipsforjs/" /><link rel="prev" href="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" /><link rel="next" href="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/tipsforjs\/"
-        },"genre": "posts","wordcount":  805 ,
-        "url": "http:\/\/example.org\/posts\/tipsforjs\/","datePublished": "2022-09-16T23:02:14+08:00","dateModified": "2022-09-18T19:48:41+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","wordcount":  1036 ,
+        "url": "http:\/\/example.org\/posts\/tipsforjs\/","datePublished": "2022-09-16T23:02:14+08:00","dateModified": "2022-09-19T20:11:06+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -138,8 +138,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">记录Js中一些独特的语法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-18">2022-09-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;805 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/tipsforjs/" class="leancloud_visitors" data-flag-title="记录Js中一些独特的语法">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-16">2022-09-16</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1036 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/tipsforjs/" class="leancloud_visitors" data-flag-title="记录Js中一些独特的语法">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -149,6 +149,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#candies">Candies</a></li>
     <li><a href="#donts">Don&rsquo;ts</a></li>
     <li><a href="#primitive-and-reference-values">Primitive and Reference Values</a></li>
     <li><a href="#destructuring-array">Destructuring Array</a>
@@ -183,6 +184,8 @@
 </span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementbyId</span><span class="p">(</span><span class="s1">&#39;idName&#39;</span><span class="p">);</span>
 </span></span></code></pre></div><p>一个需要&rsquo;#&lsquo;一个不需要</p>
 <p><code>element.textContent</code> 访问元素的内容</p>
+<h2 id="candies">Candies</h2>
+<p><code>setTimeout(function(), waitTime)</code> 等待waitTime秒后函数执行，且不会影响之后的函数的运行（代码编译不会暂停）</p>
 <h2 id="donts">Don&rsquo;ts</h2>
 <ul>
 <li>
@@ -279,18 +282,21 @@ Object.entries()
 </span></span><span class="line"><span class="cl"><span class="c1">// Arrow Form
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(()=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;This function will never run again&#34;</span><span class="p">));</span>
 </span></span></code></pre></div><h2 id="closures">Closures</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">secureBooking</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">let</span> <span class="nx">passengerCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nx">passenger</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">header</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">header</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                       <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span></code></pre></div><p>这里， 变量<code>header</code>在Immediately Invoked Function里定义，当代码运行过这一段代码后，原先header就已经消失，而进入了<code>document.querySelector('body').addEventListener</code>中的function的闭包中。因此，这个函数在body对象被点击时，它仍能正常运行。</p>
+<p>closure里的变量有很高的优先级。找变量会先找他。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-09-18</span>
+                <span>Updated on 2022-09-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -307,13 +313,14 @@ Object.entries()
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" class="prev" rel="prev" title="时空间复杂度"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>时空间复杂度</a></div>
+    <div class="post-nav"><a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" class="prev" rel="prev" title="时空间复杂度"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>时空间复杂度</a>
+            <a href="/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" class="next" rel="next" title="模拟电路QuestionNote">模拟电路QuestionNote<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.103.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.103.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
