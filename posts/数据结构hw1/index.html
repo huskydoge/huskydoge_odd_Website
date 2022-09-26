@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1\/"
-        },"genre": "posts","keywords": "数据结构, 差分法","wordcount":  1616 ,
+        },"genre": "posts","keywords": "数据结构, 差分法, 组合数学","wordcount":  1840 ,
         "url": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1\/","datePublished": "2022-09-25T23:36:25+08:00","dateModified": "2022-09-25T23:36:25+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -140,7 +140,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">数据结构Hw1的思考</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-25">2022-09-25</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-25">2022-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1616 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-25">2022-09-25</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-25">2022-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1840 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" class="leancloud_visitors" data-flag-title="数据结构Hw1的思考">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#1014-数列操作">1014. 数列操作</a>
       <ul>
         <li><a href="#输入格式">输入格式</a></li>
         <li><a href="#输出格式">输出格式</a></li>
@@ -162,10 +162,7 @@
         <li><a href="#解题思路">解题思路</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#1033-行列式求值">1033. 行列式求值</a>
       <ul>
         <li><a href="#输入格式-1">输入格式</a></li>
         <li><a href="#输出格式-1">输出格式</a></li>
@@ -178,58 +175,28 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="1033-行列式求值">1033. 行列式求值</h1>
-<p>现在给出一个n阶行列式，求出它的值。</p>
-<h3 id="输入格式">输入格式</h3>
-<p>第一行一个数n表示行列式阶数
-接下来是一个n行n列的由整数构成的行列式</p>
-<h3 id="输出格式">输出格式</h3>
-<p>一行打印一个int表示行列式的值</p>
-<h3 id="样例输入">样例输入</h3>
-<pre tabindex="0"><code>3  
-5 1 2  
-4 2 5  
-3 4 1
-</code></pre><h3 id="样例输出">样例输出</h3>
-<pre tabindex="0"><code>-59
-</code></pre><h3 id="数据范围">数据范围</h3>
-<p>$1\leq n\leq 101≤n≤10$</p>
-<p>答案在int范围之内</p>
-<h3 id="时空磁盘限制运行时">时空磁盘限制（运行时）</h3>
-<p>时间限制： 1000 ms</p>
-<p>内存空间限制： 512 MiB</p>
-<p>磁盘空间限制： 无限制</p>
-<h3 id="解题思路">解题思路</h3>
-<p>这道题的出发点应该是行列式的计算方法（我能想到的）</p>
-<ul>
-<li>代数余子式</li>
-<li>逆序数排列</li>
-<li>变换矩阵求对角线元素乘积</li>
-</ul>
-<p>第三个方法基本上可以先排除，因为涉及到分数，意味着要转换int为float，估计是会有精度损失的，肯定过不了。</p>
-<p>此外，老师还要求不要用<code>STL</code>中的库，比如<code>vector,list,map,set</code>之类的, 那就是说还要自己写一个线性表。</p>
-<h1 id="1014-数列操作">1014. 数列操作</h1>
+            </div><div class="content" id="content"><h2 id="1014-数列操作">1014. 数列操作</h2>
 <p>给定一个长度为N的整数数列A，并且可以对这个数列进行一种操作：将某个区间里的数全部+1或-1。再给一个长度相同的整数数列B，请问最少需要几次可以将A变成B？</p>
-<h3 id="输入格式-1">输入格式</h3>
+<h3 id="输入格式">输入格式</h3>
 <p>输入共三行。</p>
 <p>第一行一个整数N</p>
 <p>第二行是数列A</p>
 <p>第三行是数列B</p>
-<h3 id="输出格式-1">输出格式</h3>
+<h3 id="输出格式">输出格式</h3>
 <p>输出共一行，包含一个正整数，表示最少需要的次数。</p>
-<h3 id="样例输入-1">样例输入</h3>
+<h3 id="样例输入">样例输入</h3>
 <pre tabindex="0"><code>3  
 3 4 5
 6 7 8
-</code></pre><h3 id="样例输出-1">样例输出</h3>
+</code></pre><h3 id="样例输出">样例输出</h3>
 <pre tabindex="0"><code>3
-</code></pre><h3 id="数据范围-1">数据范围</h3>
+</code></pre><h3 id="数据范围">数据范围</h3>
 <p>对于100%的数据，$N \le 10^5，|A_i|, |B_i| &lt;= 10^6$</p>
-<h3 id="时空磁盘限制运行时-1">时空磁盘限制（运行时）</h3>
+<h3 id="时空磁盘限制运行时">时空磁盘限制（运行时）</h3>
 <p>时间限制： 1000 ms</p>
 <p>内存空间限制： 256 MiB</p>
 <p>磁盘空间限制： 无限制</p>
-<h3 id="解题思路-1">解题思路</h3>
+<h3 id="解题思路">解题思路</h3>
 <p>拿到这道题，第一个能想到的操作自然是先把两个数组相减，得到一个新的数组，记为<code>c[N]</code>。</p>
 <p><strong>那么我们的目标变转换为：如何将数组<code>d[N]</code>中的所有数经过最少次操作变为 0 。</strong></p>
 <p>但然后呢？我们来观察下这个操作：<strong>将某个区间里的数全部+1或-1</strong></p>
@@ -322,7 +289,56 @@ $$</p>
 </span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">max</span><span class="p">(</span><span class="n">positive</span><span class="p">,</span><span class="n">minus</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>为什么要用long而不是int？因为我用int过不了学校的oj，估计是oj编译器版本问题？（不明所以，有待考究）</p></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><p>为什么要用long而不是int？因为我用int过不了学校的oj，估计是oj编译器版本问题？（不明所以，有待考究）</p>
+<h2 id="1033-行列式求值">1033. 行列式求值</h2>
+<p>现在给出一个n阶行列式，求出它的值。</p>
+<h3 id="输入格式-1">输入格式</h3>
+<p>第一行一个数n表示行列式阶数
+接下来是一个n行n列的由整数构成的行列式</p>
+<h3 id="输出格式-1">输出格式</h3>
+<p>一行打印一个int表示行列式的值</p>
+<h3 id="样例输入-1">样例输入</h3>
+<pre tabindex="0"><code>3  
+5 1 2  
+4 2 5  
+3 4 1
+</code></pre><h3 id="样例输出-1">样例输出</h3>
+<pre tabindex="0"><code>-59
+</code></pre><h3 id="数据范围-1">数据范围</h3>
+<p>$1\leq n\leq 101≤n≤10$</p>
+<p>答案在int范围之内</p>
+<h3 id="时空磁盘限制运行时-1">时空磁盘限制（运行时）</h3>
+<p>时间限制： 1000 ms</p>
+<p>内存空间限制： 512 MiB</p>
+<p>磁盘空间限制： 无限制</p>
+<h3 id="解题思路-1">解题思路</h3>
+<p>这道题的出发点应该是行列式的计算方法（我能想到的）</p>
+<ul>
+<li>代数余子式</li>
+<li>逆序数排列</li>
+<li>变换矩阵求对角线元素乘积</li>
+</ul>
+<p>第三个方法基本上可以先排除，因为涉及到分数，意味着要转换int为float，估计是会有精度损失的，肯定过不了。</p>
+<p>此外，老师还要求不要用<code>STL</code>中的库，比如<code>vector,list,map,set</code>之类的, 那就是说如果要用类似结构的话还要自己写一个。</p>
+<h4 id="逆序数法">逆序数法</h4>
+<p>先看公式：
+$$
+\begin{equation}
+Det=\left|\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n n}
+\end{array}\right|=\sum(-1)^{\tau\left(j_1 \cdots j_n\right)} a_{1 j_1} \cdots a_{n j_n}
+\end{equation}
+$$
+记 $r=\tau\left(j_1 \cdots j_n \right)$， 用数组 $J$ 储存 $j_1 \cdots j_n $</p>
+<p>用逆序数法实现行列式求值，必须实现三个函数：</p>
+<ul>
+<li><code>reverse(数组J的长度，数组J)</code> 求该数组所代表的一种排列情况下的逆序数大小</li>
+<li><code>cofactorCalc(待求行列式的矩阵，待求行列式矩阵的维度，数组J)</code> 计算给定一组 $J$ 排列的情况下 $(-1)^{\tau\left(j_1 \cdots j_n\right)} a_{1 j_1} \cdots a_{n j_n}$ 的值</li>
+<li><code>perm(数组a, 数组长度)</code></li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -331,13 +347,13 @@ $$</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考" data-hashtags="数据结构,差分法"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-hashtag="数据结构"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E6%2595%25B0%25E6%258D%25AE%25E7%25BB%2593%25E6%259E%2584hw1%2f&amp;description=%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84Hw1%e7%9a%84%e6%80%9d%e8%80%83" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考" data-hashtags="数据结构,差分法,组合数学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-hashtag="数据结构"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/" data-title="数据结构Hw1的思考"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E6%2595%25B0%25E6%258D%25AE%25E7%25BB%2593%25E6%259E%2584hw1%2f&amp;description=%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84Hw1%e7%9a%84%e6%80%9d%e8%80%83" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>,&nbsp;<a href="/tags/%E5%B7%AE%E5%88%86%E6%B3%95/">差分法</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>,&nbsp;<a href="/tags/%E5%B7%AE%E5%88%86%E6%B3%95/">差分法</a>,&nbsp;<a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>

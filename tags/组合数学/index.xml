@@ -4,7 +4,15 @@
         <link>http://example.org/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
         <description>组合数学 - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 25 Sep 2022 23:36:25 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>数据结构Hw1的思考</title>
+    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/</link>
+    <pubDate>Sun, 25 Sep 2022 23:36:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>第一斯特林数公式的理解</title>
     <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</link>
     <pubDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</pubDate>
