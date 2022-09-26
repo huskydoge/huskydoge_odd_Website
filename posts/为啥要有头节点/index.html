@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9\/"
-        },"genre": "posts","keywords": "数据结构","wordcount":  692 ,
+        },"genre": "posts","keywords": "数据结构","wordcount":  690 ,
         "url": "http:\/\/example.org\/posts\/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9\/","datePublished": "2022-09-26T08:56:52+08:00","dateModified": "2022-09-26T08:56:52+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -140,7 +140,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">为啥要有头节点？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;692 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;690 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9/" class="leancloud_visitors" data-flag-title="为啥要有头节点？">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -150,9 +150,12 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>大二上学期刚学数据结构，老师讲到线性表的时候提到了&quot;头节点&quot;这个概念。</p>
-<p>以有序列表为例子，便是下标为0的地方放的并非第一个元素，而是一个头节点（或者叫做哨兵元素）。</p>
+            </div><div class="content" id="content"><p>​</p>
+<p>大二上学期刚学数据结构，老师讲到线性表的时候提到了&quot;头节点&quot;这个概念。</p>
+<p>​</p>
+<p>以有序列表为例子，便是下标为0的地方放的并非第一个元素，而是一个头节点（或者叫做哨兵元素）</p>
 <p>乍一看，我是没明白为啥一定要加一个头节点的。后来发现，其中仿佛蕴含了“用空间复杂度换时间复杂度”的思想。（这样说或许不准确，但可以说让算法的设计更加精巧）</p>
+<p>​</p>
 <p>以下面的代码举一例：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">seqList</span><span class="o">&lt;</span><span class="n">elemType</span><span class="o">&gt;::</span><span class="n">find</span> <span class="p">(</span><span class="k">const</span> <span class="n">elemType</span> <span class="o">&amp;</span><span class="n">e</span> <span class="p">)</span><span class="k">const</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// 返回值等于e的元素的序号，无则返回0.
@@ -163,12 +166,16 @@
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">e</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
 </span></span></code></pre></div><p>这段代码的目的是在一段数组中找到某个特定的元素。如果存在该元素，返回其在数组中的下标；否则返回0。</p>
+<p>​</p>
 <p>有了头节点，那么在循环的过程中我们便省去了一个步骤，即不需要再判断下标是否已经越界。</p>
 <p>查阅网上的资料，头节点更多的好处可以总结为：</p>
-<p>1、防止单链表是空的而设的，当链表为空的时候,带头结点的头指针就指向头结点，如果当链表为空的时候,单链表没有带头结点,那么它的头指针就为NULL。
-2、是为了方便单链表的特殊操作，能有效减少代码量，在插入在表头或者删除第一个结点时不用考虑特殊情况，删除或插入用户的第一个节点的值和删除或插入中间的值用一样的代码，这样就保持了单链表操作的统一性!
-3、单链表加上头结点之后，无论单链表是否为空，头指针始终指向头结点，因此空表和非空表的处理也统一了，方便了单链表的操作，也减少了程序的复杂性和出现bug的机会。</p>
+<ol>
+<li>防止单链表是空的而设的，当链表为空的时候,带头结点的头指针就指向头结点，如果当链表为空的时候,单链表没有带头结点,那么它的头指针就为NULL。</li>
+<li>是为了方便单链表的特殊操作，能有效减少代码量，在插入在表头或者删除第一个结点时不用考虑特殊情况，删除或插入用户的第一个节点的值和删除或插入中间的值用一样的代码，这样就保持了单链表操作的统一性!</li>
+<li>单链表加上头结点之后，无论单链表是否为空，头指针始终指向头结点，因此空表和非空表的处理也统一了，方便了单链表的操作，也减少了程序的复杂性和出现bug的机会。</li>
+</ol>
 <p>总结来说，没有头结点对第一个结点的操作大多和中间结点不太一样，每个操作都要考虑特殊情况，有头结点的话就不必考虑那么多了，还不容易出现代码错误。</p>
+<p>​</p>
 <p>刚刚上手数据结构，有很多还没有切身体会，在此先插个眼。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
