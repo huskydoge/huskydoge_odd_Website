@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/"
-        },"genre": "posts","keywords": "Q\u0026A","wordcount":  231 ,
+        },"genre": "posts","keywords": "Q\u0026A","wordcount":  492 ,
         "url": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/","datePublished": "2022-09-19T19:57:03+08:00","dateModified": "2022-09-19T19:57:03+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -140,7 +140,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">模拟电路QuestionNote</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;231 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;492 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" class="leancloud_visitors" data-flag-title="模拟电路QuestionNote">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -151,13 +151,43 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#为何掺杂浓度越高pn结却越窄"><strong>为何掺杂浓度越高,PN结却越窄</strong></a></li>
+    <li>
+      <ul>
+        <li><a href="#为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</a></li>
+      </ul>
+    </li>
+    <li><a href="#半导体二极管">半导体二极管</a>
+      <ul>
+        <li><a href="#为什么结电容大的二极管只能在较低频率下工作">为什么结电容大的二极管只能在较低频率下工作？</a></li>
+        <li><a href="#为什么结面积小的二极管整流平均电流小">为什么结面积小的二极管整流平均电流小？</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="为何掺杂浓度越高pn结却越窄"><strong>为何掺杂浓度越高,PN结却越窄</strong></h2>
+            </div><div class="content" id="content"><p>问题来源：模拟电子技术（第五版）</p>
+<h3 id="为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</h3>
 <p>首先, PN结的维持是依靠PN各区的少子的漂移运动和在PN结形成的空间电场下少部分突破其势垒逃逸的多子的扩散运动。漂移运动的少子和扩散运动的多子数目相同（动态平衡）。</p>
 <p>那么，此时因为少子是半导体自身共价键本征激发所形成的载流子，与掺杂浓度无关，所以在掺杂浓度增大时，<strong>少子的数目是不变的</strong>。</p>
-<p>但是假若掺杂浓度高，那么区域内的多子浓度也就增大。多子同进行漂移运动的<strong>固定数目的少子</strong>达到动态平衡时，所需挣脱束缚的多子的范围就更小，所以PN结就更窄。</p></div><div class="post-footer" id="post-footer">
+<p>但是假若掺杂浓度高，那么区域内的多子浓度也就增大。多子同进行漂移运动的<strong>固定数目的少子</strong>达到动态平衡时，所需挣脱束缚的多子的范围就更小，所以PN结就更窄。</p>
+<h2 id="半导体二极管">半导体二极管</h2>
+<h3 id="为什么结电容大的二极管只能在较低频率下工作">为什么结电容大的二极管只能在较低频率下工作？</h3>
+<p>容抗的公式为：
+$$
+X_C=\frac{1}{jwC}
+$$
+其中 $w$ 是频率。</p>
+<p>容抗是电容对交流电的阻力。那么当频率大时，容抗很低，交流电两个方向是都导通了，这就使其失去了整流作用。</p>
+<p>其他解释：</p>
+<ul>
+<li>
+<p>截止频率与电容有关，电容小，截止频率大。</p>
+</li>
+<li>
+<p>二极管是一个单向导通器件。若结电容过大，就相当于在其两端并上一个可观的电容。由于电容的旁路作用，将降低二极管的高频响应。</p>
+</li>
+</ul>
+<h3 id="为什么结面积小的二极管整流平均电流小">为什么结面积小的二极管整流平均电流小？</h3>
+<p>因为二极管的截面积越大允许通过的电流就越大，因为二极管单位截面积允许通过的电流是一定的。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
