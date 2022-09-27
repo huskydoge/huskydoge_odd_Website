@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83\/"
-        },"genre": "posts","keywords": "组合数学","wordcount":  0 ,
+        },"genre": "posts","keywords": "组合数学","wordcount":  308 ,
         "url": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83\/","datePublished": "2022-09-26T23:26:12+08:00","dateModified": "2022-09-26T23:26:12+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">关于一个组合恒等式的思考</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;0 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;0 minutes&nbsp;<span id="/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/" class="leancloud_visitors" data-flag-title="关于一个组合恒等式的思考">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;308 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/" class="leancloud_visitors" data-flag-title="关于一个组合恒等式的思考">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -151,8 +151,46 @@
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#容斥定理">容斥定理</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>好 ♂兄♂弟问了我一个组合恒等式的问题：
+$$
+\begin{equation}
+\sum_{i=0}^n(-1)^i\left(\begin{array}{l}
+n \newline
+i
+\end{array}\right) i^k= \begin{cases}0, &amp; \text { if } 0 \leq k&lt;n, \newline \newline
+(-1)^n n !, &amp; \text { if } n=k .\end{cases}
+\end{equation}
+$$
+第一眼：组合数，那试试二项式定理吧？</p>
+<p>第二眼：有（-1），会不会是容斥定理？</p>
+<p>可是看了看 $i^{k}$ 这项，和普通的二项式定理中的x项好像匹配不起来啊？</p>
+<p>再想想容斥定理，这怎么构造模型啊？</p>
+<hr>
+<p>还没想出来，好 ♂兄♂弟就给了我答案</p>
+<h2 id="容斥定理">容斥定理</h2>
+<p>$$
+\left|\bigcup_{i=1}^n A_i\right|=\sum_{k=1}^n(-1)^{k-1} \sum_{1 \leq i_1&lt;i_2&lt;\cdots&lt;i_k \leq n}\left|A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}\right|
+\newline \newline
+\begin{equation}
+\sum_{i=0}^n(-1)^i\left(\begin{array}{l}
+n \newline
+i
+\end{array}\right) i^k= \begin{cases}0, &amp; \text { if } 0 \leq k&lt;n, \newline \newline
+(-1)^n n !, &amp; \text { if } n=k .\end{cases}
+\end{equation}
+$$</p>
+<p>我们可以用所谓&quot;组合解释&quot;，也就是构建现实模型来理解这个问题：</p>
+<blockquote>
+<p>将k个不同的小球放进n个不同的盒子里，要求每个盒子至少放1个，求方法数。</p>
+<p>k&lt;n时，这是不可能做到的，所以此时方法数为 0 种</p>
+</blockquote></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
