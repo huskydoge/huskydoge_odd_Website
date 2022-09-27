@@ -4,7 +4,17 @@
         <link>http://example.org/categories/%E6%97%A5%E8%AE%B0/</link>
         <description>日记 - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 05 Sep 2022 11:47:52 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E6%97%A5%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E6%97%A5%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>日记1</title>
+    <link>http://example.org/posts/%E6%97%A5%E8%AE%B01/</link>
+    <pubDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%97%A5%E8%AE%B01/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/G5OR83Jlj4HxZMk.jpg" referrerpolicy="no-referrer">
+            </div>大二上平凡之上的一天]]></description>
+</item>
+<item>
     <title>暑期生活</title>
     <link>http://example.org/posts/%E6%9A%91%E6%9C%9F%E6%97%A5%E5%BF%97/</link>
     <pubDate>Mon, 05 Sep 2022 11:47:52 &#43;0800</pubDate>

@@ -4,10 +4,18 @@
         <link>http://example.org/categories/</link>
         <description>Categories - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 26 Sep 2022 08:56:52 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>日记</title>
+    <link>http://example.org/categories/%E6%97%A5%E8%AE%B0/</link>
+    <pubDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/categories/%E6%97%A5%E8%AE%B0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Class Note</title>
     <link>http://example.org/categories/class-note/</link>
-    <pubDate>Mon, 26 Sep 2022 08:56:52 &#43;0800</pubDate>
+    <pubDate>Tue, 27 Sep 2022 21:28:29 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/categories/class-note/</guid>
     <description><![CDATA[]]></description>
@@ -18,14 +26,6 @@
     <pubDate>Wed, 07 Sep 2022 11:40:15 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/categories/%E5%81%A5%E5%BA%B7/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>日记</title>
-    <link>http://example.org/categories/%E6%97%A5%E8%AE%B0/</link>
-    <pubDate>Mon, 05 Sep 2022 11:47:52 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/categories/%E6%97%A5%E8%AE%B0/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>

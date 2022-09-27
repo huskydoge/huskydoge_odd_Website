@@ -4,9 +4,29 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 26 Sep 2022 23:26:12 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>日记1</title>
+    <link>http://example.org/posts/%E6%97%A5%E8%AE%B01/</link>
+    <pubDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%97%A5%E8%AE%B01/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/G5OR83Jlj4HxZMk.jpg" referrerpolicy="no-referrer">
+            </div>大二上平凡之上的一天]]></description>
+</item>
+<item>
+    <title>多值函数的支点与单值解析</title>
+    <link>http://example.org/posts/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%AF%E7%82%B9%E4%B8%8E%E5%8D%95%E5%80%BC%E8%A7%A3%E6%9E%90/</link>
+    <pubDate>Tue, 27 Sep 2022 21:28:29 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%AF%E7%82%B9%E4%B8%8E%E5%8D%95%E5%80%BC%E8%A7%A3%E6%9E%90/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/gPbFo6i9VaQMHrc.jpg" referrerpolicy="no-referrer">
+            </div>复分析可真是...]]></description>
+</item>
+<item>
     <title>关于一个组合恒等式的思考</title>
     <link>http://example.org/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</link>
     <pubDate>Mon, 26 Sep 2022 23:26:12 &#43;0800</pubDate>
@@ -74,22 +94,6 @@
     <pubDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>跑步</title>
-    <link>http://example.org/posts/%E8%B7%91%E6%AD%A5/</link>
-    <pubDate>Wed, 07 Sep 2022 11:40:15 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E8%B7%91%E6%AD%A5/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Cerr&amp;Cout的区别</title>
-    <link>http://example.org/posts/cerrcout/</link>
-    <pubDate>Tue, 06 Sep 2022 14:12:40 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/cerrcout/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

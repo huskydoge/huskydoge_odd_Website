@@ -4,7 +4,17 @@
         <link>http://example.org/categories/class-note/</link>
         <description>Class Note - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Mon, 26 Sep 2022 08:56:52 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/class-note/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 21:28:29 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/class-note/" rel="self" type="application/rss+xml" /><item>
+    <title>多值函数的支点与单值解析</title>
+    <link>http://example.org/posts/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%AF%E7%82%B9%E4%B8%8E%E5%8D%95%E5%80%BC%E8%A7%A3%E6%9E%90/</link>
+    <pubDate>Tue, 27 Sep 2022 21:28:29 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%AF%E7%82%B9%E4%B8%8E%E5%8D%95%E5%80%BC%E8%A7%A3%E6%9E%90/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/gPbFo6i9VaQMHrc.jpg" referrerpolicy="no-referrer">
+            </div>复分析可真是...]]></description>
+</item>
+<item>
     <title>为啥要有头节点？</title>
     <link>http://example.org/posts/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9/</link>
     <pubDate>Mon, 26 Sep 2022 08:56:52 &#43;0800</pubDate>
