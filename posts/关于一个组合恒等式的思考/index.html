@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83\/"
-        },"genre": "posts","keywords": "组合数学","wordcount":  308 ,
+        },"genre": "posts","keywords": "组合数学","wordcount":  781 ,
         "url": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83\/","datePublished": "2022-09-26T23:26:12+08:00","dateModified": "2022-09-26T23:26:12+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -63,7 +63,8 @@
                             </a>
                             <div class="menu-more-content dropdown-content"><a href="/friends/" title="" ><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><a href="/tools/" title="" ><i class='fa-solid fa-screwdriver-wrench'></i> 工具 </a><a href="/recreation/" title="" ><i class='fa-solid fa-gamepad'></i> 资源 </a><a href="/subjects/" title="" ><i class='fa-brands fa-discourse'></i> 课程 </a></div>
                         </div>
-                    <span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <a class="menu-item" href="https://roadmap.sh/" rel="noopener noreffer" target="_blank"><i class='fa-regular fa-book'></i> 路线图 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -126,7 +127,8 @@
 			</a>
 			<div class="menu-more-content dropdown-content"><a href="/friends/" title="" ><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><a href="/tools/" title="" ><i class='fa-solid fa-screwdriver-wrench'></i> 工具 </a><a href="/recreation/" title="" ><i class='fa-solid fa-gamepad'></i> 资源 </a><a href="/subjects/" title="" ><i class='fa-brands fa-discourse'></i> 课程 </a></div>
 		</div>
-	<a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+	<a class="menu-item" href="https://roadmap.sh/" rel="noopener noreffer" target="_blank"><i class='fa-regular fa-book'></i> 路线图 
+		</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -142,8 +144,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">关于一个组合恒等式的思考</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;308 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/" class="leancloud_visitors" data-flag-title="关于一个组合恒等式的思考">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;781 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/" class="leancloud_visitors" data-flag-title="关于一个组合恒等式的思考">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -155,6 +157,8 @@
   <ul>
     <li><a href="#前言">前言</a></li>
     <li><a href="#容斥定理">容斥定理</a></li>
+    <li><a href="#求导法">求导法</a></li>
+    <li><a href="#差分法">差分法</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="前言">前言</h2>
@@ -173,11 +177,14 @@ $$
 <p>可是看了看 $i^{k}$ 这项，和普通的二项式定理中的x项好像匹配不起来啊？</p>
 <p>再想想容斥定理，这怎么构造模型啊？</p>
 <hr>
-<p>还没想出来，好 ♂兄♂弟就给了我答案</p>
+<p>还没想出来，<a href="https://www.zhihu.com/question/519096991" target="_blank" rel="noopener noreffer">好 ♂兄♂弟就给了我答案</a>
+，看了之后觉得很妙，就在此再捋一捋思路</p>
 <h2 id="容斥定理">容斥定理</h2>
 <p>$$
-\left|\bigcup_{i=1}^n A_i\right|=\sum_{k=1}^n(-1)^{k-1} \sum_{1 \leq i_1&lt;i_2&lt;\cdots&lt;i_k \leq n}\left|A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}\right|
-\newline \newline
+\begin{equation}\left|\bigcup_{i=1}^n A_i\right|=\sum_{k=1}^n(-1)^{k-1} \sum_{1 \leq i_1&lt;i_2&lt;\cdots&lt;i_k \leq n}\left|A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}\right|
+\end{equation}
+$$</p>
+<p>$$
 \begin{equation}
 \sum_{i=0}^n(-1)^i\left(\begin{array}{l}
 n \newline
@@ -188,9 +195,41 @@ i
 $$</p>
 <p>我们可以用所谓&quot;组合解释&quot;，也就是构建现实模型来理解这个问题：</p>
 <blockquote>
+<p>Question：</p>
 <p>将k个不同的小球放进n个不同的盒子里，要求每个盒子至少放1个，求方法数。</p>
-<p>k&lt;n时，这是不可能做到的，所以此时方法数为 0 种</p>
-</blockquote></div><div class="post-footer" id="post-footer">
+</blockquote>
+<p>如果要解决这个问题，我们可以用总的方法数目 $n^k$ 减去存在至少一个盒子没有球的方法数S</p>
+<p>记 $S_i$ 表示事件：至少有 $i$ 个盒子是空的，那么由容斥原理和简单的组合知识，我们有：
+$$
+\begin{equation}S=C_n^{n-1} \cdot(n-1)^k-C_n^{n-2} \cdot(n-2)^k+\cdots - (-1)^{n-1}C_n^{1}\cdot(1)^k-(-1)^{n-0}C_n^0\cdot 0
+\end{equation}
+$$
+于是，
+$$
+\begin{equation}\begin{aligned}
+目标方法数&amp;=n^k-C_n^{n-1} \cdot(n-1)^k+C_n^{n-2} \cdot(n-2)^k+\cdots\
+&amp;=\sum_{i=0}^n(-1)^{n-i} C_n^i \cdot i^k
+\newline
+&amp;=(-1)^n\sum_{i=0}^n(-1)^{i} C_n^i \cdot i^k
+\end{aligned}
+\end{equation}
+$$
+而我们知道，k&lt;n时，这件事本身就是不可能做到的，所以此时方法数为 0 种。</p>
+<p>而当k=n时，我们容易得到此时的方法数为 $n!$ 种，那么考虑equation (3) 和 (5) 前面差了一个 $(-1)^n$ ，从而得到恒等式成立。</p>
+<h2 id="求导法">求导法</h2>
+<p>我们熟知二项式定理: $(x+1)^n=\sum_{i=0}^n C_n^i \cdot x^i$ 记该等式为 $A_0$</p>
+<p>对两边同时求导得: $n(x+1)^{n-1}=\sum_{i=0}^n C_n^i \cdot i x^{i-1}$</p>
+<p>再两边同时乘以 $x$ 得: $n x(x+1)^{n-1}=\sum_{i=0}^n C_n^i \cdot i x^i$ 记该等式为 $A_1$</p>
+<p>对 $A_1$ 做同样的操作 (两边求导后再乘x) 得到 $A_2$, 以此类推, 得到 $A_1, A_2, \cdots, A_{n-1}$ 我们易知: $A_j \quad(0 \leq j&lt;n)$ 右侧为 $\sum_{i=0}^n C_n^i \cdot i^j x^i$</p>
+<p>又因为 $A_0$ 左侧为 $(x+1)^n$ 因此 $A_j(0 \leq j&lt;n)$ 左侧含因式 $(x+1)$</p>
+<p>故我们在 $A_k$ 中取 $x=-1$ 得到: $0=\sum_{i=0}^n(-1)^i \cdot i^k C_n^i$</p>
+<p>而如果k = n， 那么$A_k$ 左侧便不含因式$(x+1)$ ，具体可写为：$n!\cdot x^k$</p>
+<p>那么取 $x = -1$ 后即可得到答案。</p>
+<h2 id="差分法">差分法</h2>
+<p>差分法其实是这道题的本质，简洁而一语中的。</p>
+<p>注意到: 	$\Delta^n\left(x^t\right)=0 \quad$ (因为 $t&lt;n$ )</p>
+<p>且 $\Delta^n\left(x^t\right)=\sum_{i=0}^n(-1)^i \cdot i^t C_n^i$</p>
+<p>所以 $\sum_{i=0}^n(-1)^i \cdot i^t C_n^i=0$</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
