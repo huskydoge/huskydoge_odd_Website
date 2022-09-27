@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/"
-        },"genre": "posts","keywords": "Q\u0026A","wordcount":  492 ,
+        },"genre": "posts","keywords": "Q\u0026A","wordcount":  740 ,
         "url": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/","datePublished": "2022-09-19T19:57:03+08:00","dateModified": "2022-09-19T19:57:03+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">模拟电路QuestionNote</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;492 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" class="leancloud_visitors" data-flag-title="模拟电路QuestionNote">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;740 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" class="leancloud_visitors" data-flag-title="模拟电路QuestionNote">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -160,9 +160,10 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#pn结">PN结</a>
       <ul>
         <li><a href="#为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</a></li>
+        <li><a href="#为何pn结在无光照无外加电流时结电流为-0-">为何PN结在无光照、无外加电流时结电流为 0 ？</a></li>
       </ul>
     </li>
     <li><a href="#半导体二极管">半导体二极管</a>
@@ -173,11 +174,20 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>问题来源：模拟电子技术（第五版）</p>
+            </div><div class="content" id="content"><p>问题来源：模拟电子技术第五版（下简称模电）以及其配套习题</p>
+<h2 id="pn结">PN结</h2>
 <h3 id="为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</h3>
 <p>首先, PN结的维持是依靠PN各区的少子的漂移运动和在PN结形成的空间电场下少部分突破其势垒逃逸的多子的扩散运动。漂移运动的少子和扩散运动的多子数目相同（动态平衡）。</p>
 <p>那么，此时因为少子是半导体自身共价键本征激发所形成的载流子，与掺杂浓度无关，所以在掺杂浓度增大时，<strong>少子的数目是不变的</strong>。</p>
 <p>但是假若掺杂浓度高，那么区域内的多子浓度也就增大。多子同进行漂移运动的<strong>固定数目的少子</strong>达到动态平衡时，所需挣脱束缚的多子的范围就更小，所以PN结就更窄。</p>
+<h3 id="为何pn结在无光照无外加电流时结电流为-0-">为何PN结在无光照、无外加电流时结电流为 0 ？</h3>
+<p>乍一看我还没反应过来，不是有什么漂移电流吗？很显然，我没有把漂移电流和扩散电流和结电流区分开来。</p>
+<p><strong>漂移电流是载流子在电场（内电场）作用下形成的电流，扩散电流是由于两界面载流子浓度差形成的电流。</strong></p>
+<p>两股电流的运动方向是相反的，如图：</p>
+<!-- raw HTML omitted -->
+<p>根据<code>模电p12</code>，这两股电流达到动态平衡的结果就是形成PN结，就是宏观来看，结电流=0。</p>
+<p>那么自然在没有外加激发和偏置的情况下，结电流不会发生变化，依然为0</p>
+<p><code>习题1.3.1（3）</code></p>
 <h2 id="半导体二极管">半导体二极管</h2>
 <h3 id="为什么结电容大的二极管只能在较低频率下工作">为什么结电容大的二极管只能在较低频率下工作？</h3>
 <p>容抗的公式为：
@@ -195,8 +205,10 @@ $$
 <p>二极管是一个单向导通器件。若结电容过大，就相当于在其两端并上一个可观的电容。由于电容的旁路作用，将降低二极管的高频响应。</p>
 </li>
 </ul>
+<p><code>模电p15</code></p>
 <h3 id="为什么结面积小的二极管整流平均电流小">为什么结面积小的二极管整流平均电流小？</h3>
-<p>因为二极管的截面积越大允许通过的电流就越大，因为二极管单位截面积允许通过的电流是一定的。</p></div><div class="post-footer" id="post-footer">
+<p>因为二极管的截面积越大允许通过的电流就越大，因为二极管单位截面积允许通过的电流是一定的。</p>
+<p><code>模电p23思考题</code></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
