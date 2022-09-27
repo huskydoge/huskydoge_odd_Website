@@ -36,7 +36,9 @@
     <pubDate>Fri, 23 Sep 2022 08:05:34 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%BA%BF%E6%80%A7%E8%A1%A8/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/zVjh4vate1NZkTL.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>模拟电路QuestionNote</title>
@@ -54,7 +56,9 @@
     <pubDate>Fri, 16 Sep 2022 23:02:14 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/tipsforjs/</guid>
-    <description><![CDATA[包括Web API]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/uodpRjBDg4xm3JV.jpg" referrerpolicy="no-referrer">
+            </div>包括Web API]]></description>
 </item>
 <item>
     <title>时空间复杂度</title>
