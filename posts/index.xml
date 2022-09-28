@@ -4,8 +4,18 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>日记1</title>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 27 Sep 2022 22:39:15 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>全栈知识入门</title>
+    <link>http://example.org/posts/%E7%94%B5%E5%B7%A5%E5%AF%BC%E8%AE%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Tue, 27 Sep 2022 22:39:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%94%B5%E5%B7%A5%E5%AF%BC%E8%AE%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/09/27/nyClp1rIf6iRGDo.jpg" referrerpolicy="no-referrer">
+            </div>电工导论笔记]]></description>
+</item>
+<item>
+    <title>日记(1)</title>
     <link>http://example.org/posts/%E6%97%A5%E8%AE%B01/</link>
     <pubDate>Tue, 27 Sep 2022 21:45:31 &#43;0800</pubDate>
     <author>Author</author>
@@ -84,14 +94,6 @@
     <pubDate>Fri, 16 Sep 2022 08:00:51 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>第一斯特林数公式的理解</title>
-    <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</link>
-    <pubDate>Wed, 07 Sep 2022 22:50:40 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E6%96%AF%E7%89%B9%E6%9E%97%E6%95%B0%E5%85%AC%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
