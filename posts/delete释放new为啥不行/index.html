@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Delete释放new[]为啥不行🧐？ - HuskyDoge&#39;s World</title><meta name="Description" content="转载自CSDN"><meta property="og:title" content="Delete释放new[]为啥不行🧐？" />
+<meta property="og:description" content="转载自CSDN" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-28T14:34:44+08:00" />
+<meta property="article:modified_time" content="2022-09-28T14:34:44+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Delete释放new[]为啥不行🧐？"/>
+<meta name="twitter:description" content="转载自CSDN"/>
+<meta name="application-name" content="Husky&#39;s World">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" /><link rel="prev" href="http://example.org/posts/%E7%94%B5%E5%B7%A5%E5%AF%BC%E8%AE%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%85%A5%E9%97%A8/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Delete释放new[]为啥不行🧐？",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C\/"
+        },"genre": "posts","keywords": "C\u002b\u002b, Pointer","wordcount":  1583 ,
+        "url": "http:\/\/example.org\/posts\/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C\/","datePublished": "2022-09-28T14:34:44+08:00","dateModified": "2022-09-28T14:34:44+08:00","license": "All Mine","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "YLEOY"
+            },"description": "转载自CSDN"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/books/"><i class='fa-regular fa-book'></i> 书籍 
+                        </a>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fa-regular fa-box'></i> 归档 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/posts/" title="" ><i class='fa-solid fa-file-word'></i> 文章 </a><a href="/tags/" title="" ><i class='fa-solid fa-tag'></i> 标签 </a><a href="/categories/" title="" ><i class='fa-solid fa-house'></i> 分类 </a></div>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fa-solid fa-link'></i> 链接 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/friends/" title="" ><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><a href="/tools/" title="" ><i class='fa-solid fa-screwdriver-wrench'></i> 工具 </a><a href="/recreation/" title="" ><i class='fa-solid fa-gamepad'></i> 资源 </a><a href="/subjects/" title="" ><i class='fa-brands fa-discourse'></i> 课程 </a></div>
+                        </div>
+                    <a class="menu-item" href="https://roadmap.sh/" rel="noopener noreffer" target="_blank"><i class='fa-regular fa-map-location-dot'></i> 路线 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HuskyDoge&#39;s World"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        data-srcset="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 1.5x, https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png"
+        title="https://cdn.pixabay.com/photo/2016/10/26/07/21/shiba-inu-1770788_960_720.png" />WOOF !</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="你瞅啥?" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/books/"><i class='fa-regular fa-book'></i> 书籍 
+		</a>
+		<div class="dropdown">
+			<a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fa-regular fa-box'></i> 归档 
+			</a>
+			<div class="menu-more-content dropdown-content"><a href="/posts/" title="" ><i class='fa-solid fa-file-word'></i> 文章 </a><a href="/tags/" title="" ><i class='fa-solid fa-tag'></i> 标签 </a><a href="/categories/" title="" ><i class='fa-solid fa-house'></i> 分类 </a></div>
+		</div>
+	
+		<div class="dropdown">
+			<a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fa-solid fa-link'></i> 链接 
+			</a>
+			<div class="menu-more-content dropdown-content"><a href="/friends/" title="" ><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><a href="/tools/" title="" ><i class='fa-solid fa-screwdriver-wrench'></i> 工具 </a><a href="/recreation/" title="" ><i class='fa-solid fa-gamepad'></i> 资源 </a><a href="/subjects/" title="" ><i class='fa-brands fa-discourse'></i> 课程 </a></div>
+		</div>
+	<a class="menu-item" href="https://roadmap.sh/" rel="noopener noreffer" target="_blank"><i class='fa-regular fa-map-location-dot'></i> 路线 
+		</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Delete释放new[]为啥不行🧐？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://yujiang.blog.csdn.net/article/details/54602705" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>YLEOY</a>
+</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-28">2022-09-28</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-28">2022-09-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1583 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" class="leancloud_visitors" data-flag-title="Delete释放new[]为啥不行🧐？">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg"
+        data-srcset="https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg, https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg 1.5x, https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg"
+        title="转载自CSDN" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>我们都被告诫，new和delete，new[]和delete[]要成对出现。如果使用delete释放new[] 申请的空间会发什么？如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">T</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span> <span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">....</span><span class="c1">//do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">delete</span> <span class="n">p</span><span class="p">;</span><span class="c1">//会发生什么？
+</span></span></span></code></pre></div><p>我先告诉你，如果T是一个base type（如，int、double、char），你会发现，程序依然正确运行，不仅如此，<a href="https://so.csdn.net/so/search?q=%e5%86%85%e5%ad%98&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer">内存</a>
+空间也被正确释放。它的正确运行，让很多人对delete[]和delete的区别的探索就此终止。也难怪在国内的博客中分析delete和delete[]的原理和delete释放new[]的文章少之又少，很多相关的文章关于这个问题一句带过。</p>
+<p>如果代码是这样的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">A</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">~</span><span class="n">A</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">A</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">return0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></div><p>你可以测试一下这段代码，在VS和g++下都测试一下，看看都出现什么结果。这会增加你日后在程序调试bug的经验（我已经遭遇一次）</p>
+<p>要明白这个问题，我们要知道new和new[]，delete和delete[]都干什么了些什么。</p>
+<p>不用多说new和delete。</p>
+<ol>
+<li>
+<p>new封装了C语言中的malloc函数，申请一块内存空间，如果T是用户自定义的类类型，将使用T的构造函数初始化这块内存空间上的对象。</p>
+</li>
+<li>
+<p>delete封装了C语言中的free 函数，如果T是用户自定义的类类型，首先调用T的析构函数，再调用free释放这个对象占用的内存空间。</p>
+</li>
+</ol>
+<p>new[]会更复杂一些：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">T</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span> <span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">delete</span><span class="p">[]</span> <span class="n">ptr</span><span class="p">;</span>
+</span></span></code></pre></div><p>我们注意到，没有传入任何关于ptr指针的信息给delete[]操作符运算符(operator）。最初的C++编译器版本是要求程序员传入关于指针指向空间的大小的参数，而现代的编译器虽然也接受，但多数情况会忽视它！</p>
+<p>既然没有传入参数，那编译器一定是通过某种手段获知ptr指向空间的大小。</p>
+<p>是的，说某种手段，是因为有多种方法。在C++发展的最初，有一种关联数组的方法：T* ptr = new[s]申请一段空间后，编译器会在内存的某个地方固定的数组中存入ptr和ptr对应的空间大小s，下次在调用delete[]的时候，就会查找这个数组中的ptr对应的s。</p>
+<p>这个方法，现代的编译器已经很少见了，因为它很慢。</p>
+<p>现代的g++、vc、icpc都使用信息头（additional information head block)的方法来管理。在new[]申请内存空间时，会多申请n个字节，这n个字节就是信息头，位于我们ptr指针向低地址偏移n个字节的地方(block = ptr - n)。每次delete[]被调用时，编译器就会去这个信息头查找申请的内存信息。</p>
+<p>所以，调用new[]得到的东西和调用malloc得到的东西并不相同！</p>
+<p>现在，我们分析一下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">A</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span> <span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span>
+</span></span></code></pre></div><p>这段代码在delete的时候发生了什么：</p>
+<p>首先，和delete任何时候一样，编译器会给delete指派A的析构函数，以函数指针的形式，delete会调用这个析构函数，作用于ptr指向的这个对象上，<strong>显然ptr之后的1023个对象不会调用析构函数</strong>，因为我们使用的是delete而不是delete[]。然后，delete执行free函数，释放申请的空间。</p>
+<p>但是！我们new[]中调用malloc得到的指针并不是从ptr开始的，我们的程序找不到malloc分配的ptr指针，就会崩溃！</p>
+<p>而为什么base type不会有问题呢？程序运行得好好的。是的，都是编译器的原因。编译器检查到，<strong>如果是base tyep，new[]操作就会省去前面的信息头，后面发生delete释放new[]的时候，free调用的ptr和malloc调用的ptr也就一致了</strong>。</p>
+<p>当然，这不一定，也有可能某些编译器，在某些时候，即便是base type它也要加上head block呢？！</p>
+<p>所以，如果new和delete，new[]和delete[]不配对，发生什么，未定义！</p>
+<p>看到这里，相信你已经明白了delete[]为什么要对应new[]了，而delete也不能和delete[]混用的原因。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" data-title="Delete释放new[]为啥不行🧐？" data-hashtags="C&#43;&#43;,Pointer"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" data-hashtag="C&#43;&#43;"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" data-title="Delete释放new[]为啥不行🧐？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" data-title="Delete释放new[]为啥不行🧐？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/delete%E9%87%8A%E6%94%BEnew%E4%B8%BA%E5%95%A5%E4%B8%8D%E8%A1%8C/" data-title="Delete释放new[]为啥不行🧐？" data-image="https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2fdelete%25E9%2587%258A%25E6%2594%25BEnew%25E4%25B8%25BA%25E5%2595%25A5%25E4%25B8%258D%25E8%25A1%258C%2f&amp;description=Delete%e9%87%8a%e6%94%benew%5b%5d%e4%b8%ba%e5%95%a5%e4%b8%8d%e8%a1%8c%f0%9f%a7%90%ef%bc%9f" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/pointer/">Pointer</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E7%94%B5%E5%B7%A5%E5%AF%BC%E8%AE%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%85%A5%E9%97%A8/" class="prev" rel="prev" title="全栈知识入门"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈知识入门</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.104.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"UDNXW8ZX81","algoliaIndex":"Huskydoge","algoliaSearchKey":"db13a94961df3cbf9922d949b99db096","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
