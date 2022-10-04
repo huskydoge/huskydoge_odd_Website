@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/borntogether/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-28T21:16:38+08:00" />
-<meta property="article:modified_time" content="2022-10-02T01:01:33+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-03T09:09:32+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BornTogether网站搭建LOG"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/borntogether\/"
-        },"genre": "posts","wordcount":  2719 ,
-        "url": "http:\/\/example.org\/posts\/borntogether\/","datePublished": "2022-09-28T21:16:38+08:00","dateModified": "2022-10-02T01:01:33+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","wordcount":  3486 ,
+        "url": "http:\/\/example.org\/posts\/borntogether\/","datePublished": "2022-09-28T21:16:38+08:00","dateModified": "2022-10-03T09:09:32+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">BornTogether网站搭建LOG</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-28">2022-09-28</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-02">2022-10-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2719 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;<span id="/posts/borntogether/" class="leancloud_visitors" data-flag-title="BornTogether网站搭建LOG">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-28">2022-09-28</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-03">2022-10-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3486 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;<span id="/posts/borntogether/" class="leancloud_visitors" data-flag-title="BornTogether网站搭建LOG">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -162,7 +162,10 @@
     </li>
     <li><a href="#backend">BackEnd</a>
       <ul>
+        <li><a href="#axios">AXIOS</a></li>
         <li><a href="#python">Python</a></li>
+        <li><a href="#sql">SQL</a></li>
+        <li><a href="#一些想法">一些想法</a></li>
       </ul>
     </li>
   </ul>
@@ -192,7 +195,7 @@ end
 </p>
 <h3 id="边做边学">边做边学</h3>
 <h4 id="svg">SVG</h4>
-<h5 id="dasharraydashoffset"><code>dasharray&amp;&amp;dashoffset</code></h5>
+<h5 id="dasharray--dashoffset"><code>dasharray &amp;&amp; dashoffset</code></h5>
 <p><a href="https://blog.csdn.net/huzhenv5/article/details/103745362" target="_blank" rel="noopener noreffer">https://blog.csdn.net/huzhenv5/article/details/103745362</a>
 </p>
 <h5 id="正确控制大小的方式"><code>正确控制大小的方式</code></h5>
@@ -335,7 +338,16 @@ end
 </ol>
 <hr>
 <h4 id="vue">Vue</h4>
-<h5 id="不能直接在click中写consolelog会报错"><code>不能直接在@click中写console.log，会报错</code></h5>
+<h5 id="实现弹窗"><code>实现弹窗</code></h5>
+<p><a href="https://blog.csdn.net/Hcy_code/article/details/111244447?spm=1001.2101.3001.6650.3&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-111244447-blog-108117024.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-111244447-blog-108117024.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=4" target="_blank" rel="noopener noreffer">https://blog.csdn.net/Hcy_code/article/details/111244447?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-111244447-blog-108117024.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-3-111244447-blog-108117024.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=4</a>
+</p>
+<h5 id="监听页面刷新事件"><code>监听页面刷新事件</code></h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;load&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//写入你想要执行的代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span></code></pre></div><h5 id="不能直接在click中写consolelog会报错"><code>不能直接在@click中写console.log，会报错</code></h5>
 <h5 id="click无法绑定多个事件"><code>@click无法绑定多个事件？</code></h5>
 <p>这样解决：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 触发点击
@@ -371,7 +383,7 @@ end
 <p>vue-cli3 之后创建的时候并不会自动创建 vue.config.js，因为这个是个可选项，所以一般都是需要修改 webpack 的时候才会自己创建一个 vue.config.js。</p>
 <p>开发者一般不需要再去知道 weboack 做了什么，所以没有暴露 webpack 的配置文件，但你依然可以创建 vue.config.js 去修改默认的 webpack。</p>
 <h5 id="组件选择"><code>组件选择</code></h5>
-<p>vuetify对新手很不友好，文档半天看不懂</p>
+<p>vuetify 对新手很不友好，文档半天看不懂</p>
 <p>建议上手<a href="https://element-plus.gitee.io/zh-CN/component/date-picker.html#%E9%80%89%E6%8B%A9%E6%9F%90%E4%B8%80%E5%A4%A9" target="_blank" rel="noopener noreffer">element PLUS</a>
 ，文档翔实，<a href="https://blog.csdn.net/longlong6682/article/details/104944203" target="_blank" rel="noopener noreffer">别人也有写上手攻略</a>
 </p>
@@ -389,18 +401,87 @@ end
 </p>
 <h5 id="methods中的函数使用"><code>methods中的函数使用</code></h5>
 <p>注意！不要和在template中的引用搞错了！如果methods中的函数要相互使用，必须要加上括号！！！</p>
+<h5 id="v-for的使用"><code>v-for的使用</code></h5>
+<p>在用v-for的时候，不要忘记加:key=&ldquo;item.id&rdquo;(或者其他可以标识的属性)</p>
+<h5 id="v-on的使用"><code>v-on的使用</code></h5>
+<p>如果想用v-on一下绑定两个事件，必须得在后面加括号！</p>
+<pre tabindex="0"><code>&lt;div @click=&#34;event1() event2()&#34;&gt;&lt;/div&gt;
+</code></pre><h5 id="奇怪的bug"><code>奇怪的bug</code></h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;pageTwo&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">list</span><span class="o">:</span><span class="p">[{</span><span class="nx">sex</span><span class="o">:</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Husky&#39;</span><span class="p">,</span><span class="nx">birthday</span><span class="o">:</span><span class="s1">&#39;2002-12-17&#39;</span><span class="p">,</span> <span class="nx">hobbies</span><span class="o">:</span><span class="s1">&#39;sss,sss,sss&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">sex</span><span class="o">:</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Husky&#39;</span><span class="p">,</span><span class="nx">birthday</span><span class="o">:</span><span class="s1">&#39;2002-12-17&#39;</span><span class="p">,</span> <span class="nx">hobbies</span><span class="o">:</span><span class="s1">&#39;sss,sss,sss&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">              <span class="p">{</span><span class="nx">sex</span><span class="o">:</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Husky&#39;</span><span class="p">,</span><span class="nx">birthday</span><span class="o">:</span><span class="s1">&#39;2002-12-17&#39;</span><span class="p">,</span> <span class="nx">hobbies</span><span class="o">:</span><span class="s1">&#39;sss,sss,sss&#39;</span><span class="p">},],</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">numofMale</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">numOfFemale</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">total</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">check</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">countNumbers</span><span class="o">:</span><span class="kd">function</span> <span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">numOfMale</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">numOfFemale</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">sex</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">sex</span> <span class="o">===</span> <span class="s1">&#39;Male&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">numOfMale</span> <span class="o">++</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">sex</span> <span class="o">===</span> <span class="s1">&#39;Female&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">numOfFemale</span> <span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">total</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">numOfMale</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">numOfFemale</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>这样写的话会报错，说numOfMale是undefined，我搞不明白，最后是把countNumbers拆成两个函数，负责计数的函数写在export前面，methods中的函数只负责数组解包。</p>
+<h5 id="module-not-found-error-cant-resolve-crypto"><code>Module not found: Error: Can’t resolve ‘crypto’</code></h5>
+<p><a href="http://www.itechly.com/articles/3383.html" target="_blank" rel="noopener noreffer">http://www.itechly.com/articles/3383.html</a>
+</p>
+<h5 id="子组件向父组件传值"><code>子组件向父组件传值</code></h5>
+<p><a href="https://blog.csdn.net/weixin_38888773/article/details/81902789" target="_blank" rel="noopener noreffer">https://blog.csdn.net/weixin_38888773/article/details/81902789</a>
+</p>
+<h5 id="父组件向子组件传值"><code>父组件向子组件传值</code></h5>
 <h2 id="backend">BackEnd</h2>
+<h3 id="axios">AXIOS</h3>
+<p><a href="https://www.axios-http.cn/docs/intro" target="_blank" rel="noopener noreffer">https://www.axios-http.cn/docs/intro</a>
+</p>
 <h3 id="python">Python</h3>
 <h4 id="捕获异常">捕获异常</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">语句</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;异常说明&#39;</span><span class="p">)</span>
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><h3 id="sql">SQL</h3>
+<h5 id="id">Id</h5>
+<p>删除某个条目后，主键自增字段id不连续，或不从0开始：</p>
+<p>删除完还没有新增数据，即还没有出现不连贯的数据ID时，执行以下语句：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>如果已知下一条数据自增的ID（假设是10），可以直接写成ALTER TABLE 表名 AUTO_INCREMENT = 10;这样再插入数据时，自增ID会从10开始，也可以用这个语法来跳过一些编号。此外，如果AUTO_INCREMENT 的值小于ID的最大值，那么ID是从MAX(ID)+1开始自增，所以当AUTO_INCREMENT = 1时，一般默认ID是从最大值加一开始自增的。</p>
+<p>表中已经出现不连贯的数据ID时，执行以下语句进行修改</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">auto_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">UPDATE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="err">自增字段名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">auto_id</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">auto_id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>BUG</p>
+<pre tabindex="0"><code>code: &#39;ER_NOT_SUPPORTED_AUTH_MODE&#39;,
+errno: 1251,
+sqlMessage: &#39;Client does not support authentication protocol requested by server; consider upgrading MySQL client&#39;,
+</code></pre><p><a href="https://blog.csdn.net/bianxia123456/article/details/118358652" target="_blank" rel="noopener noreffer">https://blog.csdn.net/bianxia123456/article/details/118358652</a>
+</p>
+<p>由于密码设置更新的原因，密码格式得设置为原生</p>
+<h5 id="怎么往数据库里写数据呢"><code>怎么往数据库里写数据呢？</code></h5>
+<p>不建议直接在js里写修改数据库的交互！实际上我尝试了一个下午都一直报错。问学长之后，得知正确的方法应该是用fastApi实现</p>
+<p><a href="https://blog.csdn.net/qq_45668004/article/details/110201890" target="_blank" rel="noopener noreffer">https://blog.csdn.net/qq_45668004/article/details/110201890</a>
+</p>
+<h3 id="一些想法">一些想法</h3>
+<p>字体的大小可以随输入内容的多少而增加或减少，v-model</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-10-02</span>
+                <span>Updated on 2022-10-03</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
