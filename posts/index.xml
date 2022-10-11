@@ -4,7 +4,23 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Tue, 11 Oct 2022 19:39:01 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>MOS管原理简介</title>
+    <link>http://example.org/posts/mos/</link>
+    <pubDate>Tue, 11 Oct 2022 19:39:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/mos/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>数据结构Hw2</title>
+    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</link>
+    <pubDate>Mon, 10 Oct 2022 00:06:08 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>提升代码效率的方法</title>
     <link>http://example.org/posts/%E6%8F%90%E5%8D%87%E4%BB%A3%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/</link>
     <pubDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</pubDate>
@@ -77,22 +93,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://s2.loli.net/2022/09/27/gPbFo6i9VaQMHrc.jpg" referrerpolicy="no-referrer">
             </div>复分析可真是...]]></description>
-</item>
-<item>
-    <title>关于一个组合恒等式的思考</title>
-    <link>http://example.org/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</link>
-    <pubDate>Mon, 26 Sep 2022 23:26:12 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%BB%84%E5%90%88%E6%81%92%E7%AD%89%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>为啥要有头节点？</title>
-    <link>http://example.org/posts/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9/</link>
-    <pubDate>Mon, 26 Sep 2022 08:56:52 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9/</guid>
-    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

@@ -4,28 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>模拟电路QuestionNote - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="模拟电路QuestionNote" />
+        <title>MOS管原理简介 - HuskyDoge&#39;s World</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="MOS管原理简介" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-09-19T19:57:03+08:00" />
-<meta property="article:modified_time" content="2022-09-19T19:57:03+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="og:url" content="http://example.org/posts/mos/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-11T19:39:01+08:00" />
+<meta property="article:modified_time" content="2022-10-11T19:41:20+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="模拟电路QuestionNote"/>
+<meta name="twitter:title" content="MOS管原理简介"/>
 <meta name="twitter:description" content=""/>
 <meta name="application-name" content="Husky&#39;s World">
-<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" /><link rel="prev" href="http://example.org/posts/tipsforjs/" /><link rel="next" href="http://example.org/posts/%E7%BA%BF%E6%80%A7%E8%A1%A8/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Husky&#39;s World"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="./resources/_gen/images/alert-triangle.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/mos/" /><link rel="prev" href="http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "模拟电路QuestionNote",
+        "headline": "MOS管原理简介",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/"
-        },"genre": "posts","keywords": "Q\u0026A, 模电","wordcount":  880 ,
-        "url": "http:\/\/example.org\/posts\/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote\/","datePublished": "2022-09-19T19:57:03+08:00","dateModified": "2022-09-19T19:57:03+08:00","license": "All Mine","publisher": {
+            "@id": "http:\/\/example.org\/posts\/mos\/"
+        },"genre": "posts","keywords": "模电","wordcount":  819 ,
+        "url": "http:\/\/example.org\/posts\/mos\/","datePublished": "2022-10-11T19:39:01+08:00","dateModified": "2022-10-11T19:41:20+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -139,124 +139,71 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">模拟电路QuestionNote</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">MOS管原理简介</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/class-note/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Class Note</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-09-19">2022-09-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;880 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" class="leancloud_visitors" data-flag-title="模拟电路QuestionNote">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-11">2022-10-11</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-11">2022-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;819 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/mos/" class="leancloud_visitors" data-flag-title="MOS管原理简介">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg"
-        data-srcset="https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg, https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg 1.5x, https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg 2x"
-        data-sizes="auto"
-        alt="https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg"
-        title="https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg" /></div><div class="details toc" id="toc-static"  data-kept="">
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#pn结">PN结</a>
-      <ul>
-        <li><a href="#为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</a></li>
-        <li><a href="#为何pn结在无光照无外加电流时结电流为-0-">为何PN结在无光照、无外加电流时结电流为 0 ？</a></li>
-      </ul>
-    </li>
-    <li><a href="#半导体二极管">半导体二极管</a>
-      <ul>
-        <li><a href="#为什么结电容大的二极管只能在较低频率下工作">为什么结电容大的二极管只能在较低频率下工作？</a></li>
-        <li><a href="#为什么结面积小的二极管整流平均电流小">为什么结面积小的二极管整流平均电流小？</a></li>
-      </ul>
-    </li>
-    <li><a href="#晶体管">晶体管</a>
-      <ul>
-        <li><a href="#为什么ugs达到开启电压和ugd达到开启电压的时候两个夹断的形态会是不同的呢">为什么Ugs达到开启电压和Ugd达到开启电压的时候，两个夹断的形态会是不同的呢？</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>问题来源：模拟电子技术第五版（下简称模电）以及其配套习题</p>
-<h2 id="pn结">PN结</h2>
-<h3 id="为何掺杂浓度越高pn结却越窄">为何掺杂浓度越高,PN结却越窄？</h3>
-<p>首先, PN结的维持是依靠PN各区的少子的漂移运动和在PN结形成的空间电场下少部分突破其势垒逃逸的多子的扩散运动。漂移运动的少子和扩散运动的多子数目相同（动态平衡）。</p>
-<p>那么，此时因为少子是半导体自身共价键本征激发所形成的载流子，与掺杂浓度无关，所以在掺杂浓度增大时，<strong>少子的数目是不变的</strong>。</p>
-<p>但是假若掺杂浓度高，那么区域内的多子浓度也就增大。多子同进行漂移运动的<strong>固定数目的少子</strong>达到动态平衡时，所需挣脱束缚的多子的范围就更小，所以PN结就更窄。</p>
-<h3 id="为何pn结在无光照无外加电流时结电流为-0-">为何PN结在无光照、无外加电流时结电流为 0 ？</h3>
-<p>乍一看我还没反应过来，不是有什么漂移电流吗？很显然，我没有把漂移电流和扩散电流和结电流区分开来。</p>
-<p><strong>漂移电流是载流子在电场（内电场）作用下形成的电流，扩散电流是由于两界面载流子浓度差形成的电流。</strong></p>
-<p>两股电流的运动方向是相反的，如图：</p>
-<figure><a class="lightgallery" href="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg" title="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg" data-thumbnail="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg" data-sub-html="<h2>PN结</h2>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg"
-            data-srcset="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg, https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg 1.5x, https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg 2x"
-            data-sizes="auto"
-            alt="https://s2.loli.net/2022/09/27/MbuvGYzqlmiKJOD.jpg" width="100px" />
-    </a><figcaption class="image-caption">PN结</figcaption>
-    </figure>
-<p>根据<code>模电p12</code>，这两股电流达到动态平衡的结果就是形成PN结，就是宏观来看，结电流=0。</p>
-<p>那么自然在没有外加激发和偏置的情况下，结电流不会发生变化，依然为0</p>
-<p><code>习题1.3.1（3）</code></p>
-<h2 id="半导体二极管">半导体二极管</h2>
-<h3 id="为什么结电容大的二极管只能在较低频率下工作">为什么结电容大的二极管只能在较低频率下工作？</h3>
-<p>容抗的公式为：
-$$
-X_C=\frac{1}{jwC}
-$$
-其中 $w$ 是频率。</p>
-<p>容抗是电容对交流电的阻力。那么当频率大时，容抗很低，交流电两个方向是都导通了，这就使其失去了整流作用。</p>
-<p>其他解释：</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://ts1.cn.mm.bing.net/th/id/R-C.924127affee85a8146120837c7606249?rik=ITGlwmNH3kjREg&amp;riu=http%3a%2f%2fwww.ejiguan.cn%2fuploadfile%2f2020%2f1119%2f20201119051437985.png&amp;ehk=W8%2bbduN8AerxTdXeXI5t8Ebpi5z%2fxAL2ki7WKD%2fDEck%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1"
+        data-srcset="https://ts1.cn.mm.bing.net/th/id/R-C.924127affee85a8146120837c7606249?rik=ITGlwmNH3kjREg&amp;riu=http%3a%2f%2fwww.ejiguan.cn%2fuploadfile%2f2020%2f1119%2f20201119051437985.png&amp;ehk=W8%2bbduN8AerxTdXeXI5t8Ebpi5z%2fxAL2ki7WKD%2fDEck%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1, https://ts1.cn.mm.bing.net/th/id/R-C.924127affee85a8146120837c7606249?rik=ITGlwmNH3kjREg&amp;riu=http%3a%2f%2fwww.ejiguan.cn%2fuploadfile%2f2020%2f1119%2f20201119051437985.png&amp;ehk=W8%2bbduN8AerxTdXeXI5t8Ebpi5z%2fxAL2ki7WKD%2fDEck%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1 1.5x, https://ts1.cn.mm.bing.net/th/id/R-C.924127affee85a8146120837c7606249?rik=ITGlwmNH3kjREg&amp;riu=http%3a%2f%2fwww.ejiguan.cn%2fuploadfile%2f2020%2f1119%2f20201119051437985.png&amp;ehk=W8%2bbduN8AerxTdXeXI5t8Ebpi5z%2fxAL2ki7WKD%2fDEck%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1 2x"
+        data-sizes="auto"
+        alt="https://ts1.cn.mm.bing.net/th/id/R-C.924127affee85a8146120837c7606249?rik=ITGlwmNH3kjREg&amp;riu=http%3a%2f%2fwww.ejiguan.cn%2fuploadfile%2f2020%2f1119%2f20201119051437985.png&amp;ehk=W8%2bbduN8AerxTdXeXI5t8Ebpi5z%2fxAL2ki7WKD%2fDEck%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1"
+        title="查看源图像" /></p>
 <ul>
-<li>
-<p>截止频率与电容有关，电容小，截止频率大。</p>
-</li>
-<li>
-<p>二极管是一个单向导通器件。若结电容过大，就相当于在其两端并上一个可观的电容。由于电容的旁路作用，将降低二极管的高频响应。</p>
-</li>
+<li>注意，图片中的s和d在实际使用中是有导线相连的！</li>
 </ul>
-<p><code>模电p15</code></p>
-<h3 id="为什么结面积小的二极管整流平均电流小">为什么结面积小的二极管整流平均电流小？</h3>
-<p>因为二极管的截面积越大允许通过的电流就越大，因为二极管单位截面积允许通过的电流是一定的。</p>
-<p><code>模电p23思考题</code></p>
-<h2 id="晶体管">晶体管</h2>
-<h3 id="为什么ugs达到开启电压和ugd达到开启电压的时候两个夹断的形态会是不同的呢">为什么Ugs达到开启电压和Ugd达到开启电压的时候，两个夹断的形态会是不同的呢？</h3>
-<p>这是因为uGD变了，uGS没变。</p>
-<ol>
-<li>
-<p>当uD=uS时，uGS大于开启电压，漏源之间形成导电沟道，两端沟道宽度一致。</p>
-</li>
-<li>
-<p>uS不变，uD增加（即uDS增加）时，d端沟道变窄，s端沟道宽度不变。</p>
-</li>
-</ol>
-<p><code>模电p38</code></p></div><div class="post-footer" id="post-footer">
+<p>==在N 沟道增强型 MOS 管的漏、源之间足两个背对背的PN结。==</p>
+<blockquote>
+<p>这个没啥问题，看书上的图就行，以N沟道为例，那就是从左到右为N-P-N，N周围的阴影框住的是耗尽层，上方是二氧化硅绝缘层</p>
+</blockquote>
+<p>当栅源电压 $U_{GS}=0$ 时，不论漏源电压 $U_{DS}$ 的极性如何，总有一个 PN结处于反偏状态,漏、源之间没有导电沟道。此时通源电流 $ i_{DS}=0$。</p>
+<blockquote>
+<p>我的理解是无论电流方向从D到S还是从S到D，总有一个PN结是处于反偏状态，所以不导通（反向电流很小，直接理解为断路好了）。</p>
+</blockquote>
+<p>如果在栅、源之间加止上一定的正向电压 $U_{GS}$,则将形成一个由栅极指向衬底P的电场．该电场一方面使橱极附近 P型衬底中的空穴被排斥,同时又将P型衬底中的少数电子吸引到村底表面。</p>
+<blockquote>
+<p>G的电位升高，电场方向由栅极指向衬底（无视绝缘层），同极相斥异极相吸，引来电子，排走空穴。电子是可以透过耗尽层的（或者说是交换），从而参与形成了导电沟道。这里建议结合书上的MOS管图。</p>
+</blockquote>
+<p>当 $U_{GS}$ 较小时，吸引电子的能力不够强，在漏、源之间不够形成导电沟道。随者 $U_{GS}$ 的增大,被吸引的电子浓度增大,当 $U_{GS}$达到某一数值时，足够多的电子在栅极附近 P 型村底表面形成一个N型薄层，且与两个 $N^+$ 区相邻近，从而在漏、源之间形成导电沟道。</p>
+<blockquote>
+<p>浓度UP，导电能力增强，最终沟道形成。</p>
+</blockquote>
+<p>这时,若在漏、源之间加上电压$U_{DS}$,就会产生漏源电流 $i_{DS}$。形成导电沟道后，在漏源电压$U_{DS}$的作用下, 导电沟道会随其增大而沿源-漏方向变窄。（$U_{DS}$ 不大的情况下，否则就会进入恒流区）</p>
+<blockquote>
+<p>这个原因我也没搞得非常清楚，但我觉得这样会好理解一点。沟道打开是因为$U_{GS}$的存在，而原本S和D是对称的，也就是$U_{GS} $= $U_{GD}$。这样使得导电沟道的宽度是均匀的。现在$U_{DS}$增大，在$U_{GS}$不变的情况下，意味着$U_{GD}$减小了，所以D那边的导电沟道变窄。</p>
+</blockquote></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-09-19</span>
+                <span>Updated on 2022-10-11</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" data-title="模拟电路QuestionNote" data-hashtags="Q&A,模电"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" data-hashtag="Q&amp;A"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" data-title="模拟电路QuestionNote"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" data-title="模拟电路QuestionNote"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AFquestionnote/" data-title="模拟电路QuestionNote" data-image="https://s2.loli.net/2022/09/27/RoNfGPtlZh6XryL.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E6%25A8%25A1%25E6%258B%259F%25E7%2594%25B5%25E8%25B7%25AFquestionnote%2f&amp;description=%e6%a8%a1%e6%8b%9f%e7%94%b5%e8%b7%afQuestionNote" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/mos/" data-title="MOS管原理简介" data-hashtags="模电"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/mos/" data-hashtag="模电"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/mos/" data-title="MOS管原理简介"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/mos/" data-title="MOS管原理简介"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/mos/" data-title="MOS管原理简介"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2fmos%2f&amp;description=MOS%e7%ae%a1%e5%8e%9f%e7%90%86%e7%ae%80%e4%bb%8b" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/qa/">Q&amp;A</a>,&nbsp;<a href="/tags/%E6%A8%A1%E7%94%B5/">模电</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%A8%A1%E7%94%B5/">模电</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/tipsforjs/" class="prev" rel="prev" title="记录Js中一些独特的语法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>记录Js中一些独特的语法</a>
-            <a href="/posts/%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="next" rel="next" title="线性表">线性表<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/" class="prev" rel="prev" title="数据结构Hw2"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>数据结构Hw2</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
