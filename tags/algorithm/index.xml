@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Algorithm - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/algorithm/</link>
+        <description>Algorithm - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 13 Oct 2022 22:23:54 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/algorithm/" rel="self" type="application/rss+xml" /><item>
+    <title>EditDistance</title>
+    <link>http://example.org/posts/editdistance/</link>
+    <pubDate>Thu, 13 Oct 2022 22:23:54 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/editdistance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s2.loli.net/2022/10/13/KYvH9Vb5cd76uO1.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+</channel>
+</rss>
