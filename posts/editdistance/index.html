@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/editdistance/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-13T22:23:54+08:00" />
-<meta property="article:modified_time" content="2022-10-13T22:34:08+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-14T08:04:37+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EditDistance"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/editdistance\/"
-        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1453 ,
-        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-13T22:34:08+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1455 ,
+        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T08:04:37+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">EditDistance</h1><h2 class="single-subtitle">转载自简书</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1453 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1455 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/editdistance/" class="leancloud_visitors" data-flag-title="EditDistance">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -629,7 +629,7 @@
         alt="https:////upload-images.jianshu.io/upload_images/244848-66cb771b8a61d8d0.png?imageMogr2/auto-orient/strip|imageView2/2/w/231/format/webp"
         title="img" /></p>
 <h3 id="算法实现">算法实现</h3>
-<p>1 递归方式</p>
+<h4 id="1递归方式">1.递归方式</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Levenshtein_Distance_Recursive</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">len</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -651,8 +651,8 @@
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="no">Levenshtein_Distance_Recursive</span><span class="p">(</span><span class="s2">&#34;abc&#34;</span><span class="p">,</span> <span class="s2">&#34;bd&#34;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="mi">2</span>
-</span></span></code></pre></div><p>2 动态规划
-递归是从后向前分解，那与之相对的就是从前向后计算，逐渐推导出最终结果，此法被称之为动态规划，动态规划很适用于具有重叠计算性质的问题，但这个过程中会存储大量的中间计算的结果，一个好的动态规划算法会尽量减少空间复杂度。</p>
+</span></span></code></pre></div><h4 id="2动态规划">2.动态规划</h4>
+<p>递归是从后向前分解，那与之相对的就是从前向后计算，逐渐推导出最终结果，此法被称之为动态规划，动态规划很适用于具有重叠计算性质的问题，但这个过程中会存储大量的中间计算的结果，一个好的动态规划算法会尽量减少空间复杂度。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Levenshtein_Distance</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
 </span></span></span><span class="line"><span class="cl"><span class="s2">    计算字符串 str1 和 str2 的编辑距离
@@ -696,7 +696,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-10-13</span>
+                <span>Updated on 2022-10-14</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
