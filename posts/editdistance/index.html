@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/editdistance/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-13T22:23:54+08:00" />
-<meta property="article:modified_time" content="2022-10-14T10:29:28+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-14T10:32:21+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EditDistance"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/editdistance\/"
-        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1596 ,
-        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T10:29:28+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1606 ,
+        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T10:32:21+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">EditDistance</h1><h2 class="single-subtitle">转载自简书</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1596 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1606 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/editdistance/" class="leancloud_visitors" data-flag-title="EditDistance">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -212,15 +212,9 @@
 </ul>
 <h3 id="过程示例">过程示例</h3>
 <p>以 $xxc$ 和 $xyz$ 为例，建立一个矩阵，通过矩阵记录计算好的距离：</p>
+<p>{{ &lt; raw &gt; }}</p>
 <!-- raw HTML omitted -->
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://s2.loli.net/2022/10/14/gqz9u6mVAT3Yda5.webp"
-        data-srcset="https://s2.loli.net/2022/10/14/gqz9u6mVAT3Yda5.webp, https://s2.loli.net/2022/10/14/gqz9u6mVAT3Yda5.webp 1.5x, https://s2.loli.net/2022/10/14/gqz9u6mVAT3Yda5.webp 2x"
-        data-sizes="auto"
-        alt="https://s2.loli.net/2022/10/14/gqz9u6mVAT3Yda5.webp"
-        title="img" /></p>
+<p>{{ &lt; /raw &gt; }}</p>
 <p>当$min(i,j) = 0$时，$lev_{a,b}=max(i,j)$，根据此初始化矩阵的第一行和第一列:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="err">第一行（</span><span class="n">index</span> <span class="p">=</span> <span class="mi">0</span><span class="err">）初始化：</span>
 </span></span><span class="line"><span class="cl"><span class="bp">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span> <span class="p">-&gt;</span>  <span class="n">lev_</span><span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">}(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="bp">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span>
