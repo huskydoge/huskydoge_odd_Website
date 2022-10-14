@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/editdistance/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-13T22:23:54+08:00" />
-<meta property="article:modified_time" content="2022-10-14T08:59:02+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-14T09:47:17+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EditDistance"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/editdistance\/"
-        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1598 ,
-        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T08:59:02+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1596 ,
+        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T09:47:17+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">EditDistance</h1><h2 class="single-subtitle">转载自简书</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1598 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1596 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/editdistance/" class="leancloud_visitors" data-flag-title="EditDistance">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -189,35 +189,14 @@
 </ol>
 <p>因此，&ldquo;kitten&rdquo; 和 &ldquo;sitting&rdquo; 这两个单词之间的编辑距离为 3 。</p>
 <h3 id="形式化定义">形式化定义</h3>
-<p>我们将两个字符串 $a, b$ 的 Levenshtein Distance 表示为 $lev_{a,b}(|a|,|b|)$，其中 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=%7Ca%7C"
-        data-srcset="https://math.jianshu.com/math?formula=%7Ca%7C, https://math.jianshu.com/math?formula=%7Ca%7C 1.5x, https://math.jianshu.com/math?formula=%7Ca%7C 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=%7Ca%7C"
-        title="|a|" /> 和  <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=%7Cb%7C"
-        data-srcset="https://math.jianshu.com/math?formula=%7Cb%7C, https://math.jianshu.com/math?formula=%7Cb%7C 1.5x, https://math.jianshu.com/math?formula=%7Cb%7C 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=%7Cb%7C"
-        title="|b|" /> 分别对应<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a%2Cb"
-        data-srcset="https://math.jianshu.com/math?formula=a%2Cb, https://math.jianshu.com/math?formula=a%2Cb 1.5x, https://math.jianshu.com/math?formula=a%2Cb 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a%2Cb"
-        title="a,b" /> 的长度。那么，在这里两个字符串 $a, b$ 的 Levenshtein Distance，即 $lev_{a,b}(|a|,|b|)$ 可用如下的数学语言描述：</p>
+<p>我们将两个字符串 $a, b$ 的 Levenshtein Distance 表示为 $lev_{a,b}(|a|,|b|)$，其中 $|a|$ 和 $|b|$ 分别对应 $a,b$ 的长度。那么，在这里两个字符串 $a, b$ 的 Levenshtein Distance，即 $lev_{a,b}(|a|,|b|)$ 可用如下的数学语言描述：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1058/format/webp"
-        data-srcset="https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1058/format/webp, https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1058/format/webp 1.5x, https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1058/format/webp 2x"
+        data-src="https://s2.loli.net/2022/10/14/IuRJVojnEUB7cSq.webp"
+        data-srcset="https://s2.loli.net/2022/10/14/IuRJVojnEUB7cSq.webp, https://s2.loli.net/2022/10/14/IuRJVojnEUB7cSq.webp 1.5x, https://s2.loli.net/2022/10/14/IuRJVojnEUB7cSq.webp 2x"
         data-sizes="auto"
-        alt="https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip|imageView2/2/w/1058/format/webp"
+        alt="https://s2.loli.net/2022/10/14/IuRJVojnEUB7cSq.webp"
         title="img" /></p>
 <ul>
 <li>定义 $lev_{a,b}(|a|,|b|)$ 指的是 $a $ 中<strong>前 $i$ 个字符</strong>和 $b$ 中<strong>前 $j$ 个字符</strong>之间的距离。为了方便理解，这里的 $i, j$ 可以看作是 $a,b $ 的长度。这里的字符串的第一个字符 index 从 1 开始（实际因为在表上运算的时候字符串前需要补 0），因此最后的编辑距离便是 $i=|a|,j=|b|$  时的距离： $lev_{a,b}(|a|,|b|)$</li>
@@ -416,8 +395,7 @@
 <p>[4] <a href="https://www.jianshu.com/p/a96095aa92bc" target="_blank" rel="noopener noreffer">https://www.jianshu.com/p/a96095aa92bc</a>
 </p>
 <p>作者：TSW1995
-链接：https://www.jianshu.com/p/a617d20162cf
-来源：简书</p></div><div class="post-footer" id="post-footer">
+链接：https://www.jianshu.com/p/a617d20162cf</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
