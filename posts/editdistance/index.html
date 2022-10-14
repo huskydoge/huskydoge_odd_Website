@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/editdistance/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-13T22:23:54+08:00" />
-<meta property="article:modified_time" content="2022-10-14T08:04:37+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-14T08:59:02+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EditDistance"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/editdistance\/"
-        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1455 ,
-        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T08:04:37+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "NLP, Algorithm","wordcount":  1598 ,
+        "url": "http:\/\/example.org\/posts\/editdistance\/","datePublished": "2022-10-13T22:23:54+08:00","dateModified": "2022-10-14T08:59:02+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">EditDistance</h1><h2 class="single-subtitle">转载自简书</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1455 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/editdistance/" class="leancloud_visitors" data-flag-title="EditDistance">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-13">2022-10-13</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1598 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/editdistance/" class="leancloud_visitors" data-flag-title="EditDistance">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -174,28 +174,7 @@
 </nav></div>
             </div><div class="content" id="content"><h3 id="概述">概述</h3>
 <p>编辑距离（Minimum Edit Distance，MED），由俄罗斯科学家 Vladimir Levenshtein 在1965年提出，也因此而得名 Levenshtein Distance。</p>
-<p>在信息论、语言学和计算机科学领域，Levenshtein Distance 是用来度量两个序列相似程度的指标。通俗地来讲，编辑距离指的是在两个单词<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=%3Cw_1%2Cw_2%3E"
-        data-srcset="https://math.jianshu.com/math?formula=%3Cw_1%2Cw_2%3E, https://math.jianshu.com/math?formula=%3Cw_1%2Cw_2%3E 1.5x, https://math.jianshu.com/math?formula=%3Cw_1%2Cw_2%3E 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=%3Cw_1%2Cw_2%3E"
-        title="&amp;lt;w_1,w_2&amp;gt;" />之间，由其中一个单词<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=w_1"
-        data-srcset="https://math.jianshu.com/math?formula=w_1, https://math.jianshu.com/math?formula=w_1 1.5x, https://math.jianshu.com/math?formula=w_1 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=w_1"
-        title="w_1" />转换为另一个单词<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=w_2"
-        data-srcset="https://math.jianshu.com/math?formula=w_2, https://math.jianshu.com/math?formula=w_2 1.5x, https://math.jianshu.com/math?formula=w_2 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=w_2"
-        title="w_2" />所需要的最少<strong>单字符编辑操作</strong>次数。</p>
+<p>在信息论、语言学和计算机科学领域，Levenshtein Distance 是用来度量两个序列相似程度的指标。通俗地来讲，编辑距离指的是在两个单词$&lt;w_1,w_2&gt;$ 之间，由其中一个单词$w_1$转换为另一个单词$w_2$所需要的最少<strong>单字符编辑操作</strong>次数。</p>
 <p>在这里定义的单字符编辑操作有且仅有三种：</p>
 <ul>
 <li>插入（Insertion）</li>
@@ -203,33 +182,21 @@
 <li>替换（Substitution）</li>
 </ul>
 <p>譬如，&ldquo;kitten&rdquo; 和 &ldquo;sitting&rdquo; 这两个单词，由 &ldquo;kitten&rdquo; 转换为  &ldquo;sitting&rdquo;  需要的最少单字符编辑操作有：</p>
-<p>1.kitten → sitten (substitution of &ldquo;s&rdquo; for &ldquo;k&rdquo;)
-2.sitten → sittin (substitution of &ldquo;i&rdquo; for &ldquo;e&rdquo;)
-3.sittin  → sitting (insertion of &ldquo;g&rdquo; at the end)</p>
+<ol>
+<li>kitten → sitten (substitution of &ldquo;s&rdquo; for &ldquo;k&rdquo;)</li>
+<li>sitten → sittin (substitution of &ldquo;i&rdquo; for &ldquo;e&rdquo;)</li>
+<li>sittin  → sitting (insertion of &ldquo;g&rdquo; at the end)</li>
+</ol>
 <p>因此，&ldquo;kitten&rdquo; 和 &ldquo;sitting&rdquo; 这两个单词之间的编辑距离为 3 。</p>
 <h3 id="形式化定义">形式化定义</h3>
-<p>我们将两个字符串 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a%2Cb"
-        data-srcset="https://math.jianshu.com/math?formula=a%2Cb, https://math.jianshu.com/math?formula=a%2Cb 1.5x, https://math.jianshu.com/math?formula=a%2Cb 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a%2Cb"
-        title="a,b" /> 的 Levenshtein Distance 表示为 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(%7Ca%7C%2C%20%7Cb%7C)"
-        title="lev_{a,b}(|a|, |b|)" />，其中<img
+<p>我们将两个字符串 $a, b$ 的 Levenshtein Distance 表示为 $lev_{a,b}(|a|,|b|)$，其中 <img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="https://math.jianshu.com/math?formula=%7Ca%7C"
         data-srcset="https://math.jianshu.com/math?formula=%7Ca%7C, https://math.jianshu.com/math?formula=%7Ca%7C 1.5x, https://math.jianshu.com/math?formula=%7Ca%7C 2x"
         data-sizes="auto"
         alt="https://math.jianshu.com/math?formula=%7Ca%7C"
-        title="|a|" /> 和 <img
+        title="|a|" /> 和  <img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="https://math.jianshu.com/math?formula=%7Cb%7C"
@@ -243,21 +210,7 @@
         data-srcset="https://math.jianshu.com/math?formula=a%2Cb, https://math.jianshu.com/math?formula=a%2Cb 1.5x, https://math.jianshu.com/math?formula=a%2Cb 2x"
         data-sizes="auto"
         alt="https://math.jianshu.com/math?formula=a%2Cb"
-        title="a,b" /> 的长度。那么，在这里两个字符串 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a%2Cb"
-        data-srcset="https://math.jianshu.com/math?formula=a%2Cb, https://math.jianshu.com/math?formula=a%2Cb 1.5x, https://math.jianshu.com/math?formula=a%2Cb 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a%2Cb"
-        title="a,b" /> 的 Levenshtein Distance，即 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(%7Ca%7C%2C%20%7Cb%7C)"
-        title="lev_{a,b}(|a|, |b|)" /> 可用如下的数学语言描述：</p>
+        title="a,b" /> 的长度。那么，在这里两个字符串 $a, b$ 的 Levenshtein Distance，即 $lev_{a,b}(|a|,|b|)$ 可用如下的数学语言描述：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -267,233 +220,19 @@
         alt="https:////upload-images.jianshu.io/upload_images/244848-e66264ce2243ddfb.png?imageMogr2/auto-orient/strip|imageView2/2/w/1058/format/webp"
         title="img" /></p>
 <ul>
-<li>定义 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(i%2C%20j)"
-        title="lev_{a,b}(i, j)" /> 指的是 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a"
-        data-srcset="https://math.jianshu.com/math?formula=a, https://math.jianshu.com/math?formula=a 1.5x, https://math.jianshu.com/math?formula=a 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a"
-        title="a" /> 中<strong>前 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i"
-        data-srcset="https://math.jianshu.com/math?formula=i, https://math.jianshu.com/math?formula=i 1.5x, https://math.jianshu.com/math?formula=i 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i"
-        title="i" /> 个字符</strong>和 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=b"
-        data-srcset="https://math.jianshu.com/math?formula=b, https://math.jianshu.com/math?formula=b 1.5x, https://math.jianshu.com/math?formula=b 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=b"
-        title="b" /> 中<strong>前 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=j"
-        data-srcset="https://math.jianshu.com/math?formula=j, https://math.jianshu.com/math?formula=j 1.5x, https://math.jianshu.com/math?formula=j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=j"
-        title="j" /> 个字符</strong>之间的距离。为了方便理解，这里的<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i%2Cj"
-        data-srcset="https://math.jianshu.com/math?formula=i%2Cj, https://math.jianshu.com/math?formula=i%2Cj 1.5x, https://math.jianshu.com/math?formula=i%2Cj 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i%2Cj"
-        title="i,j" />可以看作是<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a%2Cb"
-        data-srcset="https://math.jianshu.com/math?formula=a%2Cb, https://math.jianshu.com/math?formula=a%2Cb 1.5x, https://math.jianshu.com/math?formula=a%2Cb 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a%2Cb"
-        title="a,b" />的长度。这里的字符串的第一个字符 index 从 1 开始（实际因为在表上运算的时候字符串前需要补 0），因此最后的编辑距离便是 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i%20%3D%20%7Ca%7C%2C%20j%20%3D%20%7Cb%7C"
-        data-srcset="https://math.jianshu.com/math?formula=i%20%3D%20%7Ca%7C%2C%20j%20%3D%20%7Cb%7C, https://math.jianshu.com/math?formula=i%20%3D%20%7Ca%7C%2C%20j%20%3D%20%7Cb%7C 1.5x, https://math.jianshu.com/math?formula=i%20%3D%20%7Ca%7C%2C%20j%20%3D%20%7Cb%7C 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i%20%3D%20%7Ca%7C%2C%20j%20%3D%20%7Cb%7C"
-        title="i = |a|, j = |b|" /> 时的距离：  <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(%7Ca%7C%2C%20%7Cb%7C)"
-        title="lev_{a,b}(|a|, |b|)" /></li>
-<li>当 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200"
-        data-srcset="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200 1.5x, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=min(i%2C%20j)%20%3D%200"
-        title="min(i, j) = 0" /> 的时候，对应着字符串<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a"
-        data-srcset="https://math.jianshu.com/math?formula=a, https://math.jianshu.com/math?formula=a 1.5x, https://math.jianshu.com/math?formula=a 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a"
-        title="a" /> 中<strong>前 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i"
-        data-srcset="https://math.jianshu.com/math?formula=i, https://math.jianshu.com/math?formula=i 1.5x, https://math.jianshu.com/math?formula=i 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i"
-        title="i" /> 个字符</strong>和 字符串<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=b"
-        data-srcset="https://math.jianshu.com/math?formula=b, https://math.jianshu.com/math?formula=b 1.5x, https://math.jianshu.com/math?formula=b 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=b"
-        title="b" /> 中<strong>前 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=j"
-        data-srcset="https://math.jianshu.com/math?formula=j, https://math.jianshu.com/math?formula=j 1.5x, https://math.jianshu.com/math?formula=j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=j"
-        title="j" /> 个字符</strong>，此时的 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i%2Cj"
-        data-srcset="https://math.jianshu.com/math?formula=i%2Cj, https://math.jianshu.com/math?formula=i%2Cj 1.5x, https://math.jianshu.com/math?formula=i%2Cj 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i%2Cj"
-        title="i,j" /> 有一个值为 0 ，表示字符串 a 和 b 中有一个为空串，那么从 a 转换到 b 只需要进行<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=max%28i%2C%20j%29"
-        data-srcset="https://math.jianshu.com/math?formula=max%28i%2C%20j%29, https://math.jianshu.com/math?formula=max%28i%2C%20j%29 1.5x, https://math.jianshu.com/math?formula=max%28i%2C%20j%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=max(i%2C%20j)"
-        title="max(i, j)" />次单字符编辑操作即可，所以它们之间的编辑距离为 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=max%28i%2C%20j%29"
-        data-srcset="https://math.jianshu.com/math?formula=max%28i%2C%20j%29, https://math.jianshu.com/math?formula=max%28i%2C%20j%29 1.5x, https://math.jianshu.com/math?formula=max%28i%2C%20j%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=max(i%2C%20j)"
-        title="max(i, j)" />，即 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=i%2C%20j"
-        data-srcset="https://math.jianshu.com/math?formula=i%2C%20j, https://math.jianshu.com/math?formula=i%2C%20j 1.5x, https://math.jianshu.com/math?formula=i%2C%20j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=i%2C%20j"
-        title="i, j" /> 中的最大者。</li>
-<li>当 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%5Cne%200"
-        data-srcset="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%5Cne%200, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%5Cne%200 1.5x, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%5Cne%200 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=min(i%2C%20j)%20%5Cne%200"
-        title="min(i, j) \ne 0" /> 的时候，<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28%7Ca%7C%2C%20%7Cb%7C%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(%7Ca%7C%2C%20%7Cb%7C)"
-        title="lev_{a,b}(|a|, |b|)" /> 为如下三种情况的最小值：
-1.<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j%29%20%2B%201"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j%29%20%2B%201, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j%29%20%2B%201 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j%29%20%2B%201 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(i-1%2C%20j)%20%2B%201"
-        title="lev_{a,b}(i-1, j) &#43; 1" /> 表示 删除 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a_i"
-        data-srcset="https://math.jianshu.com/math?formula=a_i, https://math.jianshu.com/math?formula=a_i 1.5x, https://math.jianshu.com/math?formula=a_i 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a_i"
-        title="a_i" />
-2.<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j-1%29%20%2B%201"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j-1%29%20%2B%201, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j-1%29%20%2B%201 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j-1%29%20%2B%201 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(i%2C%20j-1)%20%2B%201"
-        title="lev_{a,b}(i, j-1) &#43; 1" /> 表示 插入 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=b_j"
-        data-srcset="https://math.jianshu.com/math?formula=b_j, https://math.jianshu.com/math?formula=b_j 1.5x, https://math.jianshu.com/math?formula=b_j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=b_j"
-        title="b_j" />
-3.<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j-1%29%2B1_%7B%28a_i%20%5Cne%20b_j%29%7D"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j-1%29%2B1_%7B%28a_i%20%5Cne%20b_j%29%7D, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j-1%29%2B1_%7B%28a_i%20%5Cne%20b_j%29%7D 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i-1%2C%20j-1%29%2B1_%7B%28a_i%20%5Cne%20b_j%29%7D 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(i-1%2C%20j-1)%2B1_%7B(a_i%20%5Cne%20b_j)%7D"
-        title="lev_{a,b}(i-1, j-1)&#43;1_{(a_i \ne b_j)}" /> 表示 替换 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=b_j"
-        data-srcset="https://math.jianshu.com/math?formula=b_j, https://math.jianshu.com/math?formula=b_j 1.5x, https://math.jianshu.com/math?formula=b_j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=b_j"
-        title="b_j" /></li>
-<li><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=1_%7B%28a_i%20%5Cne%20b_j%29%7D"
-        data-srcset="https://math.jianshu.com/math?formula=1_%7B%28a_i%20%5Cne%20b_j%29%7D, https://math.jianshu.com/math?formula=1_%7B%28a_i%20%5Cne%20b_j%29%7D 1.5x, https://math.jianshu.com/math?formula=1_%7B%28a_i%20%5Cne%20b_j%29%7D 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=1_%7B(a_i%20%5Cne%20b_j)%7D"
-        title="1_{(a_i \ne b_j)}" /> 为一个指示函数，表示当 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a_i%20%3D%20b_j"
-        data-srcset="https://math.jianshu.com/math?formula=a_i%20%3D%20b_j, https://math.jianshu.com/math?formula=a_i%20%3D%20b_j 1.5x, https://math.jianshu.com/math?formula=a_i%20%3D%20b_j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a_i%20%3D%20b_j"
-        title="a_i = b_j" /> 的时候取 0 ;当 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=a_i%20%5Cne%20b_j"
-        data-srcset="https://math.jianshu.com/math?formula=a_i%20%5Cne%20b_j, https://math.jianshu.com/math?formula=a_i%20%5Cne%20b_j 1.5x, https://math.jianshu.com/math?formula=a_i%20%5Cne%20b_j 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=a_i%20%5Cne%20b_j"
-        title="a_i \ne b_j" /> 的时候，其值为 1。</li>
+<li>定义 $lev_{a,b}(|a|,|b|)$ 指的是 $a $ 中<strong>前 $i$ 个字符</strong>和 $b$ 中<strong>前 $j$ 个字符</strong>之间的距离。为了方便理解，这里的 $i, j$ 可以看作是 $a,b $ 的长度。这里的字符串的第一个字符 index 从 1 开始（实际因为在表上运算的时候字符串前需要补 0），因此最后的编辑距离便是 $i=|a|,j=|b|$  时的距离： $lev_{a,b}(|a|,|b|)$</li>
+<li>当 $min(i,j)$ 的时候，对应着字符串 $a$ 中<strong>前 $i$ 个字符</strong>和 字符串$b$ 中<strong>前 $j$ 个字符</strong>，此时的 $i,j$ 有一个值为 0 ，表示字符串 a 和 b 中有一个为空串，那么从 a 转换到 b 只需要进行 $max(i,j)$ 次单字符编辑操作即可，所以它们之间的编辑距离为 $max(i,j)$ ，即 $i,j$ 中的最大者。</li>
+<li>当 $min(i,j) \neq 0$ 为如下三种情况的最小值：$lev_{a,b}(i-1,j -1)+1_{(a_i \neq b_j)}$
+<ol>
+<li>$lev_{a,b}(i-1,j)+1$  表示 删除 $a_i$</li>
+<li>$lev_{a,b}(i,j -1)+1$  表示 插入 $b_j$</li>
+<li>$lev_{a,b}(i-1,j -1)+1_{(a_i \neq b_j)}$ 表示 替换 $b_j$</li>
+</ol>
+</li>
+<li>$1_{(a_i \neq b_j)}$ 为一个指示函数，表示当 $a_i = a_j$ 的时候取 0 ;当 $a_i \neq a_j$ 的时候，其值为 1。</li>
 </ul>
 <h3 id="过程示例">过程示例</h3>
-<p>以 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=xxc"
-        data-srcset="https://math.jianshu.com/math?formula=xxc, https://math.jianshu.com/math?formula=xxc 1.5x, https://math.jianshu.com/math?formula=xxc 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=xxc"
-        title="xxc" /> 和 <img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=xyz"
-        data-srcset="https://math.jianshu.com/math?formula=xyz, https://math.jianshu.com/math?formula=xyz 1.5x, https://math.jianshu.com/math?formula=xyz 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=xyz"
-        title="xyz" /> 为例，建立一个矩阵，通过矩阵记录计算好的距离：</p>
+<p>以 $xxc$ 和 $xyz$ 为例，建立一个矩阵，通过矩阵记录计算好的距离：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -502,21 +241,7 @@
         data-sizes="auto"
         alt="https:////upload-images.jianshu.io/upload_images/244848-2a007c4cfae269e0.png?imageMogr2/auto-orient/strip|imageView2/2/w/231/format/webp"
         title="img" /></p>
-<p>当<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200"
-        data-srcset="https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200 1.5x, https://math.jianshu.com/math?formula=min%28i%2C%20j%29%20%3D%200 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=min(i%2C%20j)%20%3D%200"
-        title="min(i, j) = 0" />时，<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29%20%3D%20max%28i%2C%20j%29"
-        data-srcset="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29%20%3D%20max%28i%2C%20j%29, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29%20%3D%20max%28i%2C%20j%29 1.5x, https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D%28i%2C%20j%29%20%3D%20max%28i%2C%20j%29 2x"
-        data-sizes="auto"
-        alt="https://math.jianshu.com/math?formula=lev_%7Ba%2Cb%7D(i%2C%20j)%20%3D%20max(i%2C%20j)"
-        title="lev_{a,b}(i, j) = max(i, j)" />，根据此初始化矩阵的第一行和第一列:</p>
+<p>当$min(i,j) = 0$时，$lev_{a,b}=max(i,j)$，根据此初始化矩阵的第一行和第一列:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="err">第一行（</span><span class="n">index</span> <span class="p">=</span> <span class="mi">0</span><span class="err">）初始化：</span>
 </span></span><span class="line"><span class="cl"><span class="bp">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span> <span class="p">-&gt;</span>  <span class="n">lev_</span><span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">}(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="bp">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl"><span class="bp">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span> <span class="p">-&gt;</span>  <span class="n">lev_</span><span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">}(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="bp">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="mi">1</span>
