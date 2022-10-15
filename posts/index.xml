@@ -10,7 +10,9 @@
     <pubDate>Fri, 14 Oct 2022 18:43:14 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75z9dc0rqj31900u0gn7.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>EditDistance</title>
