@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2\/"
-        },"genre": "posts","wordcount":  978 ,
+        },"genre": "posts","wordcount":  1224 ,
         "url": "http:\/\/example.org\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2\/","datePublished": "2022-10-10T00:06:08+08:00","dateModified": "2022-10-10T00:06:08+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">数据结构Hw2</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-10">2022-10-10</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-10">2022-10-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;978 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/" class="leancloud_visitors" data-flag-title="数据结构Hw2">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-10">2022-10-10</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-10">2022-10-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1224 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/" class="leancloud_visitors" data-flag-title="数据结构Hw2">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -206,7 +206,8 @@
 <p>内存空间限制： 256 MiB</p>
 <p>磁盘空间限制： 无限制</p>
 <h3 id="solution">SOLUTION</h3>
-<h4 id="分析">分析</h4>
+<h4 id="idea1-树状数组">Idea1 树状数组</h4>
+<h5 id="分析">分析</h5>
 <p>用数组来标记每个猴子的状态：</p>
 <ul>
 <li>
@@ -218,7 +219,7 @@
 </ul>
 <p>要记录这种数组的和，最好用<a href="https://www.cnblogs.com/xenny/p/9739600.html" target="_blank" rel="noopener noreffer">树状数组</a>
 。</p>
-<h4 id="code">CODE</h4>
+<h5 id="code">CODE</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -283,7 +284,30 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>时间复杂度： O(mlogm), m为队列长度</p></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><p>时间复杂度： O(mlogm), m为队列长度</p>
+<h4 id="idea2-动态规划">Idea2 动态规划</h4>
+<p>每一次删除一只🐒后，都是一个新的约瑟夫环问题，而相邻的两个约瑟夫环问题之间有一个关系。</p>
+<p>假设每一次在新的约瑟夫环上进行报数的起始位置编号为0。</p>
+<p>第 i 局里被踢出的🐒;在第i-1局里的编号=(在第 i 局里的编号＋上一次的K）% 第i-1局🐒;数</p>
+<p>逆向思维：则$ans_i=(ans_{i-1}+K[n-i])%i$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="c1">//剩下最后一只猴子它在对应的约瑟夫环的索引为0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="o">:</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//剩下i只🐒和剩下i-1只🐒之间的递推式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">ans</span><span class="o">=</span><span class="p">(</span><span class="n">ans</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">])</span> <span class="o">%</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
