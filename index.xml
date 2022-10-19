@@ -4,15 +4,25 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 19 Oct 2022 14:59:33 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>ShapleyValue</title>
+    <link>http://example.org/posts/shapleyvalue/</link>
+    <pubDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/shapleyvalue/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>高斯单位制和国际单位制</title>
     <link>http://example.org/posts/%E9%AB%98%E6%96%AF%E5%8D%95%E4%BD%8D%E5%88%B6%E5%92%8C%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6/</link>
     <pubDate>Wed, 19 Oct 2022 14:59:33 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E9%AB%98%E6%96%AF%E5%8D%95%E4%BD%8D%E5%88%B6%E5%92%8C%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7as8s99wsj31900u0417.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>电院周赛2</title>
@@ -20,7 +30,9 @@
     <pubDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7asajzhidj31900u0tas.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>数据结构Hw3</title>
@@ -86,14 +98,6 @@
     <pubDate>Sat, 08 Oct 2022 15:29:43 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E5%B8%83%E5%B0%94%E6%A3%80%E7%B4%A2%E5%92%8C%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>电院算法周赛（1）</title>
-    <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B/</link>
-    <pubDate>Fri, 07 Oct 2022 21:34:03 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
