@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/shapleyvalue/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-19T18:20:51+08:00" />
-<meta property="article:modified_time" content="2022-10-19T22:24:09+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2022-10-19T23:06:28+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ShapleyValue"/>
@@ -24,8 +24,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/shapleyvalue\/"
-        },"genre": "posts","wordcount":  744 ,
-        "url": "http:\/\/example.org\/posts\/shapleyvalue\/","datePublished": "2022-10-19T18:20:51+08:00","dateModified": "2022-10-19T22:24:09+08:00","license": "All Mine","publisher": {
+        },"genre": "posts","keywords": "博弈论","wordcount":  747 ,
+        "url": "http:\/\/example.org\/posts\/shapleyvalue\/","datePublished": "2022-10-19T18:20:51+08:00","dateModified": "2022-10-19T23:06:28+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ShapleyValue</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-19">2022-10-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-19">2022-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;744 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-19">2022-10-19</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-19">2022-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;747 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/shapleyvalue/" class="leancloud_visitors" data-flag-title="ShapleyValue">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -193,7 +193,7 @@ $$
 \begin{aligned}
 \sum_{\mathrm{i} \in \mathrm{N}} \varphi_{\mathrm{i}}(\mathrm{v})&amp;=\frac{1}{|\mathrm{N}| !} \sum_{\mathrm{\pi^n}} \sum_{\mathrm{i} \in \mathrm{N}} [\mathrm{v}\left({\mathrm{\pi}}^{\mathrm{i}} \cup{\mathrm{i}}\right)-\mathrm{v}\left({\mathrm{\pi}}^{\mathrm{i}}\right)] \
 &amp;= \frac{1}{|\mathrm{N}|!}[\sum_{\mathrm{\pi^n
-}} \mathrm{v}(\mathrm{N}) + \sum_{|S|=m + 1, |S&rsquo;|=m,S \subseteq N} (v(S)-v(S&rsquo;))]\
+}} \mathrm{v}(\mathrm{N}) + \sum_{m=0}^{n-1}\sum_{\substack{|S|=m + 1 \ |S&rsquo;|=m }} (v(S)-v(S&rsquo;))], S \subseteq N\
 &amp;= \frac{1}{|\mathrm{N}| !} \sum_{\mathrm{\pi^n
 }} \mathrm{v}(\mathrm{N})=\frac{1}{|\mathrm{N}| !}|\mathrm{N}| ! \cdot \mathrm{v}(\mathrm{N})=\mathrm{v}(\mathrm{N})
 \end{aligned}
@@ -214,13 +214,13 @@ $$
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/shapleyvalue/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2fshapleyvalue%2f&amp;description=ShapleyValue" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue" data-hashtags="博弈论"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/shapleyvalue/" data-hashtag="博弈论"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/shapleyvalue/" data-title="ShapleyValue"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2fshapleyvalue%2f&amp;description=ShapleyValue" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/">博弈论</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
