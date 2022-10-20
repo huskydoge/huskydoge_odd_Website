@@ -4,13 +4,35 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>HARSANYIDIVIDEND</title>
+    <link>http://example.org/posts/harsanyidividend/</link>
+    <pubDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/harsanyidividend/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c766alwqj31hc0u0786.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>PytorchNote</title>
+    <link>http://example.org/posts/pytorchnote/</link>
+    <pubDate>Thu, 20 Oct 2022 12:55:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/pytorchnote/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c74jvlkhj31900u0wgn.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
     <title>ShapleyValue</title>
     <link>http://example.org/posts/shapleyvalue/</link>
     <pubDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/shapleyvalue/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c756qvozj31ci0u0wlh.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>高斯单位制和国际单位制</title>
@@ -79,24 +101,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
             </div>]]></description>
-</item>
-<item>
-    <title>提升代码效率的方法</title>
-    <link>http://example.org/posts/%E6%8F%90%E5%8D%87%E4%BB%A3%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/</link>
-    <pubDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%8F%90%E5%8D%87%E4%BB%A3%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://s2.loli.net/2022/09/28/r5PcCzmh6fuglkj.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>布尔检索和倒排索引</title>
-    <link>http://example.org/posts/%E5%B8%83%E5%B0%94%E6%A3%80%E7%B4%A2%E5%92%8C%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/</link>
-    <pubDate>Sat, 08 Oct 2022 15:29:43 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E5%B8%83%E5%B0%94%E6%A3%80%E7%B4%A2%E5%92%8C%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/</guid>
-    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

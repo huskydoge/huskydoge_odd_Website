@@ -4,13 +4,25 @@
         <link>http://example.org/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/</link>
         <description>博弈论 - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>HARSANYIDIVIDEND</title>
+    <link>http://example.org/posts/harsanyidividend/</link>
+    <pubDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/harsanyidividend/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c766alwqj31hc0u0786.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
     <title>ShapleyValue</title>
     <link>http://example.org/posts/shapleyvalue/</link>
     <pubDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/shapleyvalue/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c756qvozj31ci0u0wlh.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 </channel>
 </rss>
