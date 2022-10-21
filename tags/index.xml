@@ -4,7 +4,15 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Fri, 21 Oct 2022 16:34:49 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>统计学</title>
+    <link>http://example.org/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+    <pubDate>Fri, 21 Oct 2022 16:34:49 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>博弈论</title>
     <link>http://example.org/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/</link>
     <pubDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Tue, 11 Oct 2022 19:39:01 &#43;0800</pubDate>
     <author>HuskyDoge</author>
     <guid>http://example.org/tags/%E6%A8%A1%E7%94%B5/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>C&#43;&#43;</title>
-    <link>http://example.org/tags/c&#43;&#43;/</link>
-    <pubDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</pubDate>
-    <author>HuskyDoge</author>
-    <guid>http://example.org/tags/c&#43;&#43;/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

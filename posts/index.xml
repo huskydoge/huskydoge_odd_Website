@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Fri, 21 Oct 2022 16:34:49 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>N个相互独立的随机变量乘积的期望和方差公式</title>
+    <link>http://example.org/posts/n%E4%B8%AA%E7%9B%B8%E4%BA%92%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B9%98%E6%9C%BA%E7%9A%84%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/</link>
+    <pubDate>Fri, 21 Oct 2022 16:34:49 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/n%E4%B8%AA%E7%9B%B8%E4%BA%92%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B9%98%E6%9C%BA%E7%9A%84%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Harsanyi Dividend</title>
     <link>http://example.org/posts/harsanyidividend/</link>
     <pubDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</pubDate>
@@ -91,16 +99,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/mos/</guid>
     <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>数据结构Hw2</title>
-    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</link>
-    <pubDate>Mon, 10 Oct 2022 00:06:08 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
 </item>
 </channel>
 </rss>
