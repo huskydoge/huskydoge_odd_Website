@@ -176,7 +176,7 @@ $$</p>
 <blockquote>
 <p>协方差的定义
 $$
-\begin{aligned} \operatorname{Cov}(X, Y) &amp;=E[(X-E[X])(Y-E[Y])] \ &amp;=E[X Y]-2 E[Y] E[X]+E[X] E[Y] \ &amp;=E[X Y]-E[X] E[Y] \end{aligned}
+\begin{aligned} \operatorname{Cov}(X, Y) &amp;=E[(X-E[X])(Y-E[Y])] \newline &amp;=E[X Y]-2 E[Y] E[X]+E[X] E[Y] \newline &amp;=E[X Y]-E[X] E[Y] \end{aligned}
 $$</p>
 </blockquote>
 <p>因为随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 相互独立，则</p>
@@ -194,10 +194,10 @@ $$
 证明: 已知随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 相互独立, 则随机变量 $\mathrm{x}_1 \cdot \mathrm{x}_2$ 的方差为：
 $$
 \begin{aligned}
-\operatorname{Var}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right) &amp;=\mathbb{E}\left(\left(\mathrm{x}_1 \cdot \mathrm{x}_2-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)\right)^2\right) \
-&amp;=\mathbb{E}\left(\mathrm{x}_1^2 \cdot \mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)^2 \
-&amp;=\mathbb{E}\left(\mathrm{x}_1^2\right) \cdot \mathbb{E}\left(\mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \
-&amp;=\left(\operatorname{Var}\left(\mathrm{x}_1\right)+\mathbb{E}\left(\mathrm{x}_1\right)^2\right) \cdot\left(\operatorname{Var}\left(\mathrm{x}_2\right)+\mathbb{E}\left(\mathrm{x}_2\right)^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \</p>
+\operatorname{Var}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right) &amp;=\mathbb{E}\left(\left(\mathrm{x}_1 \cdot \mathrm{x}_2-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)\right)^2\right) \newline
+&amp;=\mathbb{E}\left(\mathrm{x}_1^2 \cdot \mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)^2 \newline
+&amp;=\mathbb{E}\left(\mathrm{x}_1^2\right) \cdot \mathbb{E}\left(\mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \newline
+&amp;=\left(\operatorname{Var}\left(\mathrm{x}_1\right)+\mathbb{E}\left(\mathrm{x}_1\right)^2\right) \cdot\left(\operatorname{Var}\left(\mathrm{x}_2\right)+\mathbb{E}\left(\mathrm{x}_2\right)^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \newline</p>
 <h2 id="heading-1">\end{aligned} \tag{2}
 $$</h2>
 <p>类似可得n个相互独立的变量的值为
