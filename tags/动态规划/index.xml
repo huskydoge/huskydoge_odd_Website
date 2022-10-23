@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>动态规划 - Tag - HuskyDoge&#39;s World</title>
+        <link>http://example.org/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+        <description>动态规划 - Tag - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
+    <title>电院周赛2</title>
+    <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</link>
+    <pubDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7asajzhidj31900u0tas.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>数据结构Hw2</title>
+    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</link>
+    <pubDate>Mon, 10 Oct 2022 00:06:08 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+</channel>
+</rss>

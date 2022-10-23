@@ -15,16 +15,6 @@
             </div>]]></description>
 </item>
 <item>
-    <title>数据结构Hw3</title>
-    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw3/</link>
-    <pubDate>Sat, 15 Oct 2022 14:57:13 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw3/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
     <title>MOS管原理简介</title>
     <link>http://example.org/posts/mos/</link>
     <pubDate>Tue, 11 Oct 2022 19:39:01 &#43;0800</pubDate>
@@ -49,16 +39,6 @@
     <author>Author</author>
     <guid>http://example.org/posts/%E4%B8%BA%E5%95%A5%E8%A6%81%E6%9C%89%E5%A4%B4%E8%8A%82%E7%82%B9/</guid>
     <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>数据结构Hw1</title>
-    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/</link>
-    <pubDate>Sun, 25 Sep 2022 23:36:25 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw1/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
 </item>
 <item>
     <title>线性表</title>
@@ -95,6 +75,22 @@
     <author>HuskyDoge</author>
     <guid>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88/</guid>
     <description><![CDATA[#include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; // 写出两个函数的声明 char *&amp;funA(char **&amp;p); char *funB(char b[], char **p); int main() { char a[100], b[100]; for(int i = 0; i &lt; 3; ++i) { char **p; cin &gt;&gt; a; // 1. funA(p)作为左值，需要加引用&amp; //]]></description>
+</item>
+<item>
+    <title>C&#43;&#43; 字符研究</title>
+    <link>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/cpp%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+    <description><![CDATA[c++字符/字符串输入函数： ​ 注：程序运行后键盘输入会首先存储到输入缓冲区中，遇到结束符时终止输入（一般为回车）。 cin &gt;&gt; s cin从输入缓冲区中]]></description>
+</item>
+<item>
+    <title>性能分析</title>
+    <link>http://example.org/posts/%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</link>
+    <pubDate>Wed, 06 Jul 2022 17:17:42 &#43;0800</pubDate>
+    <author>HuskyDoge</author>
+    <guid>http://example.org/posts/%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</guid>
+    <description><![CDATA[性能分析 Timing usr sys: 在cpu里跑的时间 wall-Clock：所有进程花费的时间， 包括用户输入 time 指令 + 文件地址 Memory htop Glances 网络参数 shell 中输入 ifconfig 比较命令行指令]]></description>
 </item>
 </channel>
 </rss>

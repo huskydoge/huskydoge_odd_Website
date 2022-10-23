@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2\/"
-        },"genre": "posts","wordcount":  1539 ,
+        },"genre": "posts","keywords": "动态规划, 栈的运用","wordcount":  1539 ,
         "url": "http:\/\/example.org\/posts\/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2\/","datePublished": "2022-10-15T19:22:56+08:00","dateModified": "2022-10-15T19:22:56+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -141,7 +141,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">电院周赛2</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
-</span></div>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/oj%E9%A2%98%E8%A7%A3/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>OJ题解</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-15">2022-10-15</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-15">2022-10-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1539 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" class="leancloud_visitors" data-flag-title="电院周赛2">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
@@ -285,13 +285,6 @@ $$
 当 $j-i=0$ 时，即为只有一堆石子，花费为0；
 当 $j-i=1$ 时，即为有两堆石子；
 当 $j-i=n$ 时，即为有n+1堆石子。</p>
-<blockquote>
-<p>参考链接：</p>
-<p><a href="https://blog.csdn.net/ll_wang/article/details/107746709?spm=1001.2101.3001.6650.12&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107746709-blog-104212240.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107746709-blog-104212240.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=12" target="_blank" rel="noopener noreffer">【蓝桥杯】算法提高 合并石子</a>
-</p>
-<p><a href="https://blog.csdn.net/yu_______chen/article/details/107433659" target="_blank" rel="noopener noreffer">「题解」石子合并1、2</a>
-</p>
-</blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
@@ -321,7 +314,13 @@ $$
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span> 
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+</span></span></code></pre></div><blockquote>
+<p>参考链接：</p>
+<p><a href="https://blog.csdn.net/ll_wang/article/details/107746709?spm=1001.2101.3001.6650.12&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107746709-blog-104212240.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107746709-blog-104212240.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=12" target="_blank" rel="noopener noreffer">【蓝桥杯】算法提高 合并石子</a>
+</p>
+<p><a href="https://blog.csdn.net/yu_______chen/article/details/107433659" target="_blank" rel="noopener noreffer">「题解」石子合并1、2</a>
+</p>
+</blockquote></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -330,13 +329,13 @@ $$
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2" data-image="https://tva1.sinaimg.cn/large/008vxvgGgy1h7asajzhidj31900u0tas.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E7%2594%25B5%25E9%2599%25A2%25E5%2591%25A8%25E8%25B5%259B2%2f&amp;description=%e7%94%b5%e9%99%a2%e5%91%a8%e8%b5%9b2" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2" data-hashtags="动态规划,栈的运用"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-hashtag="动态规划"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/" data-title="电院周赛2" data-image="https://tva1.sinaimg.cn/large/008vxvgGgy1h7asajzhidj31900u0tas.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="//mix.com/add?url=http%3a%2f%2fexample.org%2fposts%2f%25E7%2594%25B5%25E9%2599%25A2%25E5%2591%25A8%25E8%25B5%259B2%2f&amp;description=%e7%94%b5%e9%99%a2%e5%91%a8%e8%b5%9b2" target="_blank" title="Share on Mix"><i class="fab fa-mix fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/tags/%E6%A0%88%E7%9A%84%E8%BF%90%E7%94%A8/">栈的运用</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
