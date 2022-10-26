@@ -4,7 +4,15 @@
         <link>http://example.org/categories/oj%E9%A2%98%E8%A7%A3/</link>
         <description>OJ题解 - Category - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/oj%E9%A2%98%E8%A7%A3/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 23 Oct 2022 16:24:16 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/oj%E9%A2%98%E8%A7%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>电院周赛3</title>
+    <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/</link>
+    <pubDate>Sun, 23 Oct 2022 16:24:16 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>电院周赛2</title>
     <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</link>
     <pubDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</pubDate>
@@ -35,7 +43,7 @@
             </div>]]></description>
 </item>
 <item>
-    <title>电院算法周赛（1）</title>
+    <title>电院周赛1</title>
     <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B/</link>
     <pubDate>Fri, 07 Oct 2022 21:34:03 &#43;0800</pubDate>
     <author>Author</author>
