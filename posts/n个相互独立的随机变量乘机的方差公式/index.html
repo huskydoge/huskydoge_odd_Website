@@ -151,19 +151,7 @@
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">$$
-\operatorname{Cov}\left(\mathrm{x}_1, \mathrm{x}_2\right)=0
-$$
-进而可知
-$$
-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)=\mathbb{E}\left(\mathrm{x}_1\right) \cdot \mathbb{E}\left(\mathrm{x}_2\right)+0=\mathbb{E}\left(\mathrm{x}_1\right) \cdot \mathbb{E}\left(\mathrm{x}_2\right)
-$$</a></li>
-    <li><a href="#heading-1">\end{aligned} \tag{2}
-$$</a></li>
-  </ul>
-</nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><p>我们先来看二维的情况。</p>
 <p>随机变量乘积的期望: 已知两个随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 为相互独立, 则 $\mathrm{x}_1 \cdot \mathrm{x}_2$ 的期望为
 $$
@@ -180,26 +168,26 @@ $$
 $$</p>
 </blockquote>
 <p>因为随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 相互独立，则</p>
-<h2 id="heading">$$
+<p>$$
 \operatorname{Cov}\left(\mathrm{x}_1, \mathrm{x}_2\right)=0
 $$
 进而可知
 $$
 \mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)=\mathbb{E}\left(\mathrm{x}_1\right) \cdot \mathbb{E}\left(\mathrm{x}_2\right)+0=\mathbb{E}\left(\mathrm{x}_1\right) \cdot \mathbb{E}\left(\mathrm{x}_2\right)
-$$</h2>
+$$</p>
 <p>随机变量乘积的方差: 已知两个随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 为相互独立, 则 $\mathrm{x}_1 \cdot \mathrm{x}_2$ 的方差为
 $$
 \operatorname{Var}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)=\operatorname{Var}\left(\mathrm{x}_1\right) \cdot \operatorname{Var}\left(\mathrm{x}_2\right)+\operatorname{Var}\left(\mathrm{x}_1\right) \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2+\operatorname{Var}\left(\mathrm{x}_2\right) \cdot \mathbb{E}\left(\mathrm{x}_1\right)^2 \tag{1}
 $$
 证明: 已知随机变量 $\mathrm{x}_1$ 和 $\mathrm{x}_2$ 相互独立, 则随机变量 $\mathrm{x}_1 \cdot \mathrm{x}_2$ 的方差为：
 $$
-\begin{aligned}
-\operatorname{Var}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right) &amp;=\mathbb{E}\left(\left(\mathrm{x}_1 \cdot \mathrm{x}_2-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)\right)^2\right) \newline
+\begin{aligned}</p>
+<p>\operatorname{Var}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right) &amp;=\mathbb{E}\left(\left(\mathrm{x}_1 \cdot \mathrm{x}_2-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)\right)^2\right) \newline
 &amp;=\mathbb{E}\left(\mathrm{x}_1^2 \cdot \mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1 \cdot \mathrm{x}_2\right)^2 \newline
 &amp;=\mathbb{E}\left(\mathrm{x}_1^2\right) \cdot \mathbb{E}\left(\mathrm{x}_2^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \newline
 &amp;=\left(\operatorname{Var}\left(\mathrm{x}_1\right)+\mathbb{E}\left(\mathrm{x}_1\right)^2\right) \cdot\left(\operatorname{Var}\left(\mathrm{x}_2\right)+\mathbb{E}\left(\mathrm{x}_2\right)^2\right)-\mathbb{E}\left(\mathrm{x}_1\right)^2 \cdot \mathbb{E}\left(\mathrm{x}_2\right)^2 \newline</p>
-<h2 id="heading-1">\end{aligned} \tag{2}
-$$</h2>
+<p>\end{aligned} \tag{2}
+$$</p>
 <p>类似可得n个相互独立的变量的值为
 $$
 \mathbb{E}\left[X_1 X_2 \cdots X_k\right]=\prod_{i=1}^k \mathbb{E}\left[X_i\right],\ \operatorname{Var}\left[X_1 X_2 \cdots X_k\right]=\prod_{i=1}^k\left(\mathbb{E}\left[X_i\right]^2+\operatorname{Var}\left[X_i\right]^2\right)-\prod_{i=1}^k \mathbb{E}\left[X_i\right]^2
