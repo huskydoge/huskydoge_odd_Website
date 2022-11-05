@@ -18,7 +18,9 @@
     <pubDate>Sun, 23 Oct 2022 16:24:16 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h7k712juruj319t0u0q5e.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 <item>
     <title>N个相互独立的随机变量乘积的期望和方差公式</title>

@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6\/"
-        },"genre": "posts","keywords": "凸优化, 线性代数","wordcount":  748 ,
+        },"genre": "posts","keywords": "凸优化, 线性代数","wordcount":  749 ,
         "url": "http:\/\/example.org\/posts\/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6\/","datePublished": "2022-10-14T18:43:14+08:00","dateModified": "2022-10-14T18:43:14+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">关于用矩阵表示椭圆的探究</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;748 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;749 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;<span id="/posts/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6/" class="leancloud_visitors" data-flag-title="关于用矩阵表示椭圆的探究">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -213,10 +213,14 @@ $$
 $$
 其中 $\mathbf{B}$ 为正定矩阵。（可以参考Stephen Boyd《Convex Optimization》p30 （2.3））</p>
 <p>取正定矩阵 $\mathbf{A}$ ，令 $\mathbf{x&rsquo;}=\mathbf{A}\mathbf{u}$  ，其中 $||\mathbf{u}||=1$ 。于是我们只需证明 方程 (6) 对 $\mathbf{x&rsquo;}$ 有解。</p>
-<p>​																$\because x&rsquo;^T B x&rsquo;=1$</p>
-<p>​													   	$\therefore (A u)^{T} B(A u)=u^{T} u$</p>
-<p>​																$\therefore u^{T} A^{T} B A u=u^{T} u$</p>
-<p>​																$\Rightarrow A^{T} B A=E$</p>
+</blockquote>
+<p>$$
+\because x&rsquo;^T B x&rsquo;=1 \newline
+\therefore (A u)^{T} B(A u)=u^{T} u \newline
+\therefore u^{T} A^{T} B A u=u^{T} u	\newline
+\Rightarrow A^{T} B A=E
+$$</p>
+<blockquote>
 <p>于是得到：
 $$
 \left(A^{-1}\right)^{T}\left(A^{-1}\right)=B
@@ -265,7 +269,7 @@ $$
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.105.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/huskydoge" target="_blank">HuskyDoge</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
