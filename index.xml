@@ -4,9 +4,53 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 23 Oct 2022 17:51:45 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 05 Nov 2022 12:42:19 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>树状数组</title>
+    <link>http://example.org/posts/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+    <pubDate>Sat, 05 Nov 2022 12:42:19 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h7u5iqsqitj31hc0u00td.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>大根堆</title>
+    <link>http://example.org/posts/%E5%A4%A7%E6%A0%B9%E5%A0%86/</link>
+    <pubDate>Sat, 05 Nov 2022 12:42:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E5%A4%A7%E6%A0%B9%E5%A0%86/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h7u5iqsqitj31hc0u00td.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
+    <title>TOFEL</title>
+    <link>http://example.org/posts/tofel/</link>
+    <pubDate>Sun, 30 Oct 2022 11:23:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/tofel/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>GRE</title>
+    <link>http://example.org/posts/gre/</link>
+    <pubDate>Sun, 30 Oct 2022 11:23:14 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/gre/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>College List</title>
+    <link>http://example.org/posts/studyabroad/</link>
+    <pubDate>Sun, 30 Oct 2022 11:21:43 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/studyabroad/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>哲学家进餐问题</title>
     <link>http://example.org/posts/%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98/</link>
     <pubDate>Sun, 23 Oct 2022 17:51:45 &#43;0800</pubDate>
@@ -50,56 +94,6 @@
     <guid>http://example.org/posts/pytorchnote/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c74jvlkhj31900u0wgn.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>ShapleyValue</title>
-    <link>http://example.org/posts/shapleyvalue/</link>
-    <pubDate>Wed, 19 Oct 2022 18:20:51 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/shapleyvalue/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c756qvozj31ci0u0wlh.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>高斯单位制和国际单位制</title>
-    <link>http://example.org/posts/%E9%AB%98%E6%96%AF%E5%8D%95%E4%BD%8D%E5%88%B6%E5%92%8C%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6/</link>
-    <pubDate>Wed, 19 Oct 2022 14:59:33 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E9%AB%98%E6%96%AF%E5%8D%95%E4%BD%8D%E5%88%B6%E5%92%8C%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7as8s99wsj31900u0417.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>电院周赛2</title>
-    <link>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</link>
-    <pubDate>Sat, 15 Oct 2022 19:22:56 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B2/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7asajzhidj31900u0tas.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>数据结构Hw3</title>
-    <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw3/</link>
-    <pubDate>Sat, 15 Oct 2022 14:57:13 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw3/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75zgdz8zdj31400u0myk.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>关于用矩阵表示椭圆的探究</title>
-    <link>http://example.org/posts/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6/</link>
-    <pubDate>Fri, 14 Oct 2022 18:43:14 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/%E5%85%B3%E4%BA%8E%E7%94%A8%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%A4%AD%E5%9C%86%E7%9A%84%E6%8E%A2%E7%A9%B6/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h75z9dc0rqj31900u0gn7.jpg" referrerpolicy="no-referrer">
             </div>]]></description>
 </item>
 </channel>
