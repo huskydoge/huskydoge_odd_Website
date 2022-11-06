@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E5%A4%A7%E6%A0%B9%E5%A0%86%E5%92%8C%E5%B0%8F%E6%A0%B9%E5%A0%86\/"
-        },"genre": "posts","wordcount":  51 ,
+        },"genre": "posts","wordcount":  447 ,
         "url": "http:\/\/example.org\/posts\/%E5%A4%A7%E6%A0%B9%E5%A0%86%E5%92%8C%E5%B0%8F%E6%A0%B9%E5%A0%86\/","datePublished": "2022-11-05T12:42:05+08:00","dateModified": "2022-11-05T12:42:05+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,7 +142,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">大根堆和小根堆</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E7%BB%8F%E5%85%B8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>经典数据结构</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-11-05">2022-11-05</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-11-05">2022-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;51 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-11-05">2022-11-05</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-11-05">2022-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;447 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/posts/%E5%A4%A7%E6%A0%B9%E5%A0%86%E5%92%8C%E5%B0%8F%E6%A0%B9%E5%A0%86/" class="leancloud_visitors" data-flag-title="大根堆和小根堆">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -160,9 +160,26 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>想要维护的东西越多，开销就越大；想要守护的东西越多，代价就越大。</p>
-<p>​																	——Jean·PeterKing· Parkeree</p>
-</blockquote></div><div class="post-footer" id="post-footer">
+<p><strong>想要维护的东西越多，开销就越大；想要守护的东西越多，代价就越大。</strong>   						—— <em>Jean·PeterKing· Parkeree</em></p>
+</blockquote>
+<p>堆的结构可以分为<a href="https://so.csdn.net/so/search?q=%e5%a4%a7%e6%a0%b9%e5%a0%86&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer">大根堆</a>
+和小根堆，是一个<a href="https://baike.baidu.com/item/%e5%ae%8c%e5%85%a8%e4%ba%8c%e5%8f%89%e6%a0%91/7773232?fr=aladdin" target="_blank" rel="noopener noreffer">完全二叉树</a>
+，而堆排序是根据堆的这种<a href="https://so.csdn.net/so/search?q=%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer">数据结构</a>
+设计的一种排序，下面先来看看什么是大根堆和小根堆。</p>
+<p>每个结点的值都大于其左孩子和右孩子结点的值，称之为大根堆；每个结点的值都小于其左孩子和右孩子结点的值，称之为小根堆。</p>
+<p><strong>常用场景</strong></p>
+<ol>
+<li>根据之前的总结，我们可以利用堆的性质来找出一个序列中最大/小的元素，这不失为一种方法，尽管通过遍历来解决这一问题可能更好。</li>
+<li>堆排序，相信学习过堆排序的同学对此都会认同。</li>
+<li>建立优先级队列，根据上述的小结可知，若利用堆来建立优先级队列，可以快速的获取到队列中优先级最高/低的任务。</li>
+<li>n个元素中排列出前k大的元素问题，对于此类问题，可以建立一个小根堆，依次读入n个元素并调整，并在堆的规模达到k+1时，剔除掉第1个元素，剩下k个较大元素，保持堆的规模不超过k，一直循环即可得到最终的结果。</li>
+</ol>
+<p>详细参考：</p>
+<p><a href="https://blog.csdn.net/u010452388/article/details/81283998" target="_blank" rel="noopener noreffer">https://blog.csdn.net/u010452388/article/details/81283998</a>
+</p>
+<p><a href="https://blog.csdn.net/pingdaozhang/article/details/106361299" target="_blank" rel="noopener noreffer">https://blog.csdn.net/pingdaozhang/article/details/106361299</a>
+</p>
+<p><code>世界は残酷だ それでも君を爱すよ</code> 送给每一个emo的人</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -24,7 +24,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3\/"
-        },"genre": "posts","wordcount":  1998 ,
+        },"genre": "posts","wordcount":  2109 ,
         "url": "http:\/\/example.org\/posts\/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3\/","datePublished": "2022-10-23T16:24:16+08:00","dateModified": "2022-10-23T16:24:16+08:00","license": "All Mine","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,8 +142,8 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">电院周赛3</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/huskydoge" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HuskyDoge</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/oj%E9%A2%98%E8%A7%A3/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>OJ题解</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-23">2022-10-23</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-23">2022-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1998 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/" class="leancloud_visitors" data-flag-title="电院周赛3">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2022-10-23">2022-10-23</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2022-10-23">2022-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2109 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/" class="leancloud_visitors" data-flag-title="电院周赛3">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -213,10 +213,10 @@
 <p>$1 &lt;= nums.length &lt;= 5 \cdot 10^5$</p>
 <p>$-2^{8} &lt;= nums[i] &lt;= 2^{8} - 1$</p>
 <h3 id="solution">Solution</h3>
-<p>法一：归并排序</p>
+<p>法一：归并排序，在归并之前先数逆序对的个数</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">reversePairsRecursive</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span> <span class="c1">//这个函数做的是：1.数数组中逆序对数 2.对数组进行排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">reversePairsRecursive</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">==</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -230,8 +230,8 @@
 </span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="n">right</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">j</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">ret</span> <span class="o">+=</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ret</span> <span class="o">+=</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 注意，这里因为左右两边数组已经有序了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="c1">// 随后合并两个排序数组
@@ -326,19 +326,16 @@
 </ul>
 </li>
 </ul>
-<p><strong>关于优先队列</strong></p>
-<p>优先队列是一种特殊的队列，在学习堆排序的时候就有所了解，点“<a href="http://blog.csdn.net/c20182030/article/details/52727101" target="_blank" rel="noopener noreffer">击</a>
-”查看。</p>
-<p>那么优先队列是什么呢？
-说白了，就是一种功能强大的队列。如果不太清楚队列，可以看看<a href="http://blog.csdn.net/c20182030/article/details/70171231" target="_blank" rel="noopener noreffer">这篇博客</a>
+<p><em>关于优先队列</em></p>
+<p>优先队列是一种功能强大的队列。如果不太清楚队列，可以看看<a href="http://blog.csdn.net/c20182030/article/details/70171231" target="_blank" rel="noopener noreffer">这篇博客</a>
 。</p>
 <p>它的功能强大在哪里呢？
 四个字：<strong>自动排序</strong>。</p>
 <p><strong>优先队列的头文件&amp;&amp;声明</strong></p>
 <p>首先，你需要</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;queue&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span><span class="c1">//这个不是头文件但我也不晓得叫什么专业定语反正要和头文件一起开就是了！
-</span></span></span></code></pre></div><p>其次，一个优先队列声明的基本格式是：
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span> 
+</span></span></code></pre></div><p>其次，一个优先队列声明的基本格式是：
 <strong>priority_queue&lt;结构类型&gt; 队列名;</strong>
 比如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">priority_queue</span> <span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">i</span><span class="p">;</span>
@@ -349,9 +346,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1">//结构体里重载了‘&lt;’小于符号
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">priority_queue</span> <span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//不需要#include&lt;vector&gt;头文件
-</span></span></span><span class="line"><span class="cl"><span class="c1">//注意后面两个“&gt;”不要写在一起，“&gt;&gt;”是右移运算符
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//注意后面两个“&gt;”不要写在一起，“&gt;&gt;”是右移运算符
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">priority_queue</span> <span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="n">less</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span><span class="n">q</span><span class="p">;</span>
-</span></span></code></pre></div><h3 id="solution-1">Solution</h3>
+</span></span></code></pre></div><p>定义：<code>priority_queue&lt;Type, Container, Functional&gt;</code></p>
+<p>Type 就是数据类型，Container 就是<a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener noreffer">容器</a>
+类型（Container必须是用数组实现的容器，比如vector,deque等等，但不能用 list。STL里面默认用的是vector），Functional 就是比较的方式。</p>
+<h3 id="solution-1">Solution</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">

@@ -4,9 +4,27 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 05 Nov 2022 16:57:14 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 06 Nov 2022 20:57:13 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>~scanf()</title>
+    <link>http://example.org/posts/scanf/</link>
+    <pubDate>Sun, 06 Nov 2022 20:57:13 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/scanf/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>优先队列</title>
+    <link>http://example.org/posts/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</link>
+    <pubDate>Sun, 06 Nov 2022 18:38:43 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h7u5iqsqitj31hc0u00td.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item>
+<item>
     <title>数据结构Hw4</title>
     <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw4/</link>
     <pubDate>Sat, 05 Nov 2022 16:57:14 &#43;0800</pubDate>
@@ -76,24 +94,6 @@
     <guid>http://example.org/posts/%E7%94%B5%E9%99%A2%E5%91%A8%E8%B5%9B3/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h7k712juruj319t0u0q5e.jpg" referrerpolicy="no-referrer">
-            </div>]]></description>
-</item>
-<item>
-    <title>N个相互独立的随机变量乘积的期望和方差公式</title>
-    <link>http://example.org/posts/n%E4%B8%AA%E7%9B%B8%E4%BA%92%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B9%98%E6%9C%BA%E7%9A%84%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/</link>
-    <pubDate>Fri, 21 Oct 2022 16:34:49 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/n%E4%B8%AA%E7%9B%B8%E4%BA%92%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B9%98%E6%9C%BA%E7%9A%84%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Harsanyi Dividend</title>
-    <link>http://example.org/posts/harsanyidividend/</link>
-    <pubDate>Thu, 20 Oct 2022 23:31:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/harsanyidividend/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7c766alwqj31hc0u0786.jpg" referrerpolicy="no-referrer">
             </div>]]></description>
 </item>
 </channel>
