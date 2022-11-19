@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>网站搭建 - Category - HuskyDoge&#39;s World</title>
+        <link>http://example.org/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link>
+        <description>网站搭建 - Category - HuskyDoge&#39;s World</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 19 Nov 2022 12:31:01 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>Bmap</title>
+    <link>http://example.org/posts/bmap/</link>
+    <pubDate>Sat, 19 Nov 2022 12:31:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/bmap/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
