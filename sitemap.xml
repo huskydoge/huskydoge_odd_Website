@@ -2,11 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/posts/bmap/</loc><lastmod>2022-11-19T12:37:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/</loc><lastmod>2022-11-19T12:37:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2022-11-19T12:37:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2022-11-19T12:37:17&#43;08:00</lastmod></url><url>
-            <loc>http://example.org/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</loc><lastmod>2022-11-19T12:37:17&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/bmap/</loc><lastmod>2022-11-21T20:48:19&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2022-11-21T20:48:19&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2022-11-21T20:48:19&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2022-11-21T20:48:19&#43;08:00</lastmod></url><url>
+            <loc>http://example.org/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</loc><lastmod>2022-11-21T20:48:19&#43;08:00</lastmod></url><url>
             <loc>http://example.org/posts/scanf/</loc><lastmod>2022-11-06T21:08:47&#43;08:00</lastmod></url><url>
             <loc>http://example.org/categories/c&#43;&#43;%E6%8A%80%E5%B7%A7/</loc><lastmod>2022-11-06T21:08:47&#43;08:00</lastmod></url><url>
             <loc>http://example.org/tags/</loc><lastmod>2022-11-06T18:38:43&#43;08:00</lastmod></url><url>

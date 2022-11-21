@@ -10,7 +10,9 @@
     <pubDate>Sat, 19 Nov 2022 12:31:01 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/bmap/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGly1h8d1e79g96j316f0rs46h.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item>
 </channel>
 </rss>
