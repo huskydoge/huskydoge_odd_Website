@@ -10,7 +10,9 @@
     <pubDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h8xn06lq3fj31900u0767.jpg" referrerpolicy="no-referrer">
+            </div>C++学不明白是有原因的。]]></description>
 </item>
 <item>
     <title>数据结构Hw5</title>
