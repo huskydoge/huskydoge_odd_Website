@@ -4,7 +4,15 @@
         <link>http://example.org/tags/c&#43;&#43;/</link>
         <description>C&#43;&#43; - Tag - HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+    <title>Tips for OJ</title>
+    <link>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>提升代码效率的方法</title>
     <link>http://example.org/posts/%E6%8F%90%E5%8D%87%E4%BB%A3%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95/</link>
     <pubDate>Sun, 09 Oct 2022 19:54:31 &#43;0800</pubDate>

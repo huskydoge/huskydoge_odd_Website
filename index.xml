@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sun, 27 Nov 2022 16:27:49 &#43;0800</lastBuildDate>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Tips for OJ</title>
+    <link>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
+    <pubDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>数据结构Hw5</title>
     <link>http://example.org/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84hw5/</link>
     <pubDate>Sun, 27 Nov 2022 16:27:49 &#43;0800</pubDate>
@@ -88,14 +96,6 @@
     <pubDate>Sun, 30 Oct 2022 11:23:14 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/gre/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>College List</title>
-    <link>http://example.org/posts/studyabroad/</link>
-    <pubDate>Sun, 30 Oct 2022 11:21:43 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/studyabroad/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
