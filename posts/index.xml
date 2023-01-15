@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | HuskyDoge&#39;s World</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</managingEditor>
-            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hbh001098hbh@sjtu.edu.cn (HuskyDoge)</webMaster><copyright>All Mine</copyright><lastBuildDate>Sat, 14 Jan 2023 12:18:19 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>声明</title>
+    <link>http://example.org/posts/%E5%A3%B0%E6%98%8E/</link>
+    <pubDate>Sat, 14 Jan 2023 12:18:19 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/%E5%A3%B0%E6%98%8E/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Tips for OJ</title>
     <link>http://example.org/posts/oj%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
     <pubDate>Wed, 30 Nov 2022 08:48:48 &#43;0800</pubDate>
@@ -88,14 +96,6 @@
     <pubDate>Sun, 30 Oct 2022 11:23:21 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.org/posts/tofel/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>GRE</title>
-    <link>http://example.org/posts/gre/</link>
-    <pubDate>Sun, 30 Oct 2022 11:23:14 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/gre/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
